@@ -10,14 +10,17 @@ metadata:
 
 Turns "is interest in X growing in language Y?" / "which language or topic next?" into numbers from the Wikimedia
 pageviews API, charts, and optionally a one-page PDF. **The scripts compute every number. You choose the inputs,
-check what was matched, and explain.** Run commands from this skill's directory.
+check what was matched, and explain.** Run commands from this skill's directory (`cd` there first — the session
+may start in another folder).
 
-## Setup (first use only)
+## Setup
 
+Only if `node_modules/` is missing in the skill directory (a fresh copy), run once:
 ```bash
 npm ci
 ```
-`analyze.ts` works without it; `report.ts` needs it (exit code 5 means: run `npm ci`).
+Otherwise skip it — reinstalling costs time on every session. `analyze.ts` works without it; `report.ts` needs it
+(exit code 5 means: run `npm ci`).
 
 ## Workflow
 
