@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { checkClaims, checkLabels, extractNumbers } from "../scripts/lib/claims.ts";
+import { checkClaims, checkLabels, checkLanguage, extractNumbers } from "../scripts/lib/claims.ts";
 import { computeMetrics } from "../scripts/lib/metrics.ts";
 
 // 12 months at 1182 views, then 12 months at 437 — the medians of the real uk/Астрономія series
@@ -59,4 +59,34 @@ test("checkLabels flags 'growing' for a flat series and respects negation, two-l
     [{ lang: "tr", verdict: { label: "growing", basis: "" } }]), []);
   // multi-topic, single-language runs are skipped (sentences name topics, not languages)
   assert.deepEqual(checkLabels("Українська: зростає", [{ lang: "uk", verdict: { label: "flat", basis: "" } }, { lang: "uk", verdict: { label: "flat", basis: "" } }]), []);
+});
+
+test("checkLanguage (uk) catches the Russian and English leaks seen in real Haiku answers, and passes clean Ukrainian", () => {
+  const leaks = [
+    "Claude Code растет 112% англійська, 399% іспанська.",   // user's PM test, report verdict
+    "Турецька Wikipedia — ЄДИНА РАСТУЧА МОВА",               // eval 3, iteration 3
+    "Турецька хвиля: єдиний растущий ринок.",                // eval 3 PDF verdict
+    "Аналіз інтересу до фотографії в Польщі на основі Википедии", // PM sandbox dry run
+    "**Исключена**: На словацькій Вікіпедії немає статті",   // eval 5
+    "Чому обрати чеськую: більше переглядів",                // trigger test
+    "Англійська: Copilot flat -6%, AI growing +12%.",        // user's PM test, report verdict
+    "Іспанська має найбільшу аудиторію (26K views/місяць)",  // eval 3
+  ];
+  for (const s of leaks) assert.notDeepEqual(checkLanguage(s, "uk", ["Claude Code", "Copilot"]), [], s);
+  const clean = [
+    "Інтерес до астрономії в україномовній Вікіпедії спадає: частка переглядів −47% р/р, довіра висока (80).",
+    "Рекомендую спершу перевірити попит лендингом. Інтерес продовжує рости в турецькому розділі, а в польському — ні.",
+    "Мости, хвости й пости — звичайні українські слова, як і «знаходиться», «дякую» та «статей».",
+    "Стаття en · Integrated development environment: без змін (−6,5%).",
+  ];
+  for (const s of clean) assert.deepEqual(checkLanguage(s, "uk", ["Integrated development environment"]), [], s);
+  // for other languages only untranslated tool terms are flagged; English is never checked
+  assert.deepEqual(checkLanguage("Zainteresowanie jest flat", "pl").length, 1);
+  assert.deepEqual(checkLanguage("Interest is flat, trust high", "en"), []);
+});
+
+test("checkLanguage (uk) flags Russian calques only in the phrases where they are wrong", () => {
+  assert.notDeepEqual(checkLanguage("Відносна доля інтересу практично не змінилась", "uk"), []);  // seen in testing
+  assert.notDeepEqual(checkLanguage("детальне пояснення на українській мові", "uk"), []);          // seen in testing
+  assert.deepEqual(checkLanguage("Така вже доля цього розділу; звіт українською мовою.", "uk"), []);
 });

@@ -54,3 +54,9 @@ test("check_claims.ts flags an invented number (exit 6) and passes real ones (ex
   const ok = run("check_claims.ts", "--analysis", analysis, "--text", "Падіння −63% (наївно −59.6%), 559 переглядів/міс, 28% ботів");
   assert.equal(ok.status, 0, ok.stdout);
 });
+
+test("analyze.ts validates --lang before any API call", () => {
+  const r = run("analyze.ts", "--topic", "X", "--langs", "uk", "--lang", "Ukrainian!");
+  assert.equal(r.status, 2);
+  assert.match(r.stderr, /--lang must be a language code/);
+});

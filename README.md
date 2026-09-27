@@ -26,7 +26,7 @@ modules. Dependencies are pinned by `package-lock.json`.
 
 ```bash
 npm ci
-npm run check       # typecheck + 34 tests
+npm run check       # typecheck + 42 tests
 node scripts/analyze.ts --topic "Astronomy" --langs uk,pl,cs --months 24
 node scripts/report.ts --analysis out/astronomy/analysis.json --verdict "…" --findings "…|…"
 ```
@@ -44,6 +44,9 @@ Optional env: `WI_USER_AGENT` (identify yourself to Wikimedia), `WI_CACHE_DIR` (
   human traffic in 2025–26 (uk −28 %, es −22 %, en −5 %), so raw numbers alone would call almost everything "declining".
 - **Safe defaults.** Articles found only by text search (no interlanguage link) are excluded and listed, not silently
   analysed — in testing, such hits were a linguist's biography and a language-policy article.
+- **One language per answer and report.** Every UI string in the PDF comes from a dictionary (`--lang uk|en`, or a
+  translated labels file for any other language); `analyze.ts --lang` hands the model ready-made labels in the
+  user's language; a language check rejects Russian words and untranslated tool terms in Ukrainian text.
 - **Trust is explained, not just scored.** Every penalty (bots, spikes, noise, short history, weak match) adds a reason.
 - **Polite, reproducible API use:** disk cache, 250 ms spacing, `Retry-After` backoff, explicit `User-Agent`.
 
@@ -54,10 +57,11 @@ The skill was built with an AI coding agent (Claude Code). What was checked, and
 | Check | How | Result |
 |---|---|---|
 | Spec compliance | official validator `agentskills validate` (PyPI `skills-ref` 0.1.1) + the spec's size/reference rules + the agentskills.io guides (scripts, best practices, evals, descriptions) | valid; SKILL.md 140 lines ≈ 2.6 K tokens; every referenced file exists |
-| Metric logic | unit tests on synthetic series with known answers (e.g. +5 %/month must give +79.6 %/yr; one viral month must inflate `yoy` but not `robustGrowth`; topic −20 % inside an edition −20 % must be `flat`) | 34 tests pass |
+| Metric logic | unit tests on synthetic series with known answers (e.g. +5 %/month must give +79.6 %/yr; one viral month must inflate `yoy` but not `robustGrowth`; topic −20 % inside an edition −20 % must be `flat`) | 42 tests pass |
 | Script contract | subprocess tests: `--help`, unknown flags, invalid values, exit codes — no network | pass |
 | Real data | `evals/crosscheck.sh`: raw API via curl, metrics recomputed in jq (no project code), compared with `analysis.json` | 10 series × 7 metrics in 8 editions: **70/70 identical** (`evals/results/iteration-1/crosscheck.md`) |
 | Claim and label checker | fed deliberately wrong text, then retro-checked on all 15 saved Haiku answers | caught invented numbers and 7 label contradictions; 3 checker bugs found and fixed (fake "12 %" missed; "2025–26" and "2025−26" read as −26) |
+| Language | retro-check of 27 saved Ukrainian Haiku answers, then a Haiku re-run of the PM scenarios | 23/27 had Russian words or untranslated terms; after the fix the Ukrainian PDF has no English UI text (unit-tested) and both Haiku re-runs passed the language check |
 | Layout | rendered PDFs inspected; stress test with 8 languages and 5 long findings | one page (earlier versions overflowed / mis-scaled the chart) |
 | Reproducibility | clean copy without `node_modules`/cache → `npm ci` → tests → real run with an empty cache | pass |
 | Agent use on a cheap model | Claude Haiku 4.5 subagents in Claude Code, clean context per run, with vs without the skill, 4 iterations, graded from execution traces | assertions: without skill **5/24**; with skill 18/24 → 20/24 → **23/24**; mean time 217 → 83 s (baseline 176 s); tool calls 14 → 7.5 (baseline 14). Details: `evals/results/README.md` |

@@ -129,6 +129,58 @@ export function checkLabels(text: string, series: { lang: string; verdict: Serie
   return problems;
 }
 
+/**
+ * Language check: the answer and the report must be in ONE language — the user's.
+ *  - uk: flag Russian forms small models mix in ("растет", "Википедия"): Russian-only letters (ы э ъ ё), Russian-only
+ *    endings (-ия/-ии/-ию/-ией, -ость, -уется/-ается/-яется, -тся without ь) and frequent Russian words seen in testing.
+ *  - any language except en: flag tool terms copied untranslated from analyze.ts output (flat, growing, YoY, views…).
+ * Article titles from the analysis are removed first — they are proper names in their own language.
+ * Heuristic by design: low false-positive rate on real answers, not a full language identifier.
+ */
+const RU_WORDS = /(?<!\p{L})(растет|растут|растущ\p{L}*|растуч\p{L}*|рост|википеди\p{L}*|также|котор\p{L}*|если|чтобы|только|сейчас|однако|исключ\p{L}*|нужно|можно|очень|сегодня|что|как|или|и|еще|сниж\p{L}*|падени\p{L}*|увелич\p{L}*|интерес\p{L}*|статья|статьи|статью|пользоват\p{L}*|приложени\p{L}*|трафик\p{L}*|аналитик\p{L}*|мобильн\p{L}*|стабильн\p{L}*|английск\p{L}*|испанск\p{L}*|немецк\p{L}*|французск\p{L}*|польск\p{L}*|турецк\p{L}*|чешск\p{L}*|украинск\p{L}*|сравнени\p{L}*)(?!\p{L})/giu;
+const RU_LETTERS = /\p{L}*[ыэъёЫЭЪЁ]\p{L}*/gu;
+const RU_ENDINGS = /(?<!\p{L})\p{Script=Cyrillic}{3,}(ия|ии|ию|ией|ость|остью|уется|ается|яется)(?!\p{L})|(?<!\p{L})\p{Script=Cyrillic}+(ськую|цькую)(?!\p{L})|(?<!\p{L})\p{Script=Cyrillic}{2,}[^ь\P{Script=Cyrillic}]тся(?!\p{L})/giu;
+const TOOL_TERMS = /(?<![\p{L}-])(flat|growing|declining|insufficient-data|trust|high|medium|low|yoy|views|verdict|relativegrowth|robustgrowth|editiongrowth|permillion|botshare|spikemonths)(?![\p{L}-])/giu;
+const UK_FOR: Record<string, string> = {
+  flat: "без змін", growing: "зростає", declining: "спадає", "insufficient-data": "мало даних", trust: "довіра",
+  high: "висока", medium: "середня", low: "низька", yoy: "р/р", views: "переглядів", verdict: "висновок",
+  relativegrowth: "відносна зміна", robustgrowth: "зміна переглядів", editiongrowth: "зміна всього розділу",
+  permillion: "на 1 млн переглядів", botshare: "частка ботів", spikemonths: "місяці-сплески",
+};
+
+export function checkLanguage(text: string, lang: string, properNames: string[] = []): string[] {
+  // template placeholders and the skill's own name are not prose
+  let t = text.replace(/\{[a-z]+\}/g, " ").replace(/wikipedia-interest/gi, " ");
+  for (const n of [...properNames].sort((a, b) => b.length - a.length)) if (n.length > 1) t = t.split(n).join(" ");
+  const problems: string[] = [];
+  const add = (kind: string, words: string[]) => {
+    const uniq = [...new Set(words.map((w) => w.trim()).filter(Boolean))];
+    if (uniq.length) problems.push(`${kind}: ${uniq.slice(0, 8).map((w) => `"${w}"`).join(", ")}`);
+  };
+  if (lang === "uk") {
+    // calques from Russian built from real Ukrainian words — only in the phrases where they are wrong
+    add("Russian calques — «доля» here means fate: write «частка»", [...t.matchAll(/(?<!\p{L})(відносна\s+)?дол[яіюею]\p{L}*(?=\s+(інтерес|перегляд|трафік|бот|ринк|аудитор|статт))/giu)].map((m) => m[0]));
+    add("Russian calque «на …ській мові» — write «…ською мовою»", [...t.matchAll(/(?<!\p{L})на\s+\p{L}+ській\s+мові(?!\p{L})/giu)].map((m) => m[0]));
+    add("Russian words in Ukrainian text — rewrite in Ukrainian (e.g. растет → зростає, Википедия → Вікіпедія)", [
+      ...[...t.matchAll(RU_LETTERS)].map((m) => m[0]),
+      ...[...t.matchAll(RU_WORDS)].map((m) => m[0]),
+      ...[...t.matchAll(RU_ENDINGS)].map((m) => m[0]),
+    ]);
+  }
+  if (lang === "uk") {
+    // "Wikipedia" in Latin letters mixes scripts in Ukrainian prose (Polish/Spanish/German spell it "Wikipedia" correctly)
+    add("Latin \"Wikipedia\" in Ukrainian text — write «Вікіпедія»", [...t.matchAll(/(?<![\p{L}.])wikipedi\p{L}*/giu)].map((m) => m[0]));
+  }
+  if (lang !== "en") {
+    const terms = [...t.matchAll(TOOL_TERMS)].map((m) => m[0]);
+    if (terms.length) {
+      const hint = lang === "uk" ? ` (${[...new Set(terms.map((x) => x.toLowerCase()))].map((x) => `${x} → ${UK_FOR[x]}`).join(", ")})` : "";
+      add(`untranslated tool terms — write them in the user's language${hint}`, terms);
+    }
+  }
+  return problems;
+}
+
 export function checkClaims(text: string, a: AnalysisLike): ClaimCheck {
   const known = knownNumbers(a);
   const claims = extractNumbers(text);

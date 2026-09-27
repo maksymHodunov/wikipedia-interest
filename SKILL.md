@@ -28,9 +28,9 @@ Copy this checklist and tick it off:
 - [ ] 1. Plan inputs: English topic title(s), language codes, period
 - [ ] 2. Run `scripts/analyze.ts`
 - [ ] 3. Check `excluded`, `warnings`, `match`, `trustReasons`
-- [ ] 4. Answer with the template below
-- [ ] 5. The user said report / звіт / one-pager / something to share? → run `scripts/report.ts` (it makes the PDF)
-      until `"ok": true`. Never write a Markdown or text report instead.
+- [ ] 4. Answer with the template below, entirely in the user's language; not English → check it (see Language)
+- [ ] 5. The user said report / звіт / one-pager / something to share? → run `scripts/report.ts --lang <code>`
+      (it makes the PDF) until `"ok": true`. Never write a Markdown or text report instead.
 
 ### 1. Plan inputs
 - **Topic → English Wikipedia title.** Translate the user's words ("інтервальне голодування" → "Intermittent fasting").
@@ -43,10 +43,11 @@ Copy this checklist and tick it off:
 
 ### 2. Run
 ```bash
-node scripts/analyze.ts --topic "Intermittent fasting" --langs pl,cs --months 24
-node scripts/analyze.ts --topics "Astronomy,Solar System,Black hole" --langs uk --months 36
+node scripts/analyze.ts --topic "Intermittent fasting" --langs pl,cs --months 24 --lang uk
+node scripts/analyze.ts --topics "Astronomy,Solar System,Black hole" --langs uk --months 36 --lang uk
 ```
-Prints a JSON summary on stdout (`files.analysis` is the full result for `report.ts`) and progress lines on stderr.
+`--lang` = the language of the user's message (not the editions analysed): the summary then carries `verdictLabel`
+and `trustLabel` in that language — copy them instead of translating. Prints a JSON summary on stdout (`files.analysis` is the full result for `report.ts`) and progress lines on stderr.
 **Timing:** ~5 s per series on a cold cache — a 5-article basket or 8 languages can take 1–3 min, longer if Wikimedia
 throttles (the script prints `retry … in N s` and continues). Wait for the command to finish; if your tool moved it to
 the background, wait for that job — never start a second copy. Cached re-runs are instant. `--help` lists every option.
@@ -58,6 +59,16 @@ the background, wait for that job — never start a second copy. Cached re-runs 
   `--articles pl="Głodówka lecznicza"` (single `--topic` only) and call it a proxy.
 - `match`: `langlink/high` is safe; `search/*` → confirm the article really is the topic.
 - `trustReasons`: quote at least the first one in your answer.
+
+### Language — one language, the user's, everywhere
+The answer, the PDF title/verdict/findings and every label are in the language of the user's message. Small models
+drift into Russian or leave tool terms in English; in testing 23 of 27 Ukrainian answers did. So:
+- Copy `verdictLabel` / `trustLabel` from the summary (run analyze.ts with `--lang`). Otherwise translate: growing /
+  flat / declining → зростає / без змін / спадає; trust → довіра висока / середня / низька; YoY → р/р; share → частка;
+  views → переглядів; Wikipedia → Вікіпедія.
+- Ukrainian is not Russian: «Вікіпедія», «зростає», «що», «як» — never «Википедия», «растет», «что», «как».
+- Before sending a non-English answer, save it to a file and run
+  `node scripts/check_claims.ts --analysis "<files.analysis>" --file draft.md --lang <code>`; fix everything it lists.
 
 ### 4. Answer (in the user's language)
 Match the length to the request: a quick question gets 3–5 sentences with the key numbers; a comparison or decision
@@ -83,12 +94,15 @@ Rules that keep the answer honest — each one fixes a mistake seen in testing:
 
 ### 5. PDF report (only when the user asks for a report, one-pager or something to share)
 ```bash
-node scripts/report.ts --analysis "<files.analysis>" --chart indexed \
+node scripts/report.ts --analysis "<files.analysis>" --lang <code> --chart indexed \
   --title "<≤ 90 chars>" --verdict "<one sentence with numbers>" --findings "<bullet>|<bullet>|<bullet>"
 ```
-Write the title, verdict and findings in the user's language. "Short report" means this PDF — not a long chat message.
+`--lang` renders every label, heading, caveat and the chart in that language (built-in: uk, en). For another language,
+run `node scripts/report.ts --labels-template > labels.<code>.json`, translate the values (keep keys and {placeholders})
+and add `--labels labels.<code>.json`. "Short report" means this PDF — not a long chat message.
 **Validation loop:** if the output says `"ok": false` (exit code 6), fix every item in `problems` — numbers not found
-in the data, a language called growing when its verdict is flat, text too long, more than one page — and re-run until
+in the data, a language called growing when its verdict is flat, Russian or English words in the user's language,
+text too long, more than one page — and re-run until
 `"ok": true`. Then give the user the `pdf` path.
 For a long chat answer, check numbers and verdict labels the same way: save the draft to a file and run
 `node scripts/check_claims.ts --analysis "<files.analysis>" --file draft.md`.

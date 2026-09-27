@@ -1,38 +1,48 @@
 #!/usr/bin/env node
 /**
- * Build a one-page PDF from analysis.json. The agent supplies the narrative; numbers come from the data. See HELP.
+ * Build a one-page PDF from analysis.json, entirely in the user's language. See HELP.
  */
 import { readFileSync, existsSync } from "node:fs";
 import { join, dirname, resolve as resolvePath } from "node:path";
-import { checkClaims, checkLabels } from "./lib/claims.ts";
+import { checkClaims, checkLabels, checkLanguage } from "./lib/claims.ts";
+import { BUILT_IN, LABEL_KEYS, detectLang, validateLabels, type Labels } from "./lib/i18n.ts";
+import { buildReportContent, type AnalysisForReport } from "./lib/report-content.ts";
 import { EXIT, fail, handleCli, parseArgs, printJson, str } from "./lib/util.ts";
-import type { SeriesMetrics } from "./lib/metrics.ts";
 
 const HELP = `
-Usage: node scripts/report.ts --analysis <path/to/analysis.json> [options]
+Usage: node scripts/report.ts --analysis <path/to/analysis.json> --lang <code> [options]
 
-Render a one-page A4 PDF: your verdict + findings, a metrics table and a chart from analysis.json.
-Checks that every number in your text exists in analysis.json and that the PDF fits on one page.
+Render a one-page A4 PDF — your title, verdict and findings plus a table and a chart from analysis.json —
+entirely in ONE language: the language the user wrote in. Checks numbers, verdict labels, language and layout.
 
 Options:
-  --title "…"          ≤ 90 chars (default: topics + languages)
-  --verdict "…"        one-sentence answer with numbers, ≤ 240 chars (default: auto-generated draft)
-  --findings "a|b|c"   3–5 bullets separated by |, each ≤ 280 chars (default: auto-generated draft)
-  --caveats "a|b"      up to 3 extra caveats, separated by | (standard caveats are always added)
-  --chart indexed|absolute   indexed = growth comparison (default), absolute = size per 1M views
+  --lang uk|en         language of the whole report (built-in: ${Object.keys(BUILT_IN).join(", ")}). Guessed from your text if omitted.
+  --labels FILE        translations for any other language: create it with --labels-template, translate the values
+  --labels-template    print the English UI labels as JSON (translate the values, keep {placeholders} and keys)
+  --title "…"          ≤ 90 chars, in the user's language (required unless --lang en)
+  --verdict "…"        one sentence with numbers, ≤ 240 chars
+  --findings "a|b|c"   3–5 bullets separated by |, each ≤ 280 chars
+  --caveats "a|b"      up to 3 extra caveats separated by | (standard caveats are added in the report language)
+  --chart indexed|absolute   indexed = interest over time (default), absolute = views per 1M edition views
   --out FILE           default: report.pdf next to analysis.json
 
-Write --verdict/--findings in the user's language. Every number must come from analyze.ts output;
-for a difference between two series, state both numbers instead of computing it.
+Every number must come from analyze.ts output; for a difference between two series, state both numbers.
+Translate tool terms: flat, growing, declining, trust, YoY… (uk: без змін, зростає, спадає, довіра, р/р).
 
 Example:
-  node scripts/report.ts --analysis out/astronomy/analysis.json --chart indexed \\
-    --verdict "Інтерес до астрономії в uk падає: −63% медіанних переглядів р/р, довіра висока." \\
-    --findings "uk: −63% р/р, 559 переглядів/міс|pl: −36.8% р/р, але 47% трафіку — боти|cs: −34.6% р/р"
+  node scripts/report.ts --analysis out/astronomy/analysis.json --lang uk \\
+    --title "Астрономія: інтерес в українській Вікіпедії" \\
+    --verdict "Інтерес до астрономії спадає: частка переглядів −47,2% р/р, довіра висока (80)." \\
+    --findings "uk: −63% переглядів р/р, уся uk-Вікіпедія −28,2%|pl: −29,6% частки, але 47% трафіку — боти"
 `;
 
 const args = parseArgs(process.argv.slice(2));
-handleCli(args, HELP, ["analysis", "title", "verdict", "findings", "caveats", "chart", "out", "help"]);
+handleCli(args, HELP, ["analysis", "lang", "labels", "labels-template", "title", "verdict", "findings", "caveats", "chart", "out", "help"]);
+
+if (args["labels-template"]) {
+  printJson(Object.fromEntries(LABEL_KEYS.map((k) => [k, BUILT_IN.en![k]])));
+  process.exit(EXIT.OK);
+}
 
 let renderPdf: typeof import("./lib/pdf.ts").renderPdf;
 try {
@@ -45,15 +55,8 @@ const analysisPath = str(args.analysis, "analysis") ?? fail("--analysis path/to/
 if (!existsSync(analysisPath)) fail(`analysis file not found: ${analysisPath}. Run scripts/analyze.ts first; its output lists files.analysis.`, EXIT.NO_DATA);
 const chartMode = str(args.chart, "chart") ?? "indexed";
 if (chartMode !== "indexed" && chartMode !== "absolute") fail(`--chart must be one of: indexed, absolute. Received: "${chartMode}"`);
+const a = JSON.parse(readFileSync(analysisPath, "utf8")) as AnalysisForReport;
 
-type Analysis = {
-  topics: string[]; langs: string[]; period: { start: string; end: string }; normalized: boolean;
-  files: { chart: string; chartIndexed: string };
-  series: (SeriesMetrics & { name: string; spikes: string[] })[];
-  ranking: { name: string; score: number; why: string }[];
-  warnings: string[];
-};
-const a = JSON.parse(readFileSync(analysisPath, "utf8")) as Analysis;
 const problems: string[] = [];
 const split = (v: string | undefined) => (v ? v.split("|").map((s) => s.trim()).filter(Boolean) : []);
 const cap = (s: string, n: number, what: string) => {
@@ -61,66 +64,57 @@ const cap = (s: string, n: number, what: string) => {
   problems.push(`${what} is ${s.length} chars (max ${n}) — shortened with "…"; rewrite it shorter`);
   return s.slice(0, n - 1) + "…";
 };
-const fmt = (n: number | null, suffix = "") => (n === null ? "n/a" : `${n > 0 && suffix === "%" ? "+" : ""}${n}${suffix}`);
 
-// resolve chart paths relative to analysis.json if they were written as relative paths by an older version
-const base = dirname(resolvePath(analysisPath));
-const chartFile = resolvePath(base, chartMode === "indexed" ? a.files.chartIndexed : a.files.chart);
-const chartSvg = existsSync(chartFile) ? readFileSync(chartFile, "utf8") : readFileSync(join(base, chartMode === "indexed" ? "chart_indexed.svg" : "chart.svg"), "utf8");
+// the agent's own text, as passed
+const rawTitle = str(args.title, "title"), rawVerdict = str(args.verdict, "verdict");
+const rawFindings = str(args.findings, "findings"), rawCaveats = str(args.caveats, "caveats");
+const agentText = [rawTitle, rawVerdict, rawFindings, rawCaveats].filter(Boolean).join("\n");
 
-// auto-generated draft text (used only when the agent does not pass its own)
-const best = a.ranking[0];
-const autoVerdict = !best ? "No usable data."
-  : a.series.some((s) => s.verdict.label === "growing") ? `${best.name} shows the strongest trustworthy growth: ${best.why}.`
-  : `No series is growing over this period; least weak is ${best.name}: ${best.why}.`;
-const autoFindings = a.series.slice(0, 5).map((s) =>
-  `${s.name} ("${s.article}"): ${s.verdict.label} — ${s.verdict.basis}; ${s.avgMonthlyLast12.toLocaleString("en")} views/mo` +
-  (s.perMillionLast12 !== null ? `, ${s.perMillionLast12} per 1M` : "") + `; trust ${s.trust.label}` + (s.trust.reasons[0] ? ` (${s.trust.reasons[0]})` : ""));
+// one language for the whole report
+const lang = (str(args.lang, "lang") ?? detectLang(agentText) ?? fail(
+  "pass --lang <code>: the language the user wrote in (e.g. uk, en, pl). The whole report is rendered in that language.",
+)).toLowerCase();
+let L: Labels;
+const labelsFile = str(args.labels, "labels");
+if (labelsFile !== undefined) {
+  if (!existsSync(labelsFile)) fail(`labels file not found: ${labelsFile}`);
+  const v = validateLabels(JSON.parse(readFileSync(labelsFile, "utf8")));
+  if (!v.labels) fail(`labels file ${labelsFile} is incomplete: ${v.problems.join("; ")}`);
+  L = v.labels;
+} else {
+  L = BUILT_IN[lang] ?? fail(
+    `no built-in labels for "${lang}" (built-in: ${Object.keys(BUILT_IN).join(", ")}). Run \`node scripts/report.ts --labels-template > labels.${lang}.json\`, ` +
+    `translate every value into the user's language (keep the keys and {placeholders}), then re-run with --labels labels.${lang}.json`,
+  );
+}
 
-const title = cap(str(args.title, "title") ?? `${a.topics.join(", ")} — Wikipedia interest in ${a.langs.join(", ")}`, 90, "--title");
-const verdict = cap(str(args.verdict, "verdict") ?? autoVerdict, 240, "--verdict");
-let findings = split(str(args.findings, "findings"));
+let findings = split(rawFindings);
 if (findings.length > 5) { problems.push(`${findings.length} findings given (max 5) — kept the first 5`); findings = findings.slice(0, 5); }
-findings = findings.length ? findings.map((f, i) => cap(f, 280, `finding ${i + 1}`)) : autoFindings;
-const userCaveats = split(str(args.caveats, "caveats")).slice(0, 3).map((c, i) => cap(c, 200, `caveat ${i + 1}`));
+findings = findings.map((f, i) => cap(f, 280, `finding ${i + 1}`));
+const input = {
+  title: rawTitle !== undefined ? cap(rawTitle, 90, "--title") : undefined,
+  verdict: rawVerdict !== undefined ? cap(rawVerdict, 240, "--verdict") : undefined,
+  findings,
+  caveats: split(rawCaveats).slice(0, 3).map((c, i) => cap(c, 200, `caveat ${i + 1}`)),
+  chart: chartMode as "indexed" | "absolute",
+};
 
-// claim check on everything the agent wrote
-const agentText = [str(args.title, "title"), str(args.verdict, "verdict"), str(args.findings, "findings"), str(args.caveats, "caveats")].filter(Boolean).join("\n");
+// quality checks on everything the agent wrote
 const numbers = checkClaims(agentText, a);
 if (numbers.unverified.length) problems.push(`numbers not found in analysis.json: ${numbers.unverified.join(", ")} — use the exact values from analyze.ts output (state both numbers instead of a computed difference)`);
 const labels = checkLabels(agentText, a.series);
 for (const l of labels) problems.push(`${l} — use the verdict label from analyze.ts`);
+const properNames = [...a.series.map((s) => s.article), ...a.topics];
+const language = checkLanguage(agentText, lang, properNames);
+for (const l of language) problems.push(`language (${lang}): ${l}`);
+if (!rawVerdict || !rawFindings) problems.push("used auto-generated draft text — for a shared report pass your own --verdict and --findings in the user's language");
+if (!rawTitle && lang !== "en") problems.push("no --title: the default title uses the English topic names — pass a title in the user's language");
 
-const baseCaveats = [
-  "Pageviews measure curiosity, not willingness to pay; validate promising directions with a landing page or ads test.",
-  "Human traffic only (agent=user); undetected bots may remain. Spike months are marked; median-based growth ignores them.",
-  ...(a.normalized ? ["Rel. YoY = change of the topic's share of all views in that edition; it assumes the edition-wide decline (Edition column) hits all topics equally."] : []),
-  a.normalized ? "Per-1M values divide by all views of each language edition: fair across editions, but a small edition can look ‘hotter’ while tiny in absolute terms." : "Absolute views are not adjusted for the size of each language edition.",
-  "One article per topic; broad topics (a course) deserve a basket of related articles.",
-];
-const caveats = [...userCaveats, ...a.warnings.slice(0, 2).map((w) => `Data warning: ${w}`), ...baseCaveats].slice(0, 6);
-
-const table = a.normalized
-  ? {
-      header: ["Series (article)", "Views/mo", "Per 1M", "Rel. YoY", "Raw YoY", "Edition", "Verdict", "Trust"],
-      rows: a.series.map((s) => [`${s.name} (${s.article})`, s.avgMonthlyLast12.toLocaleString("en"), fmt(s.perMillionLast12),
-        fmt(s.relativeGrowth, "%"), fmt(s.robustGrowth, "%"), fmt(s.editionGrowth, "%"), s.verdict.label, `${s.trust.label} ${s.trust.score}`]),
-    }
-  : {
-      header: ["Series (article)", "Views/mo", "Total 12m", "Med. YoY", "Naive YoY", "Trend/yr", "Verdict", "Trust"],
-      rows: a.series.map((s) => [`${s.name} (${s.article})`, s.avgMonthlyLast12.toLocaleString("en"), s.totalLast12.toLocaleString("en"),
-        fmt(s.robustGrowth, "%"), fmt(s.yoy, "%"), fmt(s.trendAnnual, "%"), s.verdict.label, `${s.trust.label} ${s.trust.score}`]),
-    };
-
+const base = dirname(resolvePath(analysisPath));
 const out = resolvePath(str(args.out, "out") ?? join(base, "report.pdf"));
-const p = `${a.period.start.slice(0, 4)}-${a.period.start.slice(4, 6)} – ${a.period.end.slice(0, 4)}-${a.period.end.slice(4, 6)}`;
-const { pages } = await renderPdf({
-  title, verdict, table, chartSvg, findings, caveats,
-  subtitle: `Wikimedia pageviews API · ${p} · monthly, human (non-bot) traffic, all platforms`,
-  sources: ["wikimedia.org/api/rest_v1/metrics/pageviews", ...a.series.map((s) => `${s.project}/wiki/${s.article}`)],
-}, out);
+const content = buildReportContent(a, input, L, lang, new Date().toISOString().slice(0, 10));
+const { pages } = await renderPdf(content, out);
 if (pages > 1) problems.push(`PDF has ${pages} pages (must be 1) — shorten --findings/--caveats or use fewer languages`);
-if (!args.verdict || !args.findings) problems.push("used auto-generated draft text — for a shared report pass your own --verdict and --findings in the user's language");
 
-printJson({ ok: problems.length === 0, pdf: out, pages, chart: chartMode, numbers, labels: labels.length, problems });
+printJson({ ok: problems.length === 0, pdf: out, pages, lang, chart: chartMode, numbers, labels: labels.length, language: language.length, problems });
 if (problems.length) process.exit(EXIT.CHECK_FAILED);

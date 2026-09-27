@@ -8,6 +8,7 @@ import { resolveTopic, type Resolved } from "./lib/resolve.ts";
 import { computeMetrics, rankSeries, spikeMonths, type Point, type SeriesMetrics } from "./lib/metrics.ts";
 import { lineChart } from "./lib/svg.ts";
 import { EXIT, LANG_RE, dateRange, fail, fmtMonth, handleCli, list, parseArgs, printJson, str, writeOut } from "./lib/util.ts";
+import { BUILT_IN } from "./lib/i18n.ts";
 
 const HELP = `
 Usage: node scripts/analyze.ts --topic "<English topic>" --langs <codes> [options]
@@ -29,6 +30,8 @@ Options:
   --no-normalize                 skip per-1M normalisation (saves 1 API call per language)
   --no-bots                      skip automated-traffic fetch (saves 1 API call per series)
   --include-low-confidence       keep articles found only by text search (default: excluded, listed in "excluded")
+  --lang uk                      language of the user's message: adds verdictLabel/trustLabel in that language to copy
+                                 into your answer (built-in: uk, en; other codes: translate the labels yourself)
 
 Examples:
   node scripts/analyze.ts --topic "Intermittent fasting" --langs pl,cs --months 24
@@ -37,7 +40,7 @@ Examples:
 `;
 
 const args = parseArgs(process.argv.slice(2));
-handleCli(args, HELP, ["topic", "topics", "langs", "months", "start", "end", "articles", "source", "out", "no-normalize", "no-bots", "include-low-confidence", "help"]);
+handleCli(args, HELP, ["topic", "topics", "langs", "months", "start", "end", "articles", "source", "out", "no-normalize", "no-bots", "include-low-confidence", "lang", "help"]);
 
 const topics = args.topics !== undefined ? list(str(args.topics, "topics")) : args.topic !== undefined ? [str(args.topic, "topic")!] : [];
 if (!topics.length) fail(`--topic or --topics is required. Example: --topic "Astronomy" --langs uk,pl`);
@@ -55,6 +58,9 @@ const windowMonths = { start: fmtMonth(start), end: fmtMonth(end) };
 const normalize = !args["no-normalize"];
 const withBots = !args["no-bots"];
 const includeLow = Boolean(args["include-low-confidence"]);
+const userLang = str(args.lang, "lang")?.toLowerCase();
+if (userLang !== undefined && !LANG_RE.test(userLang)) fail(`--lang must be a language code like uk or en, got "${userLang}"`);
+const UL = userLang ? BUILT_IN[userLang] : undefined;
 const slug = topics.join("_").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "").slice(0, 40) || "analysis";
 const outDir = resolvePath(str(args.out, "out") ?? join("out", slug));
 
@@ -127,8 +133,8 @@ try {
     yLabel: normalize ? "views / 1M edition views" : "views / month", markers,
   }));
   writeOut(files.chartIndexed, lineChart(series.map((s) => ({ name: s.name, points: s.points })), {
-    title: `${label}: indexed growth (median of first 6 months = 100)`,
-    subtitle: `${period} · human views, each series rebased to its own start · ○ = spike month`, indexed: true, markers,
+    title: `${label}: interest over time (median month = 100)`,
+    subtitle: `${period} · human views, each series rebased to its own median month · ○ = spike month`, indexed: true, markers,
   }));
 
   // 5. csv + json
@@ -147,6 +153,10 @@ try {
     series: series.map((s) => ({
       name: s.name, article: s.article, match: `${s.resolution.method}/${s.resolution.confidence}`,
       verdict: `${s.verdict.label} — ${s.verdict.basis}`,
+      ...(UL && {
+        verdictLabel: UL[s.verdict.label === "insufficient-data" ? "verdict_insufficient" : (`verdict_${s.verdict.label}` as const)],
+        trustLabel: `${UL[`trust_${s.trust.label}` as const]} (${s.trust.score})`,
+      }),
       relativeGrowth: s.relativeGrowth, robustGrowth: s.robustGrowth, editionGrowth: s.editionGrowth, yoy: s.yoy, trendAnnual: s.trendAnnual, r2: s.r2,
       avgMonthly: s.avgMonthlyLast12, perMillion: s.perMillionLast12, botShare: s.botShare,
       spikeMonths: s.spikes.join(", ") || "none", peak: s.peakMonth ? `${s.peakMonth.month}: ${s.peakMonth.views}` : null,
@@ -156,7 +166,12 @@ try {
     excluded,
     warnings,
     files,
-    next: `PDF: node scripts/report.ts --analysis "${files.analysis}" --title "…" --verdict "…" --findings "…|…|…"`,
+    next: [
+      userLang && userLang !== "en"
+        ? `Answer in ${userLang}: copy verdictLabel/trustLabel as printed; before sending, check your draft with node scripts/check_claims.ts --analysis "${files.analysis}" --file draft.md --lang ${userLang}`
+        : `Answer in the user's language${userLang ? "" : " (pass --lang <code> to get labels in it)"}.`,
+      `PDF only if asked: node scripts/report.ts --analysis "${files.analysis}" --lang ${userLang ?? "<code>"} --title "…" --verdict "…" --findings "…|…|…"`,
+    ],
   });
 } catch (e) {
   if (e instanceof ApiError) fail(`${e.message}`, EXIT.API);

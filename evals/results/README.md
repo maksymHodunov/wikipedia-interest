@@ -59,6 +59,19 @@ eval-1 agent. `benchmark.json` in each iteration aggregates the runs.
 |---|---|---|---|---|---|
 | assertions passed | 2/7 | 3/7 | 6/7 | 6/7 | 1/7 |
 
+### Iteration 5 — a hands-on PM test (by the author, Haiku 4.5 in the Claude desktop app)
+Prompts about electric cars (uk), Copilot for a Spanish app, and Claude Code. Findings:
+- **Mixed languages in the PDF:** every UI string (table headers, section titles, caveats, chart, footer) was
+  hard-coded English, while the agent wrote Ukrainian → localised through `scripts/lib/i18n.ts` and `--lang`.
+- **Russian words in Ukrainian text** ("растет", "что", "как") and English labels ("FLAT", "GROWING") — written by the
+  model, not the code (no Russian string exists in the skill). A retro-check found such issues in 23 of 27 saved
+  Ukrainian answers → language check in `report.ts`/`check_claims.ts`, plus `analyze.ts --lang` returning ready-made
+  `verdictLabel`/`trustLabel`. Two Haiku re-runs: the PDF passed on the first try; the chat answer passed after the
+  labels were provided (17 numbers verified, 0 language problems). One of the two runs skipped the PDF.
+- **Not fixed yet:** "Claude Code" resolved to the Claude chatbot article and "Claude" to a given-name page; a newly
+  created/renamed article inflated growth (+399 %) while trust stayed high and its line dominated the chart;
+  "integrate it right now" despite the validate-first rule.
+
 ## Trigger smoke test (`triggers-iteration-1.json`)
 One run per query, clean subagent, `<available_skills>` with this skill plus 3 distractors (pdf, web-research,
 i18n-translation). Should-not-trigger near-misses and should-trigger queries from `evals/trigger_queries.json`.

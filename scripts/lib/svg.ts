@@ -16,9 +16,11 @@ export interface ChartOpts {
   yLabel?: string;
   width?: number;
   height?: number;
-  /** Rebase every series to 100 = median of its first `indexBase` months — for cross-language comparison. */
+  /** Rebase every series to 100 = its median month (or the median of its first `indexBase` months). */
   indexed?: boolean;
   indexBase?: number;
+  /** Number formatter for axis ticks and end labels (locale-aware in reports). */
+  fmt?: (v: number) => string;
   /** Highlight months (e.g. spikes) with a small marker. */
   markers?: Record<string, string[]>; // seriesName -> months
 }
@@ -37,19 +39,22 @@ function niceTicks(max: number, n = 4): number[] {
 const fmtNum = (v: number) => (v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : v >= 1e3 ? `${(v / 1e3).toFixed(v >= 1e4 ? 0 : 1)}k` : `${Math.round(v * 10) / 10}`);
 
 /**
- * Rebase to 100 = median of the first `base` months. A median (not a mean) keeps one spike in the base period
- * — e.g. a September school-year peak in month 1 — from making the whole line look like a collapse.
+ * Rebase to 100 = the series' median month (default) or the median of its first `base` months.
+ * A median keeps one spike from distorting the base. The whole-period default also survives new articles: with a
+ * first-months base, an article created mid-period had a base near 0 and its line shot to millions (seen in testing).
  */
-export function indexSeries(points: Point[], base = 6): Point[] {
-  const b = median(points.slice(0, base).map((p) => p.views));
+export function indexSeries(points: Point[], base?: number): Point[] {
+  const vals = (base === undefined ? points : points.slice(0, base)).map((p) => p.views);
+  const b = median(vals) || median(vals.filter((v) => v > 0));
   return b > 0 ? points.map((p) => ({ month: p.month, views: (p.views / b) * 100 })) : points;
 }
 
 export function lineChart(series: ChartSeries[], o: ChartOpts): string {
   const W = o.width ?? 760, H = o.height ?? 350;
-  const m = { top: 66, right: 110, bottom: 44, left: 56 };
+  const m = { top: 66, right: 132, bottom: 44, left: 56 };
   const pw = W - m.left - m.right, ph = H - m.top - m.bottom;
-  const data = series.slice(0, PALETTE.length).map((s) => ({ ...s, points: o.indexed ? indexSeries(s.points, o.indexBase ?? 6) : s.points }));
+  const data = series.slice(0, PALETTE.length).map((s) => ({ ...s, points: o.indexed ? indexSeries(s.points, o.indexBase) : s.points }));
+  const f = o.fmt ?? fmtNum;
 
   const months = [...new Set(data.flatMap((s) => s.points.map((p) => p.month)))].sort();
   const xi = new Map(months.map((mo, i) => [mo, i]));
@@ -68,7 +73,7 @@ export function lineChart(series: ChartSeries[], o: ChartOpts): string {
   // grid + y axis
   for (const t of ticks) {
     parts.push(`<line x1="${m.left}" x2="${m.left + pw}" y1="${y(t)}" y2="${y(t)}" stroke="${GRID}" stroke-width="1"/>`);
-    parts.push(`<text x="${m.left - 6}" y="${y(t) + 4}" font-size="10" text-anchor="end" fill="${INK2}">${fmtNum(t)}</text>`);
+    parts.push(`<text x="${m.left - 6}" y="${y(t) + 4}" font-size="10" text-anchor="end" fill="${INK2}">${esc(f(t))}</text>`);
   }
   if (o.yLabel) parts.push(`<text x="${m.left}" y="${m.top - 8}" font-size="10" fill="${INK2}">${esc(o.yLabel)}</text>`);
 
@@ -93,11 +98,17 @@ export function lineChart(series: ChartSeries[], o: ChartOpts): string {
       if (p) parts.push(`<circle cx="${x(p.month)}" cy="${y(p.views)}" r="4" fill="${SURFACE}" stroke="${color}" stroke-width="2"/>`);
     }
     const last = pts[pts.length - 1]!;
-    endLabels.push({ y: y(last.views), text: `${s.name} ${fmtNum(last.views)}`, color });
+    const label = Array.from(s.name).length > 14 ? Array.from(s.name).slice(0, 13).join("") + "…" : s.name;
+    endLabels.push({ y: y(last.views), text: `${label} ${f(last.views)}`, color });
   });
   // de-overlap direct labels (min 13px apart)
   endLabels.sort((a, b) => a.y - b.y);
   for (let i = 1; i < endLabels.length; i++) if (endLabels[i]!.y - endLabels[i - 1]!.y < 13) endLabels[i]!.y = endLabels[i - 1]!.y + 13;
+  // then push back up from the bottom edge so the lowest labels stay inside the chart
+  for (let i = endLabels.length - 1; i >= 0; i--) {
+    const limit = i === endLabels.length - 1 ? H - 6 : endLabels[i + 1]!.y - 13;
+    if (endLabels[i]!.y > limit) endLabels[i]!.y = limit;
+  }
   for (const l of endLabels) {
     parts.push(`<circle cx="${m.left + pw + 8}" cy="${l.y}" r="3" fill="${l.color}"/>`);
     parts.push(`<text x="${m.left + pw + 14}" y="${l.y + 4}" font-size="10" fill="${INK}">${esc(l.text)}</text>`);

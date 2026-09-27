@@ -24,8 +24,10 @@ export interface ReportContent {
   chartSvg: string;              // 760x350 SVG from svg.ts
   findings: string[];            // 3–5 bullets
   caveats: string[];             // assumptions & limits
+  sectionFindings: string;       // localized section headings and footer (see i18n.ts) — no UI text is hard-coded here
+  sectionCaveats: string;
+  footer: string;
   sources: string[];
-  generatedAt?: string;
 }
 
 const INK = "#1f2933", INK2 = "#52606d", RULE = "#d9dee3";
@@ -51,13 +53,13 @@ export function renderPdf(content: ReportContent, outPath: string): Promise<{ pa
 
     // table
     const cols = content.table.header.length;
-    const colW = [W * 0.28, ...Array(cols - 1).fill((W * 0.72) / (cols - 1))] as number[];
+    const colW = [W * 0.25, ...Array(cols - 1).fill((W * 0.75) / (cols - 1))] as number[];
     let y = doc.y;
     const rowH = 15;
     const drawRow = (cells: string[], bold: boolean) => {
       let x = MARGIN;
       cells.forEach((c, i) => {
-        doc.font(bold ? "B" : "R").fontSize(8.5).fillColor(INK).text(c, x + 2, y + 3, { width: colW[i]! - 4, height: rowH, ellipsis: true, lineBreak: false });
+        doc.font(bold ? "B" : "R").fontSize(bold ? 7.5 : 8).fillColor(INK).text(c, x + 2, y + 3, { width: colW[i]! - 4, height: rowH, ellipsis: true, lineBreak: false });
         x += colW[i]!;
       });
       y += rowH;
@@ -93,15 +95,12 @@ export function renderPdf(content: ReportContent, outPath: string): Promise<{ pa
       }
       y += 4;
     };
-    section("Findings", content.findings, 9);
-    section("Assumptions & limits", content.caveats, 8);
+    section(content.sectionFindings, content.findings, 9);
+    section(content.sectionCaveats, content.caveats, 8);
 
     // footer on the current (last) page, inside the bottom margin
     doc.page.margins.bottom = 0;
-    doc.font("R").fontSize(7.5).fillColor(INK2).text(
-      `Sources: ${content.sources.join("; ")}. Generated ${content.generatedAt ?? new Date().toISOString().slice(0, 10)} by wikipedia-interest skill.`,
-      MARGIN, doc.page.height - MARGIN - 14, { width: W, height: 20, ellipsis: true },
-    );
+    doc.font("R").fontSize(7.5).fillColor(INK2).text(content.footer, MARGIN, doc.page.height - MARGIN - 14, { width: W, height: 20, ellipsis: true });
     doc.end();
     stream.on("finish", () => resolve({ pages }));
     stream.on("error", reject);

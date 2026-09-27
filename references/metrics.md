@@ -71,6 +71,21 @@ Each series is divided by the **median of its first 6 months** and × 100. A med
   ("+63 %" fails against −63); unsigned numbers match either sign ("fell 63 %").
 - Computed differences ("20 pp more than …") are not in the data and are reported as unverified — state both numbers.
 
+## Language check (`checkLanguage` in `scripts/lib/claims.ts`)
+
+The answer and the PDF must be in one language — the user's. `report.ts` runs this on the agent's text; `check_claims.ts
+--lang <code>` runs it on a chat draft. Article titles and topic names are removed first (proper names).
+- **uk:** Russian-only letters (ы э ъ ё); Russian-only endings (-ия/-ии/-ию/-ией, -ость, -уется/-ается/-яется, -тся
+  without ь, -ськую); frequent Russian words seen in testing (растет, растущий, Википедия, что, как, или, …); calques
+  in the phrases where they are wrong («доля переглядів» → частка, «на українській мові» → українською мовою); and
+  "Wikipedia" in Latin letters (→ Вікіпедія).
+- **every language except en:** tool terms left in English (flat, growing, declining, trust, high/medium/low, YoY, views…).
+- Retro-check on 27 saved Ukrainian Haiku answers: 23 had issues (mostly "Wikipedia", "YoY", "растет", English
+  labels); 0 false positives on the clean ones and on 44 reference Ukrainian strings.
+
+The report's own UI text comes from `scripts/lib/i18n.ts` (built-in uk, en; any other language through
+`--labels-template` → translated JSON → `--labels`, validated for missing keys and placeholders).
+
 ## Known limitations of the source
 
 - Pageviews, not unique readers; one person reading 30 times counts 30 times.
