@@ -1,0 +1,95 @@
+{
+  "iteration": "evals/results/iteration-6",
+  "baseline": "evals/results/iteration-6",
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": null,
+      "assertions": "0/0",
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    },
+    "without_skill": {
+      "pass_rate": null,
+      "assertions": "0/0",
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    },
+    "delta": {
+      "pass_rate": null,
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    }
+  },
+  "with_skill_all_evals": {
+    "pass_rate": {
+      "mean": 0.82,
+      "stddev": 0.13,
+      "n": 4
+    },
+    "assertions": "27/33",
+    "time_seconds": {
+      "mean": 157.89,
+      "stddev": 85.46,
+      "n": 4
+    },
+    "tokens": {
+      "mean": 55461.5,
+      "stddev": 2764.2,
+      "n": 4
+    },
+    "tool_calls": {
+      "mean": 9.25,
+      "stddev": 3.11,
+      "n": 4
+    }
+  },
+  "per_eval": [
+    {
+      "eval": "eval-copilot-es-pt-report",
+      "passRate": 0.67,
+      "passed": 6,
+      "total": 9,
+      "turns": 2,
+      "seconds": 76.708,
+      "tokens": 53493,
+      "calls": 7,
+      "baseline": null
+    },
+    {
+      "eval": "eval-ev-uk-report",
+      "passRate": 0.88,
+      "passed": 7,
+      "total": 8,
+      "turns": 2,
+      "seconds": 234.976,
+      "tokens": 55950,
+      "calls": 10,
+      "baseline": null
+    },
+    {
+      "eval": "eval-meditation-ja-ko-onepager",
+      "passRate": 0.75,
+      "passed": 6,
+      "total": 8,
+      "turns": 2,
+      "seconds": 68.64,
+      "tokens": 52641,
+      "calls": 6,
+      "baseline": null
+    },
+    {
+      "eval": "eval-python-course-pl-ro",
+      "passRate": 1,
+      "passed": 8,
+      "total": 8,
+      "turns": 2,
+      "seconds": 251.23,
+      "tokens": 59762,
+      "calls": 14,
+      "baseline": null
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "topics": [
+    "GitHub Copilot"
+  ],
+  "langs": [
+    "es",
+    "pt"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/github-copilot",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/github-copilot/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/github-copilot/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/github-copilot/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/github-copilot/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "es",
+      "project": "es.wikipedia",
+      "article": "GitHub Copilot",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 3034,
+      "avgMonthlyLast12": 253,
+      "perMillionLast12": 0.5,
+      "yoy": -62.2,
+      "robustGrowth": -62.2,
+      "relativeGrowth": -55.8,
+      "editionGrowth": -22.4,
+      "trendAnnual": -56.2,
+      "r2": 0.68,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-12",
+        "views": 1169
+      },
+      "botShare": 0.48,
+      "trust": {
+        "score": 45,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (48% of views are bots) — human counts may be contaminated too",
+          "low volume (253 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -56% YoY (raw -62%, whole edition -22%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 507
+        },
+        {
+          "month": "2024-10",
+          "views": 578
+        },
+        {
+          "month": "2024-11",
+          "views": 907
+        },
+        {
+          "month": "2024-12",
+          "views": 1169
+        },
+        {
+          "month": "2025-01",
+          "views": 715
+        },
+        {
+          "month": "2025-02",
+          "views": 569
+        },
+        {
+          "month": "2025-03",
+          "views": 835
+        },
+        {
+          "month": "2025-04",
+          "views": 722
+        },
+        {
+          "month": "2025-05",
+          "views": 758
+        },
+        {
+          "month": "2025-06",
+          "views": 614
+        },
+        {
+          "month": "2025-07",
+          "views": 349
+        },
+        {
+          "month": "2025-08",
+          "views": 297
+        },
+        {
+          "month": "2025-09",
+          "views": 225
+        },
+        {
+          "month": "2025-10",
+          "views": 257
+        },
+        {
+          "month": "2025-11",
+          "views": 277
+        },
+        {
+          "month": "2025-12",
+          "views": 170
+        },
+        {
+          "month": "2026-01",
+          "views": 267
+        },
+        {
+          "month": "2026-02",
+          "views": 341
+        },
+        {
+          "month": "2026-03",
+          "views": 444
+        },
+        {
+          "month": "2026-04",
+          "views": 264
+        },
+        {
+          "month": "2026-05",
+          "views": 246
+        },
+        {
+          "month": "2026-06",
+          "views": 199
+        },
+        {
+          "month": "2026-07",
+          "views": 148
+        },
+        {
+          "month": "2026-08",
+          "views": 196
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 0.6806778889085944
+        },
+        {
+          "month": "2024-10",
+          "views": 0.714559133821407
+        },
+        {
+          "month": "2024-11",
+          "views": 1.2460593818542025
+        },
+        {
+          "month": "2024-12",
+          "views": 1.7623655614520461
+        },
+        {
+          "month": "2025-01",
+          "views": 0.9354715126146004
+        },
+        {
+          "month": "2025-02",
+          "views": 0.8237113103503256
+        },
+        {
+          "month": "2025-03",
+          "views": 1.1253870888506599
+        },
+        {
+          "month": "2025-04",
+          "views": 1.1065060383421474
+        },
+        {
+          "month": "2025-05",
+          "views": 1.144953139907709
+        },
+        {
+          "month": "2025-06",
+          "views": 1.0336998508640485
+        },
+        {
+          "month": "2025-07",
+          "views": 0.5751939098983033
+        },
+        {
+          "month": "2025-08",
+          "views": 0.496277427196022
+        },
+        {
+          "month": "2025-09",
+          "views": 0.3894341900268189
+        },
+        {
+          "month": "2025-10",
+          "views": 0.4235793686514569
+        },
+        {
+          "month": "2025-11",
+          "views": 0.47102449700292975
+        },
+        {
+          "month": "2025-12",
+          "views": 0.3341680398859984
+        },
+        {
+          "month": "2026-01",
+          "views": 0.4476826374764844
+        },
+        {
+          "month": "2026-02",
+          "views": 0.6266959695489568
+        },
+        {
+          "month": "2026-03",
+          "views": 0.8509663201713248
+        },
+        {
+          "month": "2026-04",
+          "views": 0.5141902935889263
+        },
+        {
+          "month": "2026-05",
+          "views": 0.47321716735469976
+        },
+        {
+          "month": "2026-06",
+          "views": 0.38390400322593565
+        },
+        {
+          "month": "2026-07",
+          "views": 0.2798373824885545
+        },
+        {
+          "month": "2026-08",
+          "views": 0.3851659413864257
+        }
+      ],
+      "name": "es",
+      "topic": "GitHub Copilot",
+      "resolution": {
+        "lang": "es",
+        "project": "es.wikipedia",
+        "article": "GitHub Copilot",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "pt",
+      "project": "pt.wikipedia",
+      "article": "GitHub Copilot",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 998,
+      "avgMonthlyLast12": 83,
+      "perMillionLast12": 0.5,
+      "yoy": -68.8,
+      "robustGrowth": -71.5,
+      "relativeGrowth": -62.8,
+      "editionGrowth": -19.4,
+      "trendAnnual": -61.6,
+      "r2": 0.72,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-06",
+        "views": 388
+      },
+      "botShare": 0.68,
+      "trust": {
+        "score": 45,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (68% of views are bots) — human counts may be contaminated too",
+          "low volume (83 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -63% YoY (raw -71%, whole edition -19%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 184
+        },
+        {
+          "month": "2024-10",
+          "views": 217
+        },
+        {
+          "month": "2024-11",
+          "views": 253
+        },
+        {
+          "month": "2024-12",
+          "views": 264
+        },
+        {
+          "month": "2025-01",
+          "views": 319
+        },
+        {
+          "month": "2025-02",
+          "views": 347
+        },
+        {
+          "month": "2025-03",
+          "views": 355
+        },
+        {
+          "month": "2025-04",
+          "views": 297
+        },
+        {
+          "month": "2025-05",
+          "views": 309
+        },
+        {
+          "month": "2025-06",
+          "views": 388
+        },
+        {
+          "month": "2025-07",
+          "views": 152
+        },
+        {
+          "month": "2025-08",
+          "views": 116
+        },
+        {
+          "month": "2025-09",
+          "views": 104
+        },
+        {
+          "month": "2025-10",
+          "views": 119
+        },
+        {
+          "month": "2025-11",
+          "views": 100
+        },
+        {
+          "month": "2025-12",
+          "views": 66
+        },
+        {
+          "month": "2026-01",
+          "views": 63
+        },
+        {
+          "month": "2026-02",
+          "views": 88
+        },
+        {
+          "month": "2026-03",
+          "views": 115
+        },
+        {
+          "month": "2026-04",
+          "views": 90
+        },
+        {
+          "month": "2026-05",
+          "views": 72
+        },
+        {
+          "month": "2026-06",
+          "views": 64
+        },
+        {
+          "month": "2026-07",
+          "views": 50
+        },
+        {
+          "month": "2026-08",
+          "views": 67
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 0.8227853591784524
+        },
+        {
+          "month": "2024-10",
+          "views": 0.9281837658084399
+        },
+        {
+          "month": "2024-11",
+          "views": 1.1105541026293775
+        },
+        {
+          "month": "2024-12",
+          "views": 1.1628142622816275
+        },
+        {
+          "month": "2025-01",
+          "views": 1.268526491398245
+        },
+        {
+          "month": "2025-02",
+          "views": 1.6278706237671372
+        },
+        {
+          "month": "2025-03",
+          "views": 1.4833134672394634
+        },
+        {
+          "month": "2025-04",
+          "views": 1.4325444621284635
+        },
+        {
+          "month": "2025-05",
+          "views": 1.583283226347538
+        },
+        {
+          "month": "2025-06",
+          "views": 2.106611823814932
+        },
+        {
+          "month": "2025-07",
+          "views": 0.7850950895550995
+        },
+        {
+          "month": "2025-08",
+          "views": 0.6304567526559676
+        },
+        {
+          "month": "2025-09",
+          "views": 0.5831372366162546
+        },
+        {
+          "month": "2025-10",
+          "views": 0.63514803435267
+        },
+        {
+          "month": "2025-11",
+          "views": 0.4942611217587313
+        },
+        {
+          "month": "2025-12",
+          "views": 0.40168531577979866
+        },
+        {
+          "month": "2026-01",
+          "views": 0.33885014720134465
+        },
+        {
+          "month": "2026-02",
+          "views": 0.5092452550147464
+        },
+        {
+          "month": "2026-03",
+          "views": 0.6789411592633368
+        },
+        {
+          "month": "2026-04",
+          "views": 0.5537029577427746
+        },
+        {
+          "month": "2026-05",
+          "views": 0.4094917596437613
+        },
+        {
+          "month": "2026-06",
+          "views": 0.36757674034577786
+        },
+        {
+          "month": "2026-07",
+          "views": 0.24651759021581152
+        },
+        {
+          "month": "2026-08",
+          "views": 0.38002766964446516
+        }
+      ],
+      "name": "pt",
+      "topic": "GitHub Copilot",
+      "resolution": {
+        "lang": "pt",
+        "project": "pt.wikipedia",
+        "article": "GitHub Copilot",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "es",
+      "score": 2,
+      "why": "declining (share of edition views -56% YoY (raw -62%, whole edition -22%)), trust medium, 0.5 views per 1M edition views"
+    },
+    {
+      "name": "pt",
+      "score": 2,
+      "why": "declining (share of edition views -63% YoY (raw -71%, whole edition -19%)), trust medium, 0.5 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

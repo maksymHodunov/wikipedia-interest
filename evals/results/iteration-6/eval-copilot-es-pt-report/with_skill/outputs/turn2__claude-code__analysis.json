@@ -1,0 +1,473 @@
+{
+  "topics": [
+    "Claude Code"
+  ],
+  "langs": [
+    "es",
+    "pt"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/claude-code",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/claude-code/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/claude-code/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/claude-code/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/claude-code/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "es",
+      "project": "es.wikipedia",
+      "article": "Claude (chatbot)",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 167424,
+      "avgMonthlyLast12": 13952,
+      "perMillionLast12": 26.5,
+      "yoy": 323.5,
+      "robustGrowth": 279,
+      "relativeGrowth": 398.7,
+      "editionGrowth": -22.4,
+      "trendAnnual": 232.1,
+      "r2": 0.67,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2026-05",
+        "views": 26501
+      },
+      "botShare": 0.11,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "growing",
+        "basis": "share of edition views +399% YoY (raw +279%, whole edition -22%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 3636
+        },
+        {
+          "month": "2024-10",
+          "views": 2530
+        },
+        {
+          "month": "2024-11",
+          "views": 2504
+        },
+        {
+          "month": "2024-12",
+          "views": 2175
+        },
+        {
+          "month": "2025-01",
+          "views": 3354
+        },
+        {
+          "month": "2025-02",
+          "views": 3733
+        },
+        {
+          "month": "2025-03",
+          "views": 4038
+        },
+        {
+          "month": "2025-04",
+          "views": 3083
+        },
+        {
+          "month": "2025-05",
+          "views": 3392
+        },
+        {
+          "month": "2025-06",
+          "views": 3918
+        },
+        {
+          "month": "2025-07",
+          "views": 3511
+        },
+        {
+          "month": "2025-08",
+          "views": 3661
+        },
+        {
+          "month": "2025-09",
+          "views": 3560
+        },
+        {
+          "month": "2025-10",
+          "views": 4100
+        },
+        {
+          "month": "2025-11",
+          "views": 3320
+        },
+        {
+          "month": "2025-12",
+          "views": 2955
+        },
+        {
+          "month": "2026-01",
+          "views": 4976
+        },
+        {
+          "month": "2026-02",
+          "views": 11880
+        },
+        {
+          "month": "2026-03",
+          "views": 26102
+        },
+        {
+          "month": "2026-04",
+          "views": 26257
+        },
+        {
+          "month": "2026-05",
+          "views": 26501
+        },
+        {
+          "month": "2026-06",
+          "views": 25905
+        },
+        {
+          "month": "2026-07",
+          "views": 17589
+        },
+        {
+          "month": "2026-08",
+          "views": 14279
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 4.881547937024949
+        },
+        {
+          "month": "2024-10",
+          "views": 3.127741537315155
+        },
+        {
+          "month": "2024-11",
+          "views": 3.4400580949977098
+        },
+        {
+          "month": "2024-12",
+          "views": 3.2789949496648423
+        },
+        {
+          "month": "2025-01",
+          "views": 4.388211822810308
+        },
+        {
+          "month": "2025-02",
+          "views": 5.404067348924016
+        },
+        {
+          "month": "2025-03",
+          "views": 5.44229109554367
+        },
+        {
+          "month": "2025-04",
+          "views": 4.724872737131359
+        },
+        {
+          "month": "2025-05",
+          "views": 5.123589776473548
+        },
+        {
+          "month": "2025-06",
+          "views": 6.5961498626797095
+        },
+        {
+          "month": "2025-07",
+          "views": 5.786549620782072
+        },
+        {
+          "month": "2025-08",
+          "views": 6.117412999880932
+        },
+        {
+          "month": "2025-09",
+          "views": 6.161714295535445
+        },
+        {
+          "month": "2025-10",
+          "views": 6.757491873427911
+        },
+        {
+          "month": "2025-11",
+          "views": 5.645492166244502
+        },
+        {
+          "month": "2025-12",
+          "views": 5.808626810959561
+        },
+        {
+          "month": "2026-01",
+          "views": 8.343328854243396
+        },
+        {
+          "month": "2026-02",
+          "views": 21.83327893912495
+        },
+        {
+          "month": "2026-03",
+          "views": 50.02685335385568
+        },
+        {
+          "month": "2026-04",
+          "views": 51.14050961653197
+        },
+        {
+          "month": "2026-05",
+          "views": 50.978569723849176
+        },
+        {
+          "month": "2026-06",
+          "views": 49.97504122395912
+        },
+        {
+          "month": "2026-07",
+          "views": 33.25716027426476
+        },
+        {
+          "month": "2026-08",
+          "views": 28.060124882942713
+        }
+      ],
+      "name": "es",
+      "topic": "Claude Code",
+      "resolution": {
+        "lang": "es",
+        "project": "es.wikipedia",
+        "article": "Claude (chatbot)",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "pt",
+      "project": "pt.wikipedia",
+      "article": "Claude",
+      "months": 18,
+      "completeness": 1,
+      "totalLast12": 14768,
+      "avgMonthlyLast12": 1231,
+      "perMillionLast12": 6.7,
+      "yoy": null,
+      "robustGrowth": null,
+      "relativeGrowth": null,
+      "editionGrowth": -19.4,
+      "trendAnnual": 9464.2,
+      "r2": 0.61,
+      "spikeShare": 0.28,
+      "peakMonth": {
+        "month": "2026-06",
+        "views": 5769
+      },
+      "botShare": 0.08,
+      "trust": {
+        "score": 50,
+        "label": "medium",
+        "reasons": [
+          "data starts 2025-03, 6 months after the requested start — article was created or renamed then (views under an old title are not counted)",
+          "18 months of data (<24: seasonality not separable from trend)",
+          "28% of months are spikes — interest is event-driven, not steady"
+        ]
+      },
+      "verdict": {
+        "label": "growing",
+        "basis": "trend +9464%/yr"
+      },
+      "points": [
+        {
+          "month": "2025-03",
+          "views": 16
+        },
+        {
+          "month": "2025-04",
+          "views": 3
+        },
+        {
+          "month": "2025-05",
+          "views": 4
+        },
+        {
+          "month": "2025-06",
+          "views": 3
+        },
+        {
+          "month": "2025-07",
+          "views": 7
+        },
+        {
+          "month": "2025-08",
+          "views": 5
+        },
+        {
+          "month": "2025-09",
+          "views": 5
+        },
+        {
+          "month": "2025-10",
+          "views": 7
+        },
+        {
+          "month": "2025-11",
+          "views": 5
+        },
+        {
+          "month": "2025-12",
+          "views": 9
+        },
+        {
+          "month": "2026-01",
+          "views": 9
+        },
+        {
+          "month": "2026-02",
+          "views": 11
+        },
+        {
+          "month": "2026-03",
+          "views": 11
+        },
+        {
+          "month": "2026-04",
+          "views": 20
+        },
+        {
+          "month": "2026-05",
+          "views": 263
+        },
+        {
+          "month": "2026-06",
+          "views": 5769
+        },
+        {
+          "month": "2026-07",
+          "views": 4471
+        },
+        {
+          "month": "2026-08",
+          "views": 4188
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2025-03",
+          "views": 0.06685356472065188
+        },
+        {
+          "month": "2025-04",
+          "views": 0.014470146082105693
+        },
+        {
+          "month": "2025-05",
+          "views": 0.0204955757455992
+        },
+        {
+          "month": "2025-06",
+          "views": 0.016288235751146383
+        },
+        {
+          "month": "2025-07",
+          "views": 0.03615569491372169
+        },
+        {
+          "month": "2025-08",
+          "views": 0.027174860028274465
+        },
+        {
+          "month": "2025-09",
+          "views": 0.02803544406808917
+        },
+        {
+          "month": "2025-10",
+          "views": 0.03736164907956882
+        },
+        {
+          "month": "2025-11",
+          "views": 0.02471305608793657
+        },
+        {
+          "month": "2025-12",
+          "views": 0.054775270333608905
+        },
+        {
+          "month": "2026-01",
+          "views": 0.04840716388590638
+        },
+        {
+          "month": "2026-02",
+          "views": 0.0636556568768433
+        },
+        {
+          "month": "2026-03",
+          "views": 0.06494219784258004
+        },
+        {
+          "month": "2026-04",
+          "views": 0.12304510172061656
+        },
+        {
+          "month": "2026-05",
+          "views": 1.4957823998098503
+        },
+        {
+          "month": "2026-06",
+          "views": 33.13359711023113
+        },
+        {
+          "month": "2026-07",
+          "views": 22.043602917097864
+        },
+        {
+          "month": "2026-08",
+          "views": 23.75456538016448
+        }
+      ],
+      "name": "pt",
+      "topic": "Claude Code",
+      "resolution": {
+        "lang": "pt",
+        "project": "pt.wikipedia",
+        "article": "Claude",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-03",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "es",
+      "score": 264,
+      "why": "growing (share of edition views +399% YoY (raw +279%, whole edition -22%)), trust high, 26.5 views per 1M edition views"
+    },
+    {
+      "name": "pt",
+      "score": 134,
+      "why": "growing (trend +9464%/yr), trust medium, 6.7 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

@@ -13,7 +13,8 @@ const HELP = `
 Usage: node scripts/report.ts --analysis <path/to/analysis.json> --lang <code> [options]
 
 Render a one-page A4 PDF — your title, verdict and findings plus a table and a chart from analysis.json —
-entirely in ONE language: the language the user wrote in. Checks numbers, verdict labels, language and layout.
+entirely in ONE language: the language the user wrote in. Checks numbers, ratios, verdict labels (and a relative
+decline blamed on the platform), language and layout.
 
 Options:
   --lang uk|en         language of the whole report (built-in: ${Object.keys(BUILT_IN).join(", ")}). Guessed from your text if omitted.
@@ -26,7 +27,7 @@ Options:
   --chart indexed|absolute   indexed = interest over time (default), absolute = views per 1M edition views
   --out FILE           default: report.pdf next to analysis.json
 
-Every number must come from analyze.ts output; for a difference between two series, state both numbers.
+Every number must come from analyze.ts output; no ratios or differences ("4×", "20 pp more") — state both numbers.
 Translate tool terms: flat, growing, declining, trust, YoY… (uk: без змін, зростає, спадає, довіра, р/р).
 
 Example:
@@ -45,8 +46,9 @@ if (args["labels-template"]) {
 }
 
 let renderPdf: typeof import("./lib/pdf.ts").renderPdf;
+let fontFor: typeof import("./lib/pdf.ts").fontFor;
 try {
-  ({ renderPdf } = await import("./lib/pdf.ts"));
+  ({ renderPdf, fontFor } = await import("./lib/pdf.ts"));
 } catch (e) {
   fail(`PDF dependencies are missing (${String((e as Error).message).split("\n")[0]}). Run \`npm ci\` in the skill directory, then retry.`, EXIT.SETUP);
 }
@@ -102,17 +104,21 @@ const input = {
 // quality checks on everything the agent wrote
 const numbers = checkClaims(agentText, a);
 if (numbers.unverified.length) problems.push(`numbers not found in analysis.json: ${numbers.unverified.join(", ")} — use the exact values from analyze.ts output (state both numbers instead of a computed difference)`);
+if (numbers.ratios.length) problems.push(`computed ratios ${numbers.ratios.join(", ")} are not in the data — write both numbers instead ("2 094 vs 537")`);
 const labels = checkLabels(agentText, a.series);
 for (const l of labels) problems.push(`${l} — use the verdict label from analyze.ts`);
-const properNames = [...a.series.map((s) => s.article), ...a.topics];
+const properNames = [...a.series.map((s) => s.article), ...a.topics, ...(a.excluded ?? []).flatMap((x) => x.searchHits ?? [])];
 const language = checkLanguage(agentText, lang, properNames);
 for (const l of language) problems.push(`language (${lang}): ${l}`);
 if (!rawVerdict || !rawFindings) problems.push("used auto-generated draft text — for a shared report pass your own --verdict and --findings in the user's language");
+for (const part of agentText.split(/\n|\|/).filter(Boolean)) {
+  if (fontFor(part) === "none") problems.push(`the PDF fonts cannot draw some characters in "${part.slice(0, 60)}" (emoji; Arabic, Hebrew, Indic, Thai… scripts; CJK when no fallback font is installed) — drop them, or write the names in the report language or in Latin letters`);
+}
 if (!rawTitle && lang !== "en") problems.push("no --title: the default title uses the English topic names — pass a title in the user's language");
 
 const base = dirname(resolvePath(analysisPath));
 const out = resolvePath(str(args.out, "out") ?? join(base, "report.pdf"));
-const content = buildReportContent(a, input, L, lang, new Date().toISOString().slice(0, 10));
+const content = buildReportContent(a, input, L, lang, new Date().toISOString().slice(0, 10), fontFor);
 const { pages } = await renderPdf(content, out);
 if (pages > 1) problems.push(`PDF has ${pages} pages (must be 1) — shorten --findings/--caveats or use fewer languages`);
 

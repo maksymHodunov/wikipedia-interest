@@ -17,15 +17,22 @@ observed month to the end of the requested period, so "last 12" always means 12 
 The growth metrics need 24 months (12 vs 12); with less, they are `null` and the verdict falls back to `trendAnnual`.
 
 **Verdict:** `g = relativeGrowth ?? robustGrowth ?? trendAnnual`; `g > 10` growing, `g < −10` declining, otherwise flat;
-`null` → insufficient-data. The ±10 % dead band avoids calling noise a trend.
+`null` → insufficient-data. The ±10 % dead band avoids calling noise a trend. A **level shift** (below) also gives
+insufficient-data, with the basis "not comparable: the article changed around <month>".
+
+**Level shift** (`levelShift`): with ≥ 8 months, compare `m1` = median of the first half with `m3` = median of the last
+3 months. If `m3 ≥ 100` and `m3 > 20 × m1` (or `m1 = 0`), the article was created, renamed or merged inside the period
+— its growth describes the article's history, not interest. The month reported is the first one above `5 × m1` after
+which the median stays above it. Calibrated on testing data: pt "Claude (AI)" ×894 and en ×2 070 were renames;
+es "Claude (chatbot)" ×5.1 was real growth and stays measured.
 
 ## Size and quality
 
 | Metric | Formula | Notes |
 |---|---|---|
-| `avgMonthlyLast12`, `totalLast12` | mean / sum of the last 12 months | absolute audience size |
+| `avgMonthlyLast12`, `totalLast12` | mean / sum of the last 12 months of human views | absolute audience size; the stdout summary calls it `humanViewsPerMonth` |
 | `perMillionLast12` | mean over the last 12 months of `views / edition views × 1e6` | compare languages: removes edition size |
-| `botShare` | `automated / (user + automated)` over the last 12 months | `automated` = Wikimedia's heuristic for undeclared bots; declared crawlers (`spider`) are not counted at all |
+| `botShare` | `automated / (user + automated)` over the last 12 months | `automated` = Wikimedia's heuristic for undeclared bots; declared crawlers (`spider`) are not counted at all. Every other number already excludes both — never subtract `botShare` again |
 | `spikeMonths`, `spikeShare` | month > 2.5 × median of the 6 months on each side | marked ○ on charts |
 | `completeness` | months with a record / calendar months from first record to period end | < 0.95 = gaps |
 | `peakMonth` | month with the most views | |
@@ -37,7 +44,8 @@ Trust answers "how far can we believe this verdict?", not "is it good news?".
 
 | Condition | Penalty |
 |---|---|
-| article matched by text search with no interlanguage link (`search/low`, only with `--include-low-confidence`) | −50 |
+| level shift: the article jumped > 20× (created, renamed or merged inside the period) | −40 |
+| low-confidence match (`search/low`, or a `title-mismatch` langlink; only kept with `--include-low-confidence`) | −50 |
 | article matched by text search in the anchor language (`search/medium`) | −20 |
 | data starts ≥ 3 months after the requested start (new or renamed article) | −10 |
 | < 6 / < 12 / < 24 months of data | −60 / −40 / −15 |
@@ -46,7 +54,7 @@ Trust answers "how far can we believe this verdict?", not "is it good news?".
 | spike-driven: `yoy` > 10 % but `robustGrowth` < 0 | −20 |
 | botShare > 40 % / > 30 % / > 15 % | −35 / −25 / −10 |
 | r² < 0.2 | −15 |
-| avgMonthly < 300 | −20 |
+| `avgMonthlyLast12` (`humanViewsPerMonth`) < 300 | −20 |
 | raw and relative growth both beyond ±10 % in opposite directions | −10 |
 
 ## Ranking score
@@ -57,34 +65,75 @@ probability. Always explain it with the `why` string.
 
 ## Indexed chart
 
-Each series is divided by the **median of its first 6 months** and × 100. A median base keeps a spike in month 1
-(e.g. a September school-year peak) from making the whole line look like a collapse.
+Each series is divided by the **median of all its months** and × 100 ("median month = 100"); if that median is 0
+(a mostly empty series), the median of its non-zero months is used. A median base keeps one spike — a September
+school-year peak, a news month — from rescaling the whole line, and lines of very different sizes share one axis.
 
 ## Claim check (`scripts/lib/claims.ts`)
 
-`report.ts` and `check_claims.ts` extract every number from the agent's text and look for it in `analysis.json`.
+`report.ts` and `check_claims.ts` extract every number from the agent's text and look for it in `analysis.json`
+(`check_claims.ts --analysis a.json,b.json` checks against several runs, for a follow-up that compares with an earlier one).
 - Ignored: dates and years (2024, 2025-09), bare integers ≤ 12 ("3 languages"), "1M" used as a unit.
 - Parsed: `1 431` / `1,431` = 1431; `36,8` / `36.8` = 36.8; k / тис / M / млн multipliers; `−` and `–` as minus.
+- A range is two numbers with the same unit: "78–82 %" = 78 % and 82 % (found in iteration 7: the dash was read as a
+  minus and 78 as a plain number).
+- **Ratios** ("4×", "2.3x", "18 times", "4-fold", "в 4 рази", "у 2,5 раза") are never in the data and are listed under
+  `ratios`, whatever their size — the SKILL.md rule is "write both numbers". The skill's own factors (spike 2.5×,
+  level shift 20×) are allowed. Found in 7 of 20 answer turns in iterations 6–8, e.g. "Italy has 2.3× the audience".
 - Percentages are matched only against percentage metrics (growth, bot share, …), plain numbers only against counts,
   rates and scores — otherwise any "12 %" would match some month with 12 views per 1M.
 - Tolerance ±0.55, or ±2.5 % for values ≥ 100 (so "~1 400" matches 1 431). An explicit sign must match
   ("+63 %" fails against −63); unsigned numbers match either sign ("fell 63 %").
 - Computed differences ("20 pp more than …") are not in the data and are reported as unverified — state both numbers.
 
+## Label check (`checkLabels`)
+
+- A sentence naming exactly one analysed language must not call it growing when its verdict is flat or declining
+  (or declining when it is growing). Sentences with two languages, both directions or a negation are skipped, and
+  direction words next to "platform / edition / overall / traffic" describe the whole edition, not the series.
+- **Platform excuse:** when the verdicts use `relativeGrowth`, a sentence that makes the platform the cause of the
+  decline ("due to the platform-wide decline", "appears to be a platform-wide effect", «через загальну втрату трафіку
+  Вікіпедії», «відбився загальне скорочення трафіку») is a problem: the share already removes the edition-wide change.
+  Sentences about raw numbers ("raw views fell, largely due to …") and "despite the platform decline" are fine.
+  Seen in iterations 3, 6, 7 and 8.
+- **Trust as a percentage** ("100% довіра", "trust high (90%)") is a problem: trust is a 0–100 score. The number itself
+  passes the claim check (completeness is 100 %), so this needs its own rule (iterations 1, 3 and 8).
+
 ## Language check (`checkLanguage` in `scripts/lib/claims.ts`)
 
 The answer and the PDF must be in one language — the user's. `report.ts` runs this on the agent's text; `check_claims.ts
 --lang <code>` runs it on a chat draft. Article titles and topic names are removed first (proper names).
 - **uk:** Russian-only letters (ы э ъ ё); Russian-only endings (-ия/-ии/-ию/-ией, -ость, -уется/-ается/-яется, -тся
-  without ь, -ськую); frequent Russian words seen in testing (растет, растущий, Википедия, что, как, или, …); calques
-  in the phrases where they are wrong («доля переглядів» → частка, «на українській мові» → українською мовою); and
-  "Wikipedia" in Latin letters (→ Вікіпедія).
+  without ь, -ськую); frequent Russian words seen in testing (растет, растущий, меньших, больше, лучше, прокси,
+  Википедия, что, как, или, …); calques in the phrases where they are wrong («доля переглядів» → частка, «на
+  французькій мові» / «шукати на французькому,» → французькою, «артикль» for a Wikipedia article → стаття,
+  «цілеуказ…»); "Wikipedia" in Latin letters (→ Вікіпедія); and any other word in Latin letters that starts lowercase
+  ("interesse", "keyword volumes", "vs") — capitalised names (Google Trends, ChatGPT), language codes (uk, kk), quoted
+  text, code, links and file paths are kept.
 - **every language except en:** tool terms left in English (flat, growing, declining, trust, high/medium/low, YoY, views…).
-- Retro-check on 27 saved Ukrainian Haiku answers: 23 had issues (mostly "Wikipedia", "YoY", "растет", English
-  labels); 0 false positives on the clean ones and on 44 reference Ukrainian strings.
+- Retro-check on 27 saved Ukrainian Haiku answers (iteration 5): 23 had issues (mostly "Wikipedia", "YoY", "растет",
+  English labels); 0 false positives on the clean ones and on 44 reference Ukrainian strings. The Latin-letter and
+  calque rules (iteration 7) found issues in 15 of 34 saved Ukrainian answers («szeptember», «middle», «output»,
+  «interesse», «артиклю»), with no false positives once article titles and search hits count as names.
+- Not caught: typos and invented words («Ретероманська», «вимірити»), broken agreement, wrong comparisons ("the
+  smallest decline, −16 % vs −10 %"). Those need a human reader or a spell checker (roadmap).
+
+**Notes in the user's language** (`scripts/lib/notes.ts`): every trust reason and verdict basis is stored as
+`{ key, vars }`; analysis.json keeps the English text, and `analyze.ts --lang uk` prints them in Ukrainian, so the
+model copies «малий обсяг (переглядів на місяць: 133) — малі числа сильно коливаються» instead of translating
+"small numbers swing wildly" (which came back as «коливаються дико» in iteration 7).
 
 The report's own UI text comes from `scripts/lib/i18n.ts` (built-in uk, en; any other language through
 `--labels-template` → translated JSON → `--labels`, validated for missing keys and placeholders).
+
+## PDF fonts (`scripts/lib/fonts.ts`)
+
+DejaVu Sans (bundled via npm) draws Latin, Cyrillic (incl. Kazakh), Greek and Vietnamese. Text it cannot draw — e.g.
+Japanese, Korean or Chinese article titles — uses a system fallback font: `WI_FALLBACK_FONT` (a .ttf/.otf path) or
+Arial Unicode (macOS, Windows). The chart has a single font, so its legend shows language codes (or `lang: topic`).
+Scripts that need shaping (Arabic, Hebrew, Indic, Thai, …) and emoji are never drawn: article titles fall back to the
+topic name, and agent text containing them is a `problems` item in `report.ts`. Found in testing: ja/ko titles
+rendered as empty boxes before the fallback existed.
 
 ## Known limitations of the source
 

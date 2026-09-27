@@ -1,0 +1,284 @@
+{
+  "topics": [
+    "Financial literacy"
+  ],
+  "langs": [
+    "uk",
+    "kk"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/financial-literacy",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/financial-literacy/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/financial-literacy/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/financial-literacy/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/financial-literacy/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Фінансова грамотність",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 1596,
+      "avgMonthlyLast12": 133,
+      "perMillionLast12": 2.3,
+      "yoy": -54.8,
+      "robustGrowth": -58.8,
+      "relativeGrowth": -38.5,
+      "editionGrowth": -28.2,
+      "trendAnnual": -59.6,
+      "r2": 0.75,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 471
+      },
+      "botShare": 0.18,
+      "trust": {
+        "score": 70,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (18%)",
+          "low volume (133 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -39% YoY — the edition-wide change (-28%) is already removed; raw views -59%"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 412
+        },
+        {
+          "month": "2024-10",
+          "views": 296
+        },
+        {
+          "month": "2024-11",
+          "views": 313
+        },
+        {
+          "month": "2024-12",
+          "views": 428
+        },
+        {
+          "month": "2025-01",
+          "views": 471
+        },
+        {
+          "month": "2025-02",
+          "views": 262
+        },
+        {
+          "month": "2025-03",
+          "views": 354
+        },
+        {
+          "month": "2025-04",
+          "views": 288
+        },
+        {
+          "month": "2025-05",
+          "views": 326
+        },
+        {
+          "month": "2025-06",
+          "views": 106
+        },
+        {
+          "month": "2025-07",
+          "views": 162
+        },
+        {
+          "month": "2025-08",
+          "views": 114
+        },
+        {
+          "month": "2025-09",
+          "views": 233
+        },
+        {
+          "month": "2025-10",
+          "views": 183
+        },
+        {
+          "month": "2025-11",
+          "views": 163
+        },
+        {
+          "month": "2025-12",
+          "views": 185
+        },
+        {
+          "month": "2026-01",
+          "views": 111
+        },
+        {
+          "month": "2026-02",
+          "views": 127
+        },
+        {
+          "month": "2026-03",
+          "views": 105
+        },
+        {
+          "month": "2026-04",
+          "views": 124
+        },
+        {
+          "month": "2026-05",
+          "views": 171
+        },
+        {
+          "month": "2026-06",
+          "views": 67
+        },
+        {
+          "month": "2026-07",
+          "views": 75
+        },
+        {
+          "month": "2026-08",
+          "views": 52
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 5.52951219435269
+        },
+        {
+          "month": "2024-10",
+          "views": 3.5656522835641833
+        },
+        {
+          "month": "2024-11",
+          "views": 3.7335215123601033
+        },
+        {
+          "month": "2024-12",
+          "views": 5.069199608321423
+        },
+        {
+          "month": "2025-01",
+          "views": 5.00468543750976
+        },
+        {
+          "month": "2025-02",
+          "views": 3.197001632227963
+        },
+        {
+          "month": "2025-03",
+          "views": 4.446718886722475
+        },
+        {
+          "month": "2025-04",
+          "views": 3.9918567231696427
+        },
+        {
+          "month": "2025-05",
+          "views": 4.721879624427489
+        },
+        {
+          "month": "2025-06",
+          "views": 1.9756703281677879
+        },
+        {
+          "month": "2025-07",
+          "views": 2.604104795735467
+        },
+        {
+          "month": "2025-08",
+          "views": 1.844605960371683
+        },
+        {
+          "month": "2025-09",
+          "views": 3.803665185653306
+        },
+        {
+          "month": "2025-10",
+          "views": 2.770852245409326
+        },
+        {
+          "month": "2025-11",
+          "views": 2.4278465961404536
+        },
+        {
+          "month": "2025-12",
+          "views": 3.3334921396976105
+        },
+        {
+          "month": "2026-01",
+          "views": 1.8355609877871364
+        },
+        {
+          "month": "2026-02",
+          "views": 2.46055612288273
+        },
+        {
+          "month": "2026-03",
+          "views": 1.9051142083308792
+        },
+        {
+          "month": "2026-04",
+          "views": 2.3227376535254662
+        },
+        {
+          "month": "2026-05",
+          "views": 3.056297154442577
+        },
+        {
+          "month": "2026-06",
+          "views": 1.3868187801260508
+        },
+        {
+          "month": "2026-07",
+          "views": 1.4151197850783996
+        },
+        {
+          "month": "2026-08",
+          "views": 1.0252268299574356
+        }
+      ],
+      "name": "uk",
+      "topic": "Financial literacy",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Фінансова грамотність",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "uk",
+      "score": 13,
+      "why": "declining (share of edition views -39% YoY — the edition-wide change (-28%) is already removed; raw views -59%), trust high, 2.3 views per 1M edition views"
+    }
+  ],
+  "excluded": [
+    {
+      "topic": "Financial literacy",
+      "lang": "kk",
+      "reason": "no article linked to the topic (text search only)",
+      "searchHits": [
+        "Скотт Бессант"
+      ]
+    }
+  ],
+  "warnings": [
+    "excluded Financial literacy@kk: no article on this topic in those editions (Wikipedia cannot measure interest there; not proof of low demand). To use a proxy article, pick one from \"excluded[].searchHits\" or scripts/resolve.ts --search and pass --articles <lang>=\"<Title>\"."
+  ]
+}

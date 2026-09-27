@@ -1,0 +1,287 @@
+{
+  "topics": [
+    "Personal finance"
+  ],
+  "langs": [
+    "uk",
+    "kk"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/personal-finance",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/personal-finance/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/personal-finance/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/personal-finance/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/personal-finance/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Фінанси домогосподарства",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 357,
+      "avgMonthlyLast12": 30,
+      "perMillionLast12": 0.5,
+      "yoy": -48.9,
+      "robustGrowth": -42.1,
+      "relativeGrowth": -23.9,
+      "editionGrowth": -28.2,
+      "trendAnnual": -53.5,
+      "r2": 0.55,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-11",
+        "views": 132
+      },
+      "botShare": 0.4,
+      "trust": {
+        "score": 45,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (40% of views are bots) — human counts may be contaminated too",
+          "low volume (30 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -24% YoY — the edition-wide change (-28%) is already removed; raw views -42%"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 91
+        },
+        {
+          "month": "2024-10",
+          "views": 111
+        },
+        {
+          "month": "2024-11",
+          "views": 132
+        },
+        {
+          "month": "2024-12",
+          "views": 77
+        },
+        {
+          "month": "2025-01",
+          "views": 36
+        },
+        {
+          "month": "2025-02",
+          "views": 36
+        },
+        {
+          "month": "2025-03",
+          "views": 49
+        },
+        {
+          "month": "2025-04",
+          "views": 62
+        },
+        {
+          "month": "2025-05",
+          "views": 46
+        },
+        {
+          "month": "2025-06",
+          "views": 26
+        },
+        {
+          "month": "2025-07",
+          "views": 16
+        },
+        {
+          "month": "2025-08",
+          "views": 16
+        },
+        {
+          "month": "2025-09",
+          "views": 46
+        },
+        {
+          "month": "2025-10",
+          "views": 60
+        },
+        {
+          "month": "2025-11",
+          "views": 28
+        },
+        {
+          "month": "2025-12",
+          "views": 34
+        },
+        {
+          "month": "2026-01",
+          "views": 20
+        },
+        {
+          "month": "2026-02",
+          "views": 33
+        },
+        {
+          "month": "2026-03",
+          "views": 29
+        },
+        {
+          "month": "2026-04",
+          "views": 24
+        },
+        {
+          "month": "2026-05",
+          "views": 19
+        },
+        {
+          "month": "2026-06",
+          "views": 19
+        },
+        {
+          "month": "2026-07",
+          "views": 18
+        },
+        {
+          "month": "2026-08",
+          "views": 27
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 1.221324295354599
+        },
+        {
+          "month": "2024-10",
+          "views": 1.337119606336569
+        },
+        {
+          "month": "2024-11",
+          "views": 1.5745202544138455
+        },
+        {
+          "month": "2024-12",
+          "views": 0.9119821725251158
+        },
+        {
+          "month": "2025-01",
+          "views": 0.3825237277077524
+        },
+        {
+          "month": "2025-02",
+          "views": 0.43928266702368957
+        },
+        {
+          "month": "2025-03",
+          "views": 0.6155062865802294
+        },
+        {
+          "month": "2025-04",
+          "views": 0.8593580445712425
+        },
+        {
+          "month": "2025-05",
+          "views": 0.6662774930173757
+        },
+        {
+          "month": "2025-06",
+          "views": 0.4845983823807782
+        },
+        {
+          "month": "2025-07",
+          "views": 0.25719553538128065
+        },
+        {
+          "month": "2025-08",
+          "views": 0.2588920646135695
+        },
+        {
+          "month": "2025-09",
+          "views": 0.7509381911590219
+        },
+        {
+          "month": "2025-10",
+          "views": 0.9084761460358447
+        },
+        {
+          "month": "2025-11",
+          "views": 0.41705340301799204
+        },
+        {
+          "month": "2025-12",
+          "views": 0.6126417986471284
+        },
+        {
+          "month": "2026-01",
+          "views": 0.33073170951119574
+        },
+        {
+          "month": "2026-02",
+          "views": 0.6393571027963
+        },
+        {
+          "month": "2026-03",
+          "views": 0.5261744003961476
+        },
+        {
+          "month": "2026-04",
+          "views": 0.4495621264887999
+        },
+        {
+          "month": "2026-05",
+          "views": 0.3395885727158419
+        },
+        {
+          "month": "2026-06",
+          "views": 0.3932769674984323
+        },
+        {
+          "month": "2026-07",
+          "views": 0.3396287484188159
+        },
+        {
+          "month": "2026-08",
+          "views": 0.5323293155548222
+        }
+      ],
+      "name": "uk",
+      "topic": "Personal finance",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Фінанси домогосподарства",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "uk",
+      "score": 14,
+      "why": "declining (share of edition views -24% YoY — the edition-wide change (-28%) is already removed; raw views -42%), trust medium, 0.5 views per 1M edition views"
+    }
+  ],
+  "excluded": [
+    {
+      "topic": "Personal finance",
+      "lang": "kk",
+      "reason": "no article linked to the topic (text search only)",
+      "searchHits": [
+        "BNP Paribas",
+        "Канада Ұлттық банкі",
+        "Калифорния университеті, Санта-Круз",
+        "Калифорния университеті, Санта-Барбара"
+      ]
+    }
+  ],
+  "warnings": [
+    "excluded Personal finance@kk: no article on this topic in those editions (Wikipedia cannot measure interest there; not proof of low demand). To use a proxy article, pick one from \"excluded[].searchHits\" or scripts/resolve.ts --search and pass --articles <lang>=\"<Title>\"."
+  ]
+}

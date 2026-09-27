@@ -9,6 +9,7 @@ import { computeMetrics, rankSeries, spikeMonths, type Point, type SeriesMetrics
 import { lineChart } from "./lib/svg.ts";
 import { EXIT, LANG_RE, dateRange, fail, fmtMonth, handleCli, list, parseArgs, printJson, str, writeOut } from "./lib/util.ts";
 import { BUILT_IN } from "./lib/i18n.ts";
+import { NOTES, renderNote } from "./lib/notes.ts";
 
 const HELP = `
 Usage: node scripts/analyze.ts --topic "<English topic>" --langs <codes> [options]
@@ -30,8 +31,9 @@ Options:
   --no-normalize                 skip per-1M normalisation (saves 1 API call per language)
   --no-bots                      skip automated-traffic fetch (saves 1 API call per series)
   --include-low-confidence       keep articles found only by text search (default: excluded, listed in "excluded")
-  --lang uk                      language of the user's message: adds verdictLabel/trustLabel in that language to copy
-                                 into your answer (built-in: uk, en; other codes: translate the labels yourself)
+  --lang uk                      language of the user's message: verdict, trustReasons, verdictLabel and trustLabel
+                                 come in that language to copy into your answer (built-in: uk, en; other codes:
+                                 translate them yourself)
 
 Examples:
   node scripts/analyze.ts --topic "Intermittent fasting" --langs pl,cs --months 24
@@ -61,6 +63,21 @@ const includeLow = Boolean(args["include-low-confidence"]);
 const userLang = str(args.lang, "lang")?.toLowerCase();
 if (userLang !== undefined && !LANG_RE.test(userLang)) fail(`--lang must be a language code like uk or en, got "${userLang}"`);
 const UL = userLang ? BUILT_IN[userLang] : undefined;
+const localNotes = !!(UL && userLang && NOTES[userLang]); // verdict basis and trust reasons in the user's language
+
+// An edition is not a country (evals 7–8: Switzerland → de/fr/it treated as Swiss readers; Kazakhstan → kk only).
+const READERS: Record<string, string> = {
+  en: "readers worldwide", de: "Germany, Austria, Switzerland", fr: "France, Belgium, Switzerland, Canada, Francophone Africa",
+  it: "Italy, Switzerland", es: "Spain, Latin America, the US", pt: "Brazil, Portugal, Lusophone Africa", nl: "the Netherlands, Flanders",
+  ru: "Russia, Belarus, Kazakhstan and other post-Soviet countries", ar: "the Arab world", sv: "Sweden, Finland",
+  zh: "Taiwan, Hong Kong, Singapore, Malaysia and the diaspora — Wikipedia is blocked in mainland China",
+  kk: "Kazakhstan, where many people read ru instead", uk: "Ukraine, where many people also read ru or en",
+  sr: "Serbia, Bosnia, Montenegro", ms: "Malaysia, Brunei", rm: "Switzerland (Graubünden) — a very small edition",
+};
+function readersNote(ls: string[]): string | null {
+  const known = ls.filter((l) => READERS[l]);
+  return known.length ? `Editions are not countries — ${known.map((l) => `${l}: ${READERS[l]}`).join("; ")}. If the user asked about a country, say whose readers each edition mostly measures.` : null;
+}
 const slug = topics.join("_").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "").slice(0, 40) || "analysis";
 const outDir = resolvePath(str(args.out, "out") ?? join("out", slug));
 
@@ -81,11 +98,12 @@ const progress = (msg: string) => process.stderr.write(`[analyze ${Math.round((D
 
 try {
   // 1. resolve titles
-  const resolved: { topic: string; items: Resolved[] }[] = [];
+  const resolved: { topic: string; items: Resolved[]; anchorIssue?: { kind: string; anchor: string; searchHits: string[] } }[] = [];
   progress(`${topics.length} topic(s) × ${langs.length} language(s); cold runs take ~5 s per series (longer if throttled)`);
   for (const [i, t] of topics.entries()) {
     progress(`resolving "${t}" (${i + 1}/${topics.length})`);
-    resolved.push({ topic: t, items: (await resolveTopic(t, langs, { source, explicit })).items });
+    const rr = await resolveTopic(t, langs, { source, explicit });
+    resolved.push({ topic: t, items: rr.items, anchorIssue: rr.anchorIssue });
   }
 
   // 2. project totals (one call per language)
@@ -100,12 +118,17 @@ try {
   for (const r of resolved) {
     for (const it of r.items) {
       if (!it.article) {
-        excluded.push({ topic: r.topic, lang: it.lang, reason: "no article found", searchHits: [] });
+        excluded.push(it.note === "disambiguation"
+          ? { topic: r.topic, lang: it.lang, reason: `"${r.topic}" is ambiguous (disambiguation page) — re-run with a specific English title`, searchHits: (it.candidates ?? []).slice(0, 5) }
+          : { topic: r.topic, lang: it.lang, reason: "no article found", searchHits: [] });
         continue;
       }
       if (it.confidence === "low" && !includeLow) {
-        // Safe default: a text-search hit with no interlanguage link is usually a different subject.
-        excluded.push({ topic: r.topic, lang: it.lang, reason: "no article linked to the topic (text search only)", searchHits: [it.article, ...(it.candidates ?? [])].slice(0, 4) });
+        // Safe default: a text-search hit with no interlanguage link, or an article whose title does not contain the
+        // topic, is usually a different subject ("Claude Code" → the Claude chatbot article).
+        excluded.push(it.note === "title-mismatch"
+          ? { topic: r.topic, lang: it.lang, reason: `no article titled "${r.topic}" — the closest is "${it.article}" (a different subject?)`, searchHits: (it.candidates ?? [it.article]).slice(0, 5) }
+          : { topic: r.topic, lang: it.lang, reason: "no article linked to the topic (text search only)", searchHits: [it.article, ...(it.candidates ?? [])].slice(0, 4) });
         continue;
       }
       progress(`fetching ${r.topic}@${it.lang} "${it.article}"`);
@@ -117,8 +140,14 @@ try {
       series.push({ ...m, name: nameOf(r.topic, it.lang), topic: r.topic, resolution: it, spikes: spikeMonths(m.points).map((p) => p.month) });
     }
   }
-  if (excluded.length) {
-    warnings.push(`excluded ${excluded.map((x) => `${x.topic}@${x.lang}`).join(", ")}: no article on this topic in those editions (a finding in itself — small or young audience). To use a proxy article, pick one from "excluded[].searchHits" or scripts/resolve.ts --search and pass --articles <lang>="<Title>".`);
+  for (const r of resolved) {
+    const issue = r.anchorIssue;
+    if (issue?.kind === "disambiguation") warnings.push(`"${r.topic}" is ambiguous: Wikipedia's "${issue.anchor}" is a disambiguation page, so nothing was analysed. Re-run with the specific English title you mean, e.g. ${issue.searchHits.slice(0, 3).map((h) => `"${h}"`).join(", ")}.`);
+    if (issue?.kind === "title-mismatch") warnings.push(`"${r.topic}" has no Wikipedia article of its own: the closest is "${issue.anchor}", a different subject, so it was excluded. Tell the user there is no article for "${r.topic}"; only if they agree, analyse "${issue.anchor}" as a clearly labelled proxy (--topic "${issue.anchor}").`);
+  }
+  const plainExcluded = excluded.filter((x) => x.reason === "no article found" || x.reason.startsWith("no article linked"));
+  if (plainExcluded.length) {
+    warnings.push(`excluded ${plainExcluded.map((x) => `${x.topic}@${x.lang}`).join(", ")}: no article on this topic in those editions (Wikipedia cannot measure interest there; not proof of low demand). To use a proxy article, pick one from "excluded[].searchHits" or scripts/resolve.ts --search and pass --articles <lang>="<Title>".`);
   }
   if (!series.length) fail("no usable article for any topic/language: " + warnings.join("; "), EXIT.NO_DATA);
 
@@ -152,15 +181,19 @@ try {
     period, normalized: normalize,
     series: series.map((s) => ({
       name: s.name, article: s.article, match: `${s.resolution.method}/${s.resolution.confidence}`,
-      verdict: `${s.verdict.label} — ${s.verdict.basis}`,
+      // with --lang uk the verdict and trust reasons come in Ukrainian: the model copies them instead of translating
+      verdict: localNotes && s.verdict.note
+        ? `${UL![s.verdict.label === "insufficient-data" ? "verdict_insufficient" : (`verdict_${s.verdict.label}` as const)]} — ${renderNote(s.verdict.note, userLang)}`
+        : `${s.verdict.label} — ${s.verdict.basis}`,
       ...(UL && {
         verdictLabel: UL[s.verdict.label === "insufficient-data" ? "verdict_insufficient" : (`verdict_${s.verdict.label}` as const)],
         trustLabel: `${UL[`trust_${s.trust.label}` as const]} (${s.trust.score})`,
       }),
       relativeGrowth: s.relativeGrowth, robustGrowth: s.robustGrowth, editionGrowth: s.editionGrowth, yoy: s.yoy, trendAnnual: s.trendAnnual, r2: s.r2,
-      avgMonthly: s.avgMonthlyLast12, perMillion: s.perMillionLast12, botShare: s.botShare,
+      humanViewsPerMonth: s.avgMonthlyLast12, perMillion: s.perMillionLast12, botShare: s.botShare,
       spikeMonths: s.spikes.join(", ") || "none", peak: s.peakMonth ? `${s.peakMonth.month}: ${s.peakMonth.views}` : null,
-      trust: `${s.trust.label} (${s.trust.score})`, trustReasons: s.trust.reasons,
+      trust: `${s.trust.label} (${s.trust.score})`,
+      trustReasons: localNotes && s.trust.notes ? s.trust.notes.map((n) => renderNote(n, userLang)) : s.trust.reasons,
     })),
     ranking: ranking.map((r) => `${r.name} (score ${r.score}): ${r.why}`),
     excluded,
@@ -168,9 +201,12 @@ try {
     files,
     next: [
       userLang && userLang !== "en"
-        ? `Answer in ${userLang}: copy verdictLabel/trustLabel as printed; before sending, check your draft with node scripts/check_claims.ts --analysis "${files.analysis}" --file draft.md --lang ${userLang}`
+        ? `Answer in ${userLang}: copy verdictLabel, trustLabel${localNotes ? ", verdict and trustReasons (already in " + userLang + ")" : ""} as printed.`
         : `Answer in the user's language${userLang ? "" : " (pass --lang <code> to get labels in it)"}.`,
-      `PDF only if asked: node scripts/report.ts --analysis "${files.analysis}" --lang ${userLang ?? "<code>"} --title "…" --verdict "…" --findings "…|…|…"`,
+      `Check every answer before sending it, follow-ups too: save it to out/draft.md and run node scripts/check_claims.ts --analysis "${files.analysis}" --file out/draft.md --lang ${userLang ?? "<code>"} — then send exactly the checked text. No ratios ("4×"): write both numbers.`,
+      ...(readersNote(langs) ? [readersNote(langs)!] : []),
+      `If the user asked for any report (report, one-pager, summary for the team/CEO, PDF, звіт), the PDF is required before you answer: node scripts/report.ts --analysis "${files.analysis}" --lang ${userLang ?? "<code>"} --title "…" --verdict "…" --findings "…|…|…"`,
+      `humanViewsPerMonth already excludes bots — never subtract botShare from it.`,
     ],
   });
 } catch (e) {

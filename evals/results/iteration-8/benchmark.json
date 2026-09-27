@@ -1,0 +1,73 @@
+{
+  "iteration": "evals/results/iteration-8",
+  "baseline": "evals/results/iteration-8",
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": null,
+      "assertions": "0/0",
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    },
+    "without_skill": {
+      "pass_rate": null,
+      "assertions": "0/0",
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    },
+    "delta": {
+      "pass_rate": null,
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    }
+  },
+  "with_skill_all_evals": {
+    "pass_rate": {
+      "mean": 0.67,
+      "stddev": 0.11,
+      "n": 2
+    },
+    "assertions": "12/18",
+    "time_seconds": {
+      "mean": 95.44,
+      "stddev": 27.42,
+      "n": 2
+    },
+    "tokens": {
+      "mean": 57823,
+      "stddev": 4477,
+      "n": 2
+    },
+    "tool_calls": {
+      "mean": 9,
+      "stddev": 4,
+      "n": 2
+    }
+  },
+  "per_eval": [
+    {
+      "eval": "eval-german-course-tr-it-nl-report",
+      "passRate": 0.78,
+      "passed": 7,
+      "total": 9,
+      "turns": 2,
+      "seconds": 68.022,
+      "tokens": 53346,
+      "calls": 5,
+      "baseline": null
+    },
+    {
+      "eval": "eval-running-switzerland-report",
+      "passRate": 0.56,
+      "passed": 5,
+      "total": 9,
+      "turns": 2,
+      "seconds": 122.862,
+      "tokens": 62300,
+      "calls": 13,
+      "baseline": null
+    }
+  ]
+}

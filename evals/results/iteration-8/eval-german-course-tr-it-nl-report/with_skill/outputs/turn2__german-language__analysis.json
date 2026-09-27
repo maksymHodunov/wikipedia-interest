@@ -1,0 +1,808 @@
+{
+  "topics": [
+    "German language"
+  ],
+  "langs": [
+    "tr",
+    "it",
+    "nl"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/german-language",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/german-language/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/german-language/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/german-language/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/german-language/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "tr",
+      "project": "tr.wikipedia",
+      "article": "Almanca",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 35305,
+      "avgMonthlyLast12": 2942,
+      "perMillionLast12": 27,
+      "yoy": -20.4,
+      "robustGrowth": -23.1,
+      "relativeGrowth": -0.3,
+      "editionGrowth": -18.7,
+      "trendAnnual": -24.7,
+      "r2": 0.72,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 4792
+      },
+      "botShare": 0.17,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (17%)"
+        ],
+        "notes": [
+          {
+            "key": "bots15",
+            "vars": {
+              "pct": 17
+            }
+          }
+        ]
+      },
+      "verdict": {
+        "label": "flat",
+        "basis": "no clear change — -0% is inside the ±10% noise band (share of edition views -0% YoY — the edition-wide change (-19%) is already removed; raw views -23%)",
+        "note": {
+          "key": "flat",
+          "vars": {
+            "g": "-0%"
+          },
+          "inner": {
+            "key": "basisRelative",
+            "vars": {
+              "rel": "-0%",
+              "ed": "-19%",
+              "raw": "-23%"
+            }
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 4613
+        },
+        {
+          "month": "2024-10",
+          "views": 4792
+        },
+        {
+          "month": "2024-11",
+          "views": 4125
+        },
+        {
+          "month": "2024-12",
+          "views": 4495
+        },
+        {
+          "month": "2025-01",
+          "views": 4032
+        },
+        {
+          "month": "2025-02",
+          "views": 3373
+        },
+        {
+          "month": "2025-03",
+          "views": 3747
+        },
+        {
+          "month": "2025-04",
+          "views": 3445
+        },
+        {
+          "month": "2025-05",
+          "views": 3068
+        },
+        {
+          "month": "2025-06",
+          "views": 2730
+        },
+        {
+          "month": "2025-07",
+          "views": 2826
+        },
+        {
+          "month": "2025-08",
+          "views": 3128
+        },
+        {
+          "month": "2025-09",
+          "views": 3425
+        },
+        {
+          "month": "2025-10",
+          "views": 3434
+        },
+        {
+          "month": "2025-11",
+          "views": 3222
+        },
+        {
+          "month": "2025-12",
+          "views": 3376
+        },
+        {
+          "month": "2026-01",
+          "views": 3384
+        },
+        {
+          "month": "2026-02",
+          "views": 2575
+        },
+        {
+          "month": "2026-03",
+          "views": 2624
+        },
+        {
+          "month": "2026-04",
+          "views": 2562
+        },
+        {
+          "month": "2026-05",
+          "views": 2771
+        },
+        {
+          "month": "2026-06",
+          "views": 2669
+        },
+        {
+          "month": "2026-07",
+          "views": 2757
+        },
+        {
+          "month": "2026-08",
+          "views": 2506
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 40.219388788224165
+        },
+        {
+          "month": "2024-10",
+          "views": 35.670593915686446
+        },
+        {
+          "month": "2024-11",
+          "views": 31.30799402684459
+        },
+        {
+          "month": "2024-12",
+          "views": 29.187094359045012
+        },
+        {
+          "month": "2025-01",
+          "views": 26.97896983279442
+        },
+        {
+          "month": "2025-02",
+          "views": 27.084657420838806
+        },
+        {
+          "month": "2025-03",
+          "views": 26.548538071485712
+        },
+        {
+          "month": "2025-04",
+          "views": 25.452627886673405
+        },
+        {
+          "month": "2025-05",
+          "views": 23.140524766308797
+        },
+        {
+          "month": "2025-06",
+          "views": 24.01932272689312
+        },
+        {
+          "month": "2025-07",
+          "views": 23.727230548582636
+        },
+        {
+          "month": "2025-08",
+          "views": 28.386561736334105
+        },
+        {
+          "month": "2025-09",
+          "views": 30.72900513845489
+        },
+        {
+          "month": "2025-10",
+          "views": 29.609309387604814
+        },
+        {
+          "month": "2025-11",
+          "views": 24.08419205649676
+        },
+        {
+          "month": "2025-12",
+          "views": 28.9299640105592
+        },
+        {
+          "month": "2026-01",
+          "views": 27.78864811552687
+        },
+        {
+          "month": "2026-02",
+          "views": 24.98954515068317
+        },
+        {
+          "month": "2026-03",
+          "views": 24.39231415657127
+        },
+        {
+          "month": "2026-04",
+          "views": 26.532597719650607
+        },
+        {
+          "month": "2026-05",
+          "views": 25.788780469604667
+        },
+        {
+          "month": "2026-06",
+          "views": 27.145460102326894
+        },
+        {
+          "month": "2026-07",
+          "views": 27.71774862752657
+        },
+        {
+          "month": "2026-08",
+          "views": 26.744861555426933
+        }
+      ],
+      "name": "tr",
+      "topic": "German language",
+      "resolution": {
+        "lang": "tr",
+        "project": "tr.wikipedia",
+        "article": "Almanca",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "it",
+      "project": "it.wikipedia",
+      "article": "Lingua tedesca",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 82185,
+      "avgMonthlyLast12": 6849,
+      "perMillionLast12": 17.9,
+      "yoy": -26,
+      "robustGrowth": -25.8,
+      "relativeGrowth": -14.5,
+      "editionGrowth": -13.4,
+      "trendAnnual": -24.1,
+      "r2": 0.77,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 11588
+      },
+      "botShare": 0.13,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": [],
+        "notes": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -15% YoY — the edition-wide change (-13%) is already removed; raw views -26%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-15%",
+            "ed": "-13%",
+            "raw": "-26%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 9527
+        },
+        {
+          "month": "2024-10",
+          "views": 8851
+        },
+        {
+          "month": "2024-11",
+          "views": 9894
+        },
+        {
+          "month": "2024-12",
+          "views": 9460
+        },
+        {
+          "month": "2025-01",
+          "views": 11588
+        },
+        {
+          "month": "2025-02",
+          "views": 9122
+        },
+        {
+          "month": "2025-03",
+          "views": 9811
+        },
+        {
+          "month": "2025-04",
+          "views": 8832
+        },
+        {
+          "month": "2025-05",
+          "views": 9558
+        },
+        {
+          "month": "2025-06",
+          "views": 7365
+        },
+        {
+          "month": "2025-07",
+          "views": 9085
+        },
+        {
+          "month": "2025-08",
+          "views": 7925
+        },
+        {
+          "month": "2025-09",
+          "views": 7225
+        },
+        {
+          "month": "2025-10",
+          "views": 7286
+        },
+        {
+          "month": "2025-11",
+          "views": 8151
+        },
+        {
+          "month": "2025-12",
+          "views": 6934
+        },
+        {
+          "month": "2026-01",
+          "views": 7688
+        },
+        {
+          "month": "2026-02",
+          "views": 6276
+        },
+        {
+          "month": "2026-03",
+          "views": 6161
+        },
+        {
+          "month": "2026-04",
+          "views": 6965
+        },
+        {
+          "month": "2026-05",
+          "views": 6863
+        },
+        {
+          "month": "2026-06",
+          "views": 5646
+        },
+        {
+          "month": "2026-07",
+          "views": 6724
+        },
+        {
+          "month": "2026-08",
+          "views": 6266
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 22.290364346709392
+        },
+        {
+          "month": "2024-10",
+          "views": 20.167365436295977
+        },
+        {
+          "month": "2024-11",
+          "views": 23.00236315454408
+        },
+        {
+          "month": "2024-12",
+          "views": 21.662649672536304
+        },
+        {
+          "month": "2025-01",
+          "views": 21.7703815559584
+        },
+        {
+          "month": "2025-02",
+          "views": 20.10025160239847
+        },
+        {
+          "month": "2025-03",
+          "views": 21.278700232531232
+        },
+        {
+          "month": "2025-04",
+          "views": 20.909279805425516
+        },
+        {
+          "month": "2025-05",
+          "views": 21.425934977936365
+        },
+        {
+          "month": "2025-06",
+          "views": 19.05574624669717
+        },
+        {
+          "month": "2025-07",
+          "views": 22.326835344445453
+        },
+        {
+          "month": "2025-08",
+          "views": 18.18168524225783
+        },
+        {
+          "month": "2025-09",
+          "views": 18.205599195657726
+        },
+        {
+          "month": "2025-10",
+          "views": 18.6764149794517
+        },
+        {
+          "month": "2025-11",
+          "views": 19.557076110158647
+        },
+        {
+          "month": "2025-12",
+          "views": 18.28788267443948
+        },
+        {
+          "month": "2026-01",
+          "views": 17.80244951516622
+        },
+        {
+          "month": "2026-02",
+          "views": 16.915746587917234
+        },
+        {
+          "month": "2026-03",
+          "views": 16.38259505655766
+        },
+        {
+          "month": "2026-04",
+          "views": 19.83739844159847
+        },
+        {
+          "month": "2026-05",
+          "views": 18.445632086685258
+        },
+        {
+          "month": "2026-06",
+          "views": 16.109617300290928
+        },
+        {
+          "month": "2026-07",
+          "views": 18.533947293582965
+        },
+        {
+          "month": "2026-08",
+          "views": 15.913711376897407
+        }
+      ],
+      "name": "it",
+      "topic": "German language",
+      "resolution": {
+        "lang": "it",
+        "project": "it.wikipedia",
+        "article": "Lingua tedesca",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "nl",
+      "project": "nl.wikipedia",
+      "article": "Duits",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 20022,
+      "avgMonthlyLast12": 1669,
+      "perMillionLast12": 16.4,
+      "yoy": -20.1,
+      "robustGrowth": -21.1,
+      "relativeGrowth": -17.5,
+      "editionGrowth": -8.1,
+      "trendAnnual": -22.3,
+      "r2": 0.58,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 2896
+      },
+      "botShare": 0.25,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (25%)"
+        ],
+        "notes": [
+          {
+            "key": "bots15",
+            "vars": {
+              "pct": 25
+            }
+          }
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -17% YoY — the edition-wide change (-8%) is already removed; raw views -21%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-17%",
+            "ed": "-8%",
+            "raw": "-21%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 2499
+        },
+        {
+          "month": "2024-10",
+          "views": 2071
+        },
+        {
+          "month": "2024-11",
+          "views": 2374
+        },
+        {
+          "month": "2024-12",
+          "views": 2297
+        },
+        {
+          "month": "2025-01",
+          "views": 2896
+        },
+        {
+          "month": "2025-02",
+          "views": 2152
+        },
+        {
+          "month": "2025-03",
+          "views": 2162
+        },
+        {
+          "month": "2025-04",
+          "views": 1860
+        },
+        {
+          "month": "2025-05",
+          "views": 2115
+        },
+        {
+          "month": "2025-06",
+          "views": 1507
+        },
+        {
+          "month": "2025-07",
+          "views": 1490
+        },
+        {
+          "month": "2025-08",
+          "views": 1650
+        },
+        {
+          "month": "2025-09",
+          "views": 1839
+        },
+        {
+          "month": "2025-10",
+          "views": 1749
+        },
+        {
+          "month": "2025-11",
+          "views": 1825
+        },
+        {
+          "month": "2025-12",
+          "views": 1647
+        },
+        {
+          "month": "2026-01",
+          "views": 2069
+        },
+        {
+          "month": "2026-02",
+          "views": 1442
+        },
+        {
+          "month": "2026-03",
+          "views": 1720
+        },
+        {
+          "month": "2026-04",
+          "views": 1378
+        },
+        {
+          "month": "2026-05",
+          "views": 1783
+        },
+        {
+          "month": "2026-06",
+          "views": 1565
+        },
+        {
+          "month": "2026-07",
+          "views": 1459
+        },
+        {
+          "month": "2026-08",
+          "views": 1546
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 24.131676797528915
+        },
+        {
+          "month": "2024-10",
+          "views": 18.680001126753133
+        },
+        {
+          "month": "2024-11",
+          "views": 21.248138002127448
+        },
+        {
+          "month": "2024-12",
+          "views": 19.14744791944181
+        },
+        {
+          "month": "2025-01",
+          "views": 21.294454757066852
+        },
+        {
+          "month": "2025-02",
+          "views": 19.200948426921705
+        },
+        {
+          "month": "2025-03",
+          "views": 18.897721927696303
+        },
+        {
+          "month": "2025-04",
+          "views": 16.802838920939752
+        },
+        {
+          "month": "2025-05",
+          "views": 19.90390526290687
+        },
+        {
+          "month": "2025-06",
+          "views": 16.423970443741023
+        },
+        {
+          "month": "2025-07",
+          "views": 14.33338895137167
+        },
+        {
+          "month": "2025-08",
+          "views": 15.08245854312043
+        },
+        {
+          "month": "2025-09",
+          "views": 18.796335035606024
+        },
+        {
+          "month": "2025-10",
+          "views": 15.612122676685846
+        },
+        {
+          "month": "2025-11",
+          "views": 14.250213128530051
+        },
+        {
+          "month": "2025-12",
+          "views": 16.436507985139002
+        },
+        {
+          "month": "2026-01",
+          "views": 19.176097888372404
+        },
+        {
+          "month": "2026-02",
+          "views": 15.786725153016556
+        },
+        {
+          "month": "2026-03",
+          "views": 18.86533664946466
+        },
+        {
+          "month": "2026-04",
+          "views": 15.598916493373986
+        },
+        {
+          "month": "2026-05",
+          "views": 17.30026317358279
+        },
+        {
+          "month": "2026-06",
+          "views": 15.405195423320201
+        },
+        {
+          "month": "2026-07",
+          "views": 14.313268413553823
+        },
+        {
+          "month": "2026-08",
+          "views": 15.012179334484456
+        }
+      ],
+      "name": "nl",
+      "topic": "German language",
+      "resolution": {
+        "lang": "nl",
+        "project": "nl.wikipedia",
+        "article": "Duits",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "tr",
+      "score": 59,
+      "why": "flat (no clear change — -0% is inside the ±10% noise band (share of edition views -0% YoY — the edition-wide change (-19%) is already removed; raw views -23%)), trust high, 27 views per 1M edition views"
+    },
+    {
+      "name": "it",
+      "score": 48,
+      "why": "declining (share of edition views -15% YoY — the edition-wide change (-13%) is already removed; raw views -26%), trust high, 17.9 views per 1M edition views"
+    },
+    {
+      "name": "nl",
+      "score": 42,
+      "why": "declining (share of edition views -17% YoY — the edition-wide change (-8%) is already removed; raw views -21%), trust high, 16.4 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

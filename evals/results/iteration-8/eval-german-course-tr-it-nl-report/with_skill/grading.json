@@ -1,0 +1,56 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topic \"German language\" --langs tr,it,nl --months 24 --lang en"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "English throughout; auto_checks language 0/0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "turn 2 '2.3x larger than Turkey' (twice) — a computed ratio, flagged by auto_checks; turn 1 8/8 and no ratio. The agent ran no check in turn 2"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "0 label problems"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "'All verdicts have high trust (90–100 score)' over 24 months; limit: 'Wikipedia views measure curiosity, not willingness to pay'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": false,
+      "evidence": "turn 1 'Validate with landing page tests… before full launch'; turn 2 rules a market out: 'Netherlands (Third) … Not recommended'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": true,
+      "evidence": "report.ts ok true, pages 1, --lang en"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "'The original PDF report prioritized growth stability; this follow-up reflects the investor priority shift to audience size'"
+    },
+    {
+      "text": "Follow-up re-ranks by audience size using the existing numbers (avgMonthly or perMillion)",
+      "passed": true,
+      "evidence": "re-ranked by 6,849 / 2,942 / 1,669 from the turn-1 data, no new tool call"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "total": 9,
+    "pass_rate": 0.78
+  },
+  "human_review": "Turn 1 improved (no ratio, 46 s). Turn 2 repeats both iteration-7 failures because the follow-up skipped the check: the SKILL.md rule 'check every answer' was read as 'check answers built on new data'. 'Not recommended' is another synonym for 'avoid'."
+}

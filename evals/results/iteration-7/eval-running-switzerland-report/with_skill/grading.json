@@ -1,0 +1,56 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topics \"Running,Jogging,Marathon,Trail running\" --langs de,fr,it (killed by itself), then --topic \"Running\" with --articles de=\"Laufsport\""
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": false,
+      "evidence": "check_claims --lang uk reported 0 problems, but turn 1 has the Russian spelling 'меньших' (uk: менших); turn 2 'Ретероманська', 'Статтю' as a table header, 'не виміру', 'видання занадто мала'"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "turn 2 'майже в 4 рази більше за італійську' — a computed ratio (2,094 / 537), missed by the checker (4 ≤ 12 is ignored)"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "0 label problems; all four rows спадає / not measured as in the data"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "'висока (75)', 'тренд нестійкий (R²=0.20, 15% автоматичного трафіку)'; limit: 'Вікіпедія вимірює цікавість, не готовність платити'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "'Наступні кроки валідації: … Google Trends… рекламний тест у французькій і німецькій мовах'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": true,
+      "evidence": "report.ts ok true, 1 page, --lang uk in both turns"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "re-ran with rm added and the same pinned de article; rm reported as not measurable"
+    },
+    {
+      "text": "Notes that de/fr/it editions are read far beyond Switzerland, so they are a rough proxy for Swiss users",
+      "passed": false,
+      "evidence": "never says that de/fr/it editions are read mostly in Germany, France and Italy — 'у всіх чотирьох офіційних мовах Швейцарії' treats them as Swiss audiences"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "pass_rate": 0.67
+  },
+  "human_review": "Turn 1: the basket run hit the 120 s shell timeout, was moved to the background, and the agent ran `pkill -f \"node scripts/analyze.ts\"` — which also killed the parallel finlit run. Its first chat answer was headed 'Рекомендація: Німецька мова першою' but concluded 'Французька мова першою' (the checked draft said French). An intermediate turn-2 answer blamed the decline on 'загальну втрату трафіку Вікіпедії' although relative growth removes it. en 'Running' has no de langlink; the agent found and pinned 'Laufsport' correctly."
+}

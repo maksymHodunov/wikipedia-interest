@@ -1,0 +1,56 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topic \"GitHub Copilot\" --langs es,pt --lang en; turn 2 --topic \"Claude Code\""
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "language problems: 0 / 0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "unverified 131, 27 (turn 1) and 12,400, 1,130, 94, 41 (turn 2): human views multiplied by (1 − botShare) although they already exclude bots; computed ratios"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "label problems: 0"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "trust medium (45) with bot share and low volume; 'Wikipedia measures curiosity about the product by name'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "turn 1: 'treat this as a signal to validate … not a go/no-go decision'; turn 2 still adds 'validate with your own market research'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": false,
+      "evidence": "no report.ts call although the user asked to 'put together a short report for the team'"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "turn 2 table compares Claude Code with the earlier Copilot numbers"
+    },
+    {
+      "text": "Follow-up: verifies what the Claude Code match is and says so instead of reporting its growth as Claude Code interest",
+      "passed": false,
+      "evidence": "es = 'Claude (chatbot)', pt = 'Claude' (created 2025-03); presented as 'Claude Code +399% … trust High (100)' and 'the better bet'"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "pass_rate": 0.67
+  },
+  "human_review": "Most serious failure of the iteration: the topic resolver accepted the chatbot article for 'Claude Code' and a newly created pt article; trust stayed high. Double bot discount shows the field name avgMonthly is misread."
+}

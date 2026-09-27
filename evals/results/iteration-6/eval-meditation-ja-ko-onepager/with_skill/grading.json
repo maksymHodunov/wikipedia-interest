@@ -1,0 +1,52 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "analyze.ts --topic Meditation --langs ja,ko --lang en; turn 2 --months 60"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "language problems: 0 / 0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "turn 1 '3x higher than Japan's 3.4 per million' and '3x stronger relative demand' — computed ratio (10.8 / 3.4), not in the data [re-graded with the iteration-7 checks; originally PASS: numbers 9/9 and 12/12]"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": false,
+      "evidence": "turn 2 'The 2-year sharp decline appears to be recent platform-wide effect' — the verdict uses relative growth, which already removes the platform change [re-graded with the iteration-7 checks; originally PASS: label problems: 0]"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "trust high (100); 'measures reader curiosity, not willingness to pay'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "'validate Korea first through landing-page tests'; turn 2 'lower-risk validation target'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": true,
+      "evidence": "report.ts → ok true, 1 page, lang en"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "explicit '5-Year vs. 2-Year Comparison' and a revised recommendation"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "human_review": "PDF bug (code): Japanese/Korean article titles render as empty boxes — DejaVu Sans has no CJK glyphs. Turn 2 explains the decline as 'platform-wide effect' although relativeGrowth already removes it; turn 1 speculates 'less competition'.",
+  "regraded": "2026-09-27: computed ratios and platform excuses count as failures (iteration-7 checks); see evals/results/README.md"
+}

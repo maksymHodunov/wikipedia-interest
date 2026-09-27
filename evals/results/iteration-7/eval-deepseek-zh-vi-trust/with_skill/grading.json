@@ -1,0 +1,51 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topic \"DeepSeek\" --langs zh,vi --months 24 --lang en; turn 2 --topic \"ChatGPT\""
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "English throughout; auto_checks language 0/0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "turn 2: '4× the traffic' (30,752 / 7,499) and '18× more traffic' (9,530 / 531) are computed ratios, not in the data — the checker missed both (4 ≤ 12 is ignored, 18 matched an unrelated value). Turn 1 '78' was a checker false positive: '78–82%/year' is the zh/vi trends −77.5 / −82.4"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "0 label problems; zh/vi DeepSeek declining, ChatGPT zh declining, vi growing — as in the data"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "'Medium for Chinese, low for Vietnamese' + 'Data starts January 2025…', '70% bot traffic'; limit: 'Wikipedia views measure curiosity…'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "'Do not rely on Wikipedia growth to decide integration. Instead: check search volume trends… direct user research'; turn 2 'Before integrating DeepSeek, validate…'"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "same editions and period; the turn-2 table sets ChatGPT against the unchanged DeepSeek rows"
+    },
+    {
+      "text": "Says the DeepSeek article is new / has a short history and how that distorts its growth number (a launch spike, no full base year)",
+      "passed": true,
+      "evidence": "'Data starts January 2025 when the articles were created/renamed. Twenty months… below the 24-month minimum… provisional' and 'spiked at launch (Jan–Mar 2025), then fell'"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.88
+  },
+  "human_review": "Strong on trust. Ratios are the recurring number failure (also in evals 11 and 13). English answers never run check_claims.ts, so nothing catches them. 'Vietnamese interest in AI assistants is real and growing' generalises one article to a category."
+}

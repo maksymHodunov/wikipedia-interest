@@ -4,3 +4,9 @@ out/
 evals/runs/
 .DS_Store
 .idea/
+
+# drafts the agent checks with check_claims.ts, if saved in the skill root
+/draft*.md
+
+# logs an agent may tee into the skill directory
+*.log

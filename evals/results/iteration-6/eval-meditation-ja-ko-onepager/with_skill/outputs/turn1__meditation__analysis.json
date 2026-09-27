@@ -1,0 +1,511 @@
+{
+  "topics": [
+    "Meditation"
+  ],
+  "langs": [
+    "ja",
+    "ko"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/meditation",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/meditation/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/meditation/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/meditation/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/meditation/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "ja",
+      "project": "ja.wikipedia",
+      "article": "瞑想",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 36374,
+      "avgMonthlyLast12": 3031,
+      "perMillionLast12": 3.4,
+      "yoy": -41.2,
+      "robustGrowth": -36.2,
+      "relativeGrowth": -35.3,
+      "editionGrowth": -3.7,
+      "trendAnnual": -40.6,
+      "r2": 0.84,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 7741
+      },
+      "botShare": 0.1,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -35% YoY (raw -36%, whole edition -4%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 6348
+        },
+        {
+          "month": "2024-10",
+          "views": 7060
+        },
+        {
+          "month": "2024-11",
+          "views": 5940
+        },
+        {
+          "month": "2024-12",
+          "views": 5751
+        },
+        {
+          "month": "2025-01",
+          "views": 7741
+        },
+        {
+          "month": "2025-02",
+          "views": 4415
+        },
+        {
+          "month": "2025-03",
+          "views": 4791
+        },
+        {
+          "month": "2025-04",
+          "views": 4243
+        },
+        {
+          "month": "2025-05",
+          "views": 4469
+        },
+        {
+          "month": "2025-06",
+          "views": 3812
+        },
+        {
+          "month": "2025-07",
+          "views": 3811
+        },
+        {
+          "month": "2025-08",
+          "views": 3502
+        },
+        {
+          "month": "2025-09",
+          "views": 3635
+        },
+        {
+          "month": "2025-10",
+          "views": 4052
+        },
+        {
+          "month": "2025-11",
+          "views": 3603
+        },
+        {
+          "month": "2025-12",
+          "views": 2889
+        },
+        {
+          "month": "2026-01",
+          "views": 3099
+        },
+        {
+          "month": "2026-02",
+          "views": 2554
+        },
+        {
+          "month": "2026-03",
+          "views": 2453
+        },
+        {
+          "month": "2026-04",
+          "views": 2523
+        },
+        {
+          "month": "2026-05",
+          "views": 3006
+        },
+        {
+          "month": "2026-06",
+          "views": 2986
+        },
+        {
+          "month": "2026-07",
+          "views": 2655
+        },
+        {
+          "month": "2026-08",
+          "views": 2919
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 6.931439586003327
+        },
+        {
+          "month": "2024-10",
+          "views": 7.437727466130693
+        },
+        {
+          "month": "2024-11",
+          "views": 6.7562424839859165
+        },
+        {
+          "month": "2024-12",
+          "views": 6.2561130701614465
+        },
+        {
+          "month": "2025-01",
+          "views": 7.717082123257938
+        },
+        {
+          "month": "2025-02",
+          "views": 5.108022664214416
+        },
+        {
+          "month": "2025-03",
+          "views": 5.207884334252053
+        },
+        {
+          "month": "2025-04",
+          "views": 4.910123158097573
+        },
+        {
+          "month": "2025-05",
+          "views": 4.6097283453253235
+        },
+        {
+          "month": "2025-06",
+          "views": 4.291853935244951
+        },
+        {
+          "month": "2025-07",
+          "views": 4.29898262979881
+        },
+        {
+          "month": "2025-08",
+          "views": 3.622092370521027
+        },
+        {
+          "month": "2025-09",
+          "views": 3.9990228434438158
+        },
+        {
+          "month": "2025-10",
+          "views": 4.40999972007603
+        },
+        {
+          "month": "2025-11",
+          "views": 4.10230325917166
+        },
+        {
+          "month": "2025-12",
+          "views": 3.368875918821551
+        },
+        {
+          "month": "2026-01",
+          "views": 3.3679651623595745
+        },
+        {
+          "month": "2026-02",
+          "views": 3.152894568064851
+        },
+        {
+          "month": "2026-03",
+          "views": 2.9003228865740556
+        },
+        {
+          "month": "2026-04",
+          "views": 3.1142429782880905
+        },
+        {
+          "month": "2026-05",
+          "views": 3.307409230431228
+        },
+        {
+          "month": "2026-06",
+          "views": 3.413927093167679
+        },
+        {
+          "month": "2026-07",
+          "views": 2.9852351282500864
+        },
+        {
+          "month": "2026-08",
+          "views": 3.1697383311510117
+        }
+      ],
+      "name": "ja",
+      "topic": "Meditation",
+      "resolution": {
+        "lang": "ja",
+        "project": "ja.wikipedia",
+        "article": "瞑想",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "ko",
+      "project": "ko.wikipedia",
+      "article": "명상",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 7119,
+      "avgMonthlyLast12": 593,
+      "perMillionLast12": 10.8,
+      "yoy": -50.6,
+      "robustGrowth": -46.1,
+      "relativeGrowth": -29.3,
+      "editionGrowth": -24.9,
+      "trendAnnual": -59.2,
+      "r2": 0.76,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 2462
+      },
+      "botShare": 0.12,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -29% YoY (raw -46%, whole edition -25%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 2124
+        },
+        {
+          "month": "2024-10",
+          "views": 2462
+        },
+        {
+          "month": "2024-11",
+          "views": 1162
+        },
+        {
+          "month": "2024-12",
+          "views": 919
+        },
+        {
+          "month": "2025-01",
+          "views": 992
+        },
+        {
+          "month": "2025-02",
+          "views": 1036
+        },
+        {
+          "month": "2025-03",
+          "views": 1089
+        },
+        {
+          "month": "2025-04",
+          "views": 1045
+        },
+        {
+          "month": "2025-05",
+          "views": 1131
+        },
+        {
+          "month": "2025-06",
+          "views": 908
+        },
+        {
+          "month": "2025-07",
+          "views": 638
+        },
+        {
+          "month": "2025-08",
+          "views": 909
+        },
+        {
+          "month": "2025-09",
+          "views": 1245
+        },
+        {
+          "month": "2025-10",
+          "views": 1100
+        },
+        {
+          "month": "2025-11",
+          "views": 786
+        },
+        {
+          "month": "2025-12",
+          "views": 435
+        },
+        {
+          "month": "2026-01",
+          "views": 545
+        },
+        {
+          "month": "2026-02",
+          "views": 577
+        },
+        {
+          "month": "2026-03",
+          "views": 625
+        },
+        {
+          "month": "2026-04",
+          "views": 651
+        },
+        {
+          "month": "2026-05",
+          "views": 410
+        },
+        {
+          "month": "2026-06",
+          "views": 218
+        },
+        {
+          "month": "2026-07",
+          "views": 242
+        },
+        {
+          "month": "2026-08",
+          "views": 285
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 26.172398054227607
+        },
+        {
+          "month": "2024-10",
+          "views": 25.88296578628313
+        },
+        {
+          "month": "2024-11",
+          "views": 12.52152149977569
+        },
+        {
+          "month": "2024-12",
+          "views": 11.036803837685245
+        },
+        {
+          "month": "2025-01",
+          "views": 12.101380141666905
+        },
+        {
+          "month": "2025-02",
+          "views": 13.823750543109272
+        },
+        {
+          "month": "2025-03",
+          "views": 14.081275700995063
+        },
+        {
+          "month": "2025-04",
+          "views": 15.135398596370653
+        },
+        {
+          "month": "2025-05",
+          "views": 15.696324555026198
+        },
+        {
+          "month": "2025-06",
+          "views": 13.71277404707094
+        },
+        {
+          "month": "2025-07",
+          "views": 10.357485864791625
+        },
+        {
+          "month": "2025-08",
+          "views": 15.028634011743067
+        },
+        {
+          "month": "2025-09",
+          "views": 24.476237996322077
+        },
+        {
+          "month": "2025-10",
+          "views": 20.44691149030177
+        },
+        {
+          "month": "2025-11",
+          "views": 15.209247903852166
+        },
+        {
+          "month": "2025-12",
+          "views": 8.424086729749197
+        },
+        {
+          "month": "2026-01",
+          "views": 9.236104348795159
+        },
+        {
+          "month": "2026-02",
+          "views": 11.178678072302256
+        },
+        {
+          "month": "2026-03",
+          "views": 10.501033545324837
+        },
+        {
+          "month": "2026-04",
+          "views": 11.754038776194761
+        },
+        {
+          "month": "2026-05",
+          "views": 6.542662781090945
+        },
+        {
+          "month": "2026-06",
+          "views": 3.618132653522721
+        },
+        {
+          "month": "2026-07",
+          "views": 3.6769460149418625
+        },
+        {
+          "month": "2026-08",
+          "views": 4.570694254457702
+        }
+      ],
+      "name": "ko",
+      "topic": "Meditation",
+      "resolution": {
+        "lang": "ko",
+        "project": "ko.wikipedia",
+        "article": "명상",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "ko",
+      "score": 31,
+      "why": "declining (share of edition views -29% YoY (raw -46%, whole edition -25%)), trust high, 10.8 views per 1M edition views"
+    },
+    {
+      "name": "ja",
+      "score": 21,
+      "why": "declining (share of edition views -35% YoY (raw -36%, whole edition -4%)), trust high, 3.4 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

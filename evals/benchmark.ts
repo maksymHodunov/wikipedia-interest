@@ -6,6 +6,7 @@
  *
  * with_skill comes from <iteration>/eval-*\/with_skill; without_skill from the same folder or from --baseline.
  * Follow-up evals (no baseline) count towards pass rate but not towards time/token deltas.
+ * timing.json is either { duration_ms, total_tokens, tool_calls } or { turns: [ {…}, {…} ] } for a run with a follow-up.
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -14,13 +15,19 @@ const [iterDir, ...rest] = process.argv.slice(2);
 if (!iterDir) { console.error("usage: node evals/benchmark.ts <iteration-dir> [--baseline <iteration-dir>]"); process.exit(2); }
 const baselineDir = rest[0] === "--baseline" ? rest[1]! : iterDir;
 
-type Run = { eval: string; passRate: number; passed: number; total: number; seconds?: number; tokens?: number; calls?: number };
+type Run = { eval: string; passRate: number; passed: number; total: number; turns: number; seconds?: number; tokens?: number; calls?: number };
 const load = (dir: string, config: string): Run[] =>
   readdirSync(dir).filter((d) => d.startsWith("eval-") && existsSync(join(dir, d, config, "grading.json"))).map((d) => {
     const g = JSON.parse(readFileSync(join(dir, d, config, "grading.json"), "utf8")).summary;
     const tPath = join(dir, d, config, "timing.json");
-    const t = existsSync(tPath) ? JSON.parse(readFileSync(tPath, "utf8")) : {};
-    return { eval: d, passRate: g.pass_rate, passed: g.passed, total: g.total, seconds: t.duration_ms / 1000, tokens: t.total_tokens, calls: t.tool_calls };
+    const raw = existsSync(tPath) ? JSON.parse(readFileSync(tPath, "utf8")) : {};
+    // one-turn runs store the numbers at the top level; runs with a follow-up store { turns: [...] }: time and tool
+    // calls add up over turns; total_tokens is the subagent's context size, which already includes earlier turns → max
+    type T = { duration_ms?: number; total_tokens?: number; tool_calls?: number };
+    const turns: T[] = Array.isArray(raw.turns) ? raw.turns : [raw];
+    const all = (k: keyof T) => (turns.every((x) => typeof x[k] === "number") ? turns.map((x) => x[k]!) : [NaN]);
+    const sum = (k: keyof T) => all(k).reduce((a, x) => a + x, 0);
+    return { eval: d, passRate: g.pass_rate, passed: g.passed, total: g.total, turns: turns.length, seconds: sum("duration_ms") / 1000, tokens: Math.max(...all("total_tokens")), calls: sum("tool_calls") };
   });
 
 const stats = (xs: number[]) => {

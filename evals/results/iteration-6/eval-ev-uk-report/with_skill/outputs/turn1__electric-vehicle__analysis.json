@@ -1,0 +1,271 @@
+{
+  "topics": [
+    "Electric vehicle"
+  ],
+  "langs": [
+    "uk"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/electric-vehicle",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/electric-vehicle/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/electric-vehicle/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/electric-vehicle/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/electric-vehicle/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Електротранспорт",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 725,
+      "avgMonthlyLast12": 60,
+      "perMillionLast12": 1.1,
+      "yoy": -47.3,
+      "robustGrowth": -49.4,
+      "relativeGrowth": -28.2,
+      "editionGrowth": -28.2,
+      "trendAnnual": -48.1,
+      "r2": 0.61,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 207
+      },
+      "botShare": 0.46,
+      "trust": {
+        "score": 45,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (46% of views are bots) — human counts may be contaminated too",
+          "low volume (60 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -28% YoY (raw -49%, whole edition -28%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 102
+        },
+        {
+          "month": "2024-10",
+          "views": 207
+        },
+        {
+          "month": "2024-11",
+          "views": 187
+        },
+        {
+          "month": "2024-12",
+          "views": 133
+        },
+        {
+          "month": "2025-01",
+          "views": 116
+        },
+        {
+          "month": "2025-02",
+          "views": 106
+        },
+        {
+          "month": "2025-03",
+          "views": 124
+        },
+        {
+          "month": "2025-04",
+          "views": 139
+        },
+        {
+          "month": "2025-05",
+          "views": 121
+        },
+        {
+          "month": "2025-06",
+          "views": 38
+        },
+        {
+          "month": "2025-07",
+          "views": 52
+        },
+        {
+          "month": "2025-08",
+          "views": 52
+        },
+        {
+          "month": "2025-09",
+          "views": 62
+        },
+        {
+          "month": "2025-10",
+          "views": 72
+        },
+        {
+          "month": "2025-11",
+          "views": 73
+        },
+        {
+          "month": "2025-12",
+          "views": 61
+        },
+        {
+          "month": "2026-01",
+          "views": 89
+        },
+        {
+          "month": "2026-02",
+          "views": 54
+        },
+        {
+          "month": "2026-03",
+          "views": 76
+        },
+        {
+          "month": "2026-04",
+          "views": 53
+        },
+        {
+          "month": "2026-05",
+          "views": 59
+        },
+        {
+          "month": "2026-06",
+          "views": 35
+        },
+        {
+          "month": "2026-07",
+          "views": 45
+        },
+        {
+          "month": "2026-08",
+          "views": 46
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 1.3689569024853747
+        },
+        {
+          "month": "2024-10",
+          "views": 2.493547373979007
+        },
+        {
+          "month": "2024-11",
+          "views": 2.2305703604196148
+        },
+        {
+          "month": "2024-12",
+          "views": 1.5752419343615638
+        },
+        {
+          "month": "2025-01",
+          "views": 1.232576455947202
+        },
+        {
+          "month": "2025-02",
+          "views": 1.2934434084586415
+        },
+        {
+          "month": "2025-03",
+          "views": 1.557607745631601
+        },
+        {
+          "month": "2025-04",
+          "views": 1.9266252934742374
+        },
+        {
+          "month": "2025-05",
+          "views": 1.7525994925022272
+        },
+        {
+          "month": "2025-06",
+          "views": 0.7082591742488297
+        },
+        {
+          "month": "2025-07",
+          "views": 0.8358854899891621
+        },
+        {
+          "month": "2025-08",
+          "views": 0.8413992099941009
+        },
+        {
+          "month": "2025-09",
+          "views": 1.012134083736073
+        },
+        {
+          "month": "2025-10",
+          "views": 1.0901713752430136
+        },
+        {
+          "month": "2025-11",
+          "views": 1.0873178007254791
+        },
+        {
+          "month": "2025-12",
+          "views": 1.0991514622786713
+        },
+        {
+          "month": "2026-01",
+          "views": 1.471756107324821
+        },
+        {
+          "month": "2026-02",
+          "views": 1.0462207136666726
+        },
+        {
+          "month": "2026-03",
+          "views": 1.3789398079347317
+        },
+        {
+          "month": "2026-04",
+          "views": 0.9927830293294332
+        },
+        {
+          "month": "2026-05",
+          "views": 1.054511883696562
+        },
+        {
+          "month": "2026-06",
+          "views": 0.7244575717076384
+        },
+        {
+          "month": "2026-07",
+          "views": 0.8490718710470397
+        },
+        {
+          "month": "2026-08",
+          "views": 0.9069314265008084
+        }
+      ],
+      "name": "uk",
+      "topic": "Electric vehicle",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Електротранспорт",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "uk",
+      "score": 13,
+      "why": "declining (share of edition views -28% YoY (raw -49%, whole edition -28%)), trust medium, 1.1 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

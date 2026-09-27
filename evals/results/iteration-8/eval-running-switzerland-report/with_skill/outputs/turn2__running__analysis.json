@@ -1,0 +1,546 @@
+{
+  "topics": [
+    "Running"
+  ],
+  "langs": [
+    "de",
+    "fr",
+    "it"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "fr",
+      "project": "fr.wikipedia",
+      "article": "Course à pied",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 25122,
+      "avgMonthlyLast12": 2094,
+      "perMillionLast12": 3.5,
+      "yoy": -28.5,
+      "robustGrowth": -23.8,
+      "relativeGrowth": -21,
+      "editionGrowth": -10.1,
+      "trendAnnual": -38.7,
+      "r2": 0.6,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 5298
+      },
+      "botShare": 0.12,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": [],
+        "notes": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -21% YoY — the edition-wide change (-10%) is already removed; raw views -24%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-21%",
+            "ed": "-10%",
+            "raw": "-24%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 3436
+        },
+        {
+          "month": "2024-10",
+          "views": 5298
+        },
+        {
+          "month": "2024-11",
+          "views": 4071
+        },
+        {
+          "month": "2024-12",
+          "views": 3389
+        },
+        {
+          "month": "2025-01",
+          "views": 3328
+        },
+        {
+          "month": "2025-02",
+          "views": 2576
+        },
+        {
+          "month": "2025-03",
+          "views": 2638
+        },
+        {
+          "month": "2025-04",
+          "views": 2521
+        },
+        {
+          "month": "2025-05",
+          "views": 2621
+        },
+        {
+          "month": "2025-06",
+          "views": 1798
+        },
+        {
+          "month": "2025-07",
+          "views": 1642
+        },
+        {
+          "month": "2025-08",
+          "views": 1832
+        },
+        {
+          "month": "2025-09",
+          "views": 2910
+        },
+        {
+          "month": "2025-10",
+          "views": 3202
+        },
+        {
+          "month": "2025-11",
+          "views": 2592
+        },
+        {
+          "month": "2025-12",
+          "views": 2027
+        },
+        {
+          "month": "2026-01",
+          "views": 1980
+        },
+        {
+          "month": "2026-02",
+          "views": 1779
+        },
+        {
+          "month": "2026-03",
+          "views": 2166
+        },
+        {
+          "month": "2026-04",
+          "views": 2721
+        },
+        {
+          "month": "2026-05",
+          "views": 1905
+        },
+        {
+          "month": "2026-06",
+          "views": 1283
+        },
+        {
+          "month": "2026-07",
+          "views": 1140
+        },
+        {
+          "month": "2026-08",
+          "views": 1417
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 5.168229432854235
+        },
+        {
+          "month": "2024-10",
+          "views": 7.584609768541889
+        },
+        {
+          "month": "2024-11",
+          "views": 5.648343506928199
+        },
+        {
+          "month": "2024-12",
+          "views": 4.718786948108766
+        },
+        {
+          "month": "2025-01",
+          "views": 4.25965104324281
+        },
+        {
+          "month": "2025-02",
+          "views": 3.9299258701561466
+        },
+        {
+          "month": "2025-03",
+          "views": 3.9345968873117654
+        },
+        {
+          "month": "2025-04",
+          "views": 4.13880092938195
+        },
+        {
+          "month": "2025-05",
+          "views": 4.077263410490371
+        },
+        {
+          "month": "2025-06",
+          "views": 3.089991655544558
+        },
+        {
+          "month": "2025-07",
+          "views": 2.698148288435549
+        },
+        {
+          "month": "2025-08",
+          "views": 2.9334620042853525
+        },
+        {
+          "month": "2025-09",
+          "views": 4.945387877732678
+        },
+        {
+          "month": "2025-10",
+          "views": 5.283546445476226
+        },
+        {
+          "month": "2025-11",
+          "views": 4.088778228265509
+        },
+        {
+          "month": "2025-12",
+          "views": 3.3442141059647223
+        },
+        {
+          "month": "2026-01",
+          "views": 3.022797420606657
+        },
+        {
+          "month": "2026-02",
+          "views": 3.068051884561821
+        },
+        {
+          "month": "2026-03",
+          "views": 3.6167889600252128
+        },
+        {
+          "month": "2026-04",
+          "views": 4.913386432131369
+        },
+        {
+          "month": "2026-05",
+          "views": 3.1442926960373283
+        },
+        {
+          "month": "2026-06",
+          "views": 2.2969539481411356
+        },
+        {
+          "month": "2026-07",
+          "views": 1.9460334172414577
+        },
+        {
+          "month": "2026-08",
+          "views": 2.5331762423207578
+        }
+      ],
+      "name": "fr",
+      "topic": "Running",
+      "resolution": {
+        "lang": "fr",
+        "project": "fr.wikipedia",
+        "article": "Course à pied",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "it",
+      "project": "it.wikipedia",
+      "article": "Corsa (sport)",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 6449,
+      "avgMonthlyLast12": 537,
+      "perMillionLast12": 1.4,
+      "yoy": -35.7,
+      "robustGrowth": -39.5,
+      "relativeGrowth": -29.8,
+      "editionGrowth": -13.4,
+      "trendAnnual": -35.2,
+      "r2": 0.58,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 1117
+      },
+      "botShare": 0.11,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": [],
+        "notes": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -30% YoY — the edition-wide change (-13%) is already removed; raw views -39%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-30%",
+            "ed": "-13%",
+            "raw": "-39%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 701
+        },
+        {
+          "month": "2024-10",
+          "views": 1117
+        },
+        {
+          "month": "2024-11",
+          "views": 1073
+        },
+        {
+          "month": "2024-12",
+          "views": 886
+        },
+        {
+          "month": "2025-01",
+          "views": 1079
+        },
+        {
+          "month": "2025-02",
+          "views": 748
+        },
+        {
+          "month": "2025-03",
+          "views": 859
+        },
+        {
+          "month": "2025-04",
+          "views": 869
+        },
+        {
+          "month": "2025-05",
+          "views": 1099
+        },
+        {
+          "month": "2025-06",
+          "views": 694
+        },
+        {
+          "month": "2025-07",
+          "views": 403
+        },
+        {
+          "month": "2025-08",
+          "views": 494
+        },
+        {
+          "month": "2025-09",
+          "views": 546
+        },
+        {
+          "month": "2025-10",
+          "views": 586
+        },
+        {
+          "month": "2025-11",
+          "views": 718
+        },
+        {
+          "month": "2025-12",
+          "views": 491
+        },
+        {
+          "month": "2026-01",
+          "views": 583
+        },
+        {
+          "month": "2026-02",
+          "views": 484
+        },
+        {
+          "month": "2026-03",
+          "views": 510
+        },
+        {
+          "month": "2026-04",
+          "views": 536
+        },
+        {
+          "month": "2026-05",
+          "views": 708
+        },
+        {
+          "month": "2026-06",
+          "views": 494
+        },
+        {
+          "month": "2026-07",
+          "views": 360
+        },
+        {
+          "month": "2026-08",
+          "views": 433
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 1.6401328232437584
+        },
+        {
+          "month": "2024-10",
+          "views": 2.5451301765159426
+        },
+        {
+          "month": "2024-11",
+          "views": 2.4945962871261167
+        },
+        {
+          "month": "2024-12",
+          "views": 2.028869726201603
+        },
+        {
+          "month": "2025-01",
+          "views": 2.0271178545805246
+        },
+        {
+          "month": "2025-02",
+          "views": 1.6482118174297364
+        },
+        {
+          "month": "2025-03",
+          "views": 1.8630520334058027
+        },
+        {
+          "month": "2025-04",
+          "views": 2.057310252594517
+        },
+        {
+          "month": "2025-05",
+          "views": 2.4636014376179185
+        },
+        {
+          "month": "2025-06",
+          "views": 1.7956127488401674
+        },
+        {
+          "month": "2025-07",
+          "views": 0.9903923658570739
+        },
+        {
+          "month": "2025-08",
+          "views": 1.1333441652587217
+        },
+        {
+          "month": "2025-09",
+          "views": 1.3758141399071446
+        },
+        {
+          "month": "2025-10",
+          "views": 1.5021107847870843
+        },
+        {
+          "month": "2025-11",
+          "views": 1.7227310326455538
+        },
+        {
+          "month": "2025-12",
+          "views": 1.2949740976564443
+        },
+        {
+          "month": "2026-01",
+          "views": 1.350003650798895
+        },
+        {
+          "month": "2026-02",
+          "views": 1.304528576888455
+        },
+        {
+          "month": "2026-03",
+          "views": 1.3561310629515348
+        },
+        {
+          "month": "2026-04",
+          "views": 1.5266109927777145
+        },
+        {
+          "month": "2026-05",
+          "views": 1.9028861310466505
+        },
+        {
+          "month": "2026-06",
+          "views": 1.409520181782451
+        },
+        {
+          "month": "2026-07",
+          "views": 0.9922993791924253
+        },
+        {
+          "month": "2026-08",
+          "views": 1.0996867261724508
+        }
+      ],
+      "name": "it",
+      "topic": "Running",
+      "resolution": {
+        "lang": "it",
+        "project": "it.wikipedia",
+        "article": "Corsa (sport)",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "fr",
+      "score": 36,
+      "why": "declining (share of edition views -21% YoY — the edition-wide change (-10%) is already removed; raw views -24%), trust high, 3.5 views per 1M edition views"
+    },
+    {
+      "name": "it",
+      "score": 24,
+      "why": "declining (share of edition views -30% YoY — the edition-wide change (-13%) is already removed; raw views -39%), trust high, 1.4 views per 1M edition views"
+    }
+  ],
+  "excluded": [
+    {
+      "topic": "Running",
+      "lang": "de",
+      "reason": "no article linked to the topic (text search only)",
+      "searchHits": [
+        "Running Man",
+        "Running",
+        "The Running Man (2025)",
+        "Running Wild"
+      ]
+    }
+  ],
+  "warnings": [
+    "excluded Running@de: no article on this topic in those editions (Wikipedia cannot measure interest there; not proof of low demand). To use a proxy article, pick one from \"excluded[].searchHits\" or scripts/resolve.ts --search and pass --articles <lang>=\"<Title>\"."
+  ]
+}

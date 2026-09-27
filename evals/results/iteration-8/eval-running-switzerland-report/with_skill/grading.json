@@ -1,0 +1,56 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topic \"Running\" (de excluded: 'Running Man'), then --topic \"Jogging\" --langs de,fr,it --lang uk; turn 2 adds rm"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": false,
+      "evidence": "auto_checks 0, but by reading: 'шукати інформацію на французькому' (calque of 'на французском'), 'вимірити', 'Ретероманська', 'низьку надійність Вікіпедії даних'"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": true,
+      "evidence": "19/19 and 17/17, no ratios"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": false,
+      "evidence": "'Спад у всіх мовах також відбився загальне скорочення трафіку в Вікіпедії' blames the decline on the platform although the verdicts use relative growth (missed: the verb 'відбився' was not in the pattern)"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "'довіра висока 100'; 'дуже багато автоматичного трафіку (43% переглядів — боти) та нестабільний тренд (R²=0,12)' — copied from the new Ukrainian notes; limit: 'вимірюють цікавість… а не готовність платити'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": false,
+      "evidence": "'Першою робити французький інтерфейс' with no validation step for the top pick; Italian 'запуск тут можна відкласти'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": true,
+      "evidence": "report.ts ok true, 1 page, --lang uk in both turns"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "turn 2 re-ran with rm added; 'Ретероманська (rm) … немає даних'"
+    },
+    {
+      "text": "Notes that de/fr/it editions are read far beyond Switzerland, so they are a rough proxy for Swiss users",
+      "passed": false,
+      "evidence": "not said that de/fr/it are read mostly in Germany, France, Italy; only 'Французькі користувачі можуть шукати інформацію на французькому, навіть якщо живуть у німецькомовній частині Швейцарії'"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 4,
+    "total": 9,
+    "pass_rate": 0.56
+  },
+  "human_review": "Operationally much better than iteration 7: no background job and no pkill, 73 s + 50 s, check_claims ran in turn 1, trust reasons copied in Ukrainian. New: a factual comparison error — 'найменший відносний спад (-16% р/р порівняно з -10% для німецької…)', where −10% is the smaller decline (no check covers superlatives). 'Running' was quietly replaced by 'Jogging' without calling it a proxy. The agent left draft.md in the skill directory."
+}

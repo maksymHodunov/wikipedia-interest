@@ -1,0 +1,468 @@
+{
+  "topics": [
+    "DeepSeek"
+  ],
+  "langs": [
+    "zh",
+    "vi"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/deepseek",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/deepseek/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/deepseek/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/deepseek/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/deepseek/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "zh",
+      "project": "zh.wikipedia",
+      "article": "深度求索",
+      "months": 20,
+      "completeness": 1,
+      "totalLast12": 89991,
+      "avgMonthlyLast12": 7499,
+      "perMillionLast12": 18.5,
+      "yoy": null,
+      "robustGrowth": null,
+      "relativeGrowth": null,
+      "editionGrowth": -10.8,
+      "trendAnnual": -77.5,
+      "r2": 0.6,
+      "spikeShare": 0.15,
+      "peakMonth": {
+        "month": "2025-02",
+        "views": 145589
+      },
+      "botShare": 0.29,
+      "trust": {
+        "score": 55,
+        "label": "medium",
+        "reasons": [
+          "data starts 2025-01, 4 months after the requested start — article was created or renamed then (views under an old title are not counted)",
+          "20 months of data (<24: seasonality not separable from trend)",
+          "some spike months (15%)",
+          "notable automated traffic (29%)"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "trend -78%/yr"
+      },
+      "points": [
+        {
+          "month": "2025-01",
+          "views": 128073
+        },
+        {
+          "month": "2025-02",
+          "views": 145589
+        },
+        {
+          "month": "2025-03",
+          "views": 47535
+        },
+        {
+          "month": "2025-04",
+          "views": 21426
+        },
+        {
+          "month": "2025-05",
+          "views": 17452
+        },
+        {
+          "month": "2025-06",
+          "views": 10361
+        },
+        {
+          "month": "2025-07",
+          "views": 10121
+        },
+        {
+          "month": "2025-08",
+          "views": 9394
+        },
+        {
+          "month": "2025-09",
+          "views": 8262
+        },
+        {
+          "month": "2025-10",
+          "views": 8146
+        },
+        {
+          "month": "2025-11",
+          "views": 8584
+        },
+        {
+          "month": "2025-12",
+          "views": 8869
+        },
+        {
+          "month": "2026-01",
+          "views": 6775
+        },
+        {
+          "month": "2026-02",
+          "views": 6090
+        },
+        {
+          "month": "2026-03",
+          "views": 6548
+        },
+        {
+          "month": "2026-04",
+          "views": 7500
+        },
+        {
+          "month": "2026-05",
+          "views": 7289
+        },
+        {
+          "month": "2026-06",
+          "views": 6504
+        },
+        {
+          "month": "2026-07",
+          "views": 7012
+        },
+        {
+          "month": "2026-08",
+          "views": 8412
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2025-01",
+          "views": 286.45259519882615
+        },
+        {
+          "month": "2025-02",
+          "views": 302.7692210993361
+        },
+        {
+          "month": "2025-03",
+          "views": 91.42035322662785
+        },
+        {
+          "month": "2025-04",
+          "views": 46.938198794050194
+        },
+        {
+          "month": "2025-05",
+          "views": 37.91325554449482
+        },
+        {
+          "month": "2025-06",
+          "views": 26.3568229014045
+        },
+        {
+          "month": "2025-07",
+          "views": 24.04960572761285
+        },
+        {
+          "month": "2025-08",
+          "views": 19.971496842981292
+        },
+        {
+          "month": "2025-09",
+          "views": 20.203472689871425
+        },
+        {
+          "month": "2025-10",
+          "views": 16.728177492312753
+        },
+        {
+          "month": "2025-11",
+          "views": 19.238823953910966
+        },
+        {
+          "month": "2025-12",
+          "views": 20.732079338705905
+        },
+        {
+          "month": "2026-01",
+          "views": 18.236381680507794
+        },
+        {
+          "month": "2026-02",
+          "views": 19.223231997450338
+        },
+        {
+          "month": "2026-03",
+          "views": 17.890049135014483
+        },
+        {
+          "month": "2026-04",
+          "views": 18.71534358179226
+        },
+        {
+          "month": "2026-05",
+          "views": 14.132710240254717
+        },
+        {
+          "month": "2026-06",
+          "views": 15.387046425848995
+        },
+        {
+          "month": "2026-07",
+          "views": 17.884678891647273
+        },
+        {
+          "month": "2026-08",
+          "views": 23.227170410572956
+        }
+      ],
+      "name": "zh",
+      "topic": "DeepSeek",
+      "resolution": {
+        "lang": "zh",
+        "project": "zh.wikipedia",
+        "article": "深度求索",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-01",
+        "2025-02",
+        "2025-03"
+      ]
+    },
+    {
+      "lang": "vi",
+      "project": "vi.wikipedia",
+      "article": "DeepSeek",
+      "months": 20,
+      "completeness": 1,
+      "totalLast12": 6367,
+      "avgMonthlyLast12": 531,
+      "perMillionLast12": 9.5,
+      "yoy": null,
+      "robustGrowth": null,
+      "relativeGrowth": null,
+      "editionGrowth": -28.8,
+      "trendAnnual": -82.4,
+      "r2": 0.57,
+      "spikeShare": 0.2,
+      "peakMonth": {
+        "month": "2025-02",
+        "views": 6250
+      },
+      "botShare": 0.7,
+      "trust": {
+        "score": 15,
+        "label": "low",
+        "reasons": [
+          "data starts 2025-01, 4 months after the requested start — article was created or renamed then (views under an old title are not counted)",
+          "20 months of data (<24: seasonality not separable from trend)",
+          "20% of months are spikes — interest is event-driven, not steady",
+          "very high automated traffic (70% of views are bots) — human counts may be contaminated too"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "trend -82%/yr"
+      },
+      "points": [
+        {
+          "month": "2025-01",
+          "views": 4397
+        },
+        {
+          "month": "2025-02",
+          "views": 6250
+        },
+        {
+          "month": "2025-03",
+          "views": 1935
+        },
+        {
+          "month": "2025-04",
+          "views": 962
+        },
+        {
+          "month": "2025-05",
+          "views": 630
+        },
+        {
+          "month": "2025-06",
+          "views": 415
+        },
+        {
+          "month": "2025-07",
+          "views": 264
+        },
+        {
+          "month": "2025-08",
+          "views": 255
+        },
+        {
+          "month": "2025-09",
+          "views": 469
+        },
+        {
+          "month": "2025-10",
+          "views": 709
+        },
+        {
+          "month": "2025-11",
+          "views": 2997
+        },
+        {
+          "month": "2025-12",
+          "views": 552
+        },
+        {
+          "month": "2026-01",
+          "views": 223
+        },
+        {
+          "month": "2026-02",
+          "views": 155
+        },
+        {
+          "month": "2026-03",
+          "views": 277
+        },
+        {
+          "month": "2026-04",
+          "views": 202
+        },
+        {
+          "month": "2026-05",
+          "views": 218
+        },
+        {
+          "month": "2026-06",
+          "views": 204
+        },
+        {
+          "month": "2026-07",
+          "views": 191
+        },
+        {
+          "month": "2026-08",
+          "views": 170
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2025-01",
+          "views": 65.36492986136392
+        },
+        {
+          "month": "2025-02",
+          "views": 95.0011518699662
+        },
+        {
+          "month": "2025-03",
+          "views": 26.995006677113757
+        },
+        {
+          "month": "2025-04",
+          "views": 14.168037728689177
+        },
+        {
+          "month": "2025-05",
+          "views": 9.46609283111754
+        },
+        {
+          "month": "2025-06",
+          "views": 8.075796664205592
+        },
+        {
+          "month": "2025-07",
+          "views": 4.893260654820218
+        },
+        {
+          "month": "2025-08",
+          "views": 4.7356958909183895
+        },
+        {
+          "month": "2025-09",
+          "views": 8.671503640025435
+        },
+        {
+          "month": "2025-10",
+          "views": 12.9285205077061
+        },
+        {
+          "month": "2025-11",
+          "views": 44.20191973789751
+        },
+        {
+          "month": "2025-12",
+          "views": 11.782840708843743
+        },
+        {
+          "month": "2026-01",
+          "views": 4.272091950131621
+        },
+        {
+          "month": "2026-02",
+          "views": 3.965631737416436
+        },
+        {
+          "month": "2026-03",
+          "views": 6.600672019899048
+        },
+        {
+          "month": "2026-04",
+          "views": 4.663529573426488
+        },
+        {
+          "month": "2026-05",
+          "views": 4.873576409887091
+        },
+        {
+          "month": "2026-06",
+          "views": 4.421335117934455
+        },
+        {
+          "month": "2026-07",
+          "views": 3.7874007810056654
+        },
+        {
+          "month": "2026-08",
+          "views": 3.5073565359135155
+        }
+      ],
+      "name": "vi",
+      "topic": "DeepSeek",
+      "resolution": {
+        "lang": "vi",
+        "project": "vi.wikipedia",
+        "article": "DeepSeek",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-11"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "zh",
+      "score": 13,
+      "why": "declining (trend -78%/yr), trust medium, 18.5 views per 1M edition views"
+    },
+    {
+      "name": "vi",
+      "score": 10,
+      "why": "declining (trend -82%/yr), trust low, 9.5 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

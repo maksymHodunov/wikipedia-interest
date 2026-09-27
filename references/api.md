@@ -26,6 +26,11 @@ Base: `https://wikimedia.org/api/rest_v1/metrics/pageviews`
 `https://{lang}.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&…`
 
 - Search: `list=search&srsearch=<topic>&srlimit=5` → top hit is the anchor article.
+- Disambiguation check: `prop=pageprops&ppprop=disambiguation&titles=<anchor>&redirects=1`. "Python", "Claude",
+  "Mercury" are disambiguation pages in en: nothing is analysed and `excluded[].searchHits` lists specific titles.
+- Title check: every word of the topic (minus "the/of/a…", plural -s) must be in the anchor title. "Claude Code" →
+  "Claude (AI)" fails it: all its matches become low confidence (excluded by default) and a warning names the
+  closest article, so a different subject is never reported under the user's topic.
 - Interlanguage links: `prop=langlinks&titles=<anchor>&lllimit=max&redirects=1` → `{lang: title}`.
 - Both are cheap and cached for 30 days. When a language has no interlanguage link, a local search runs and its hit
   is accepted only if it links back to the anchor article (`search/high`); otherwise the language is **excluded** and
@@ -34,9 +39,9 @@ Base: `https://wikimedia.org/api/rest_v1/metrics/pageviews`
 
 ## Call budget per analysis
 
-`per topic: 1 search + 1 langlinks (+ 1 search and 1 langlinks per language without a link)` ·
+`per topic: 1 search + 1 pageprops + 1 langlinks (+ 1 search and 1 langlinks per language without a link)` ·
 `per language: 1 edition total` · `per kept series: 1 user + 1 automated`. Excluded (search-only) matches cost no
-pageview calls. A 3-language, 1-topic run ≈ 11 calls (~4 s cold, instant when cached). `--no-bots` and
+pageview calls. A 3-language, 1-topic run ≈ 12 calls (~4 s cold, instant when cached). `--no-bots` and
 `--no-normalize` remove calls if you are rate-limited; `relativeGrowth`/`perMillion` need the edition totals.
 
 ## Errors
@@ -44,6 +49,7 @@ pageview calls. A 3-language, 1-topic run ≈ 11 calls (~4 s cold, instant when 
 | Symptom | Meaning | What to do |
 |---|---|---|
 | exit 4, "HTTP 429" | throttled | wait ~60 s, re-run the same command (finished calls are cached) |
-| exit 3, "no usable article" | every language excluded or empty | check `excluded[].searchHits`, try another English title, or pin with `--articles` |
+| `retry … in 59 s` lines, run > 2 min | throttled harder: several sessions at once (iteration 7: four agents in parallel) | let it finish — never kill it or start a second copy |
+| exit 3, "no usable article" | every language excluded or empty (incl. a disambiguation page or a title mismatch) | read `warnings`, check `excluded[].searchHits`, try the specific English title, or pin with `--articles` |
 | exit 2 | bad arguments | the message lists valid options; `--help` has examples |
 | `"has no pageview data"` warning | article exists but got no human views in the period | small edition or new article — report it |

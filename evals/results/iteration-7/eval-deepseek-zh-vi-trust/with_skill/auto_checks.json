@@ -1,0 +1,41 @@
+[
+  {
+    "turn": 1,
+    "prompt": "<available_skills>\n<skill><name>wikipedia-interest</name><description>Measure how interest in a topic changes across Wikipedia language editions and turn it into a data-backed recommendation or a one-page PDF report. Use this skill when a product team asks which topic, course or content area to build next, which language or market to localize into or launch next, or whether interest in a subject i",
+    "toolCalls": 4,
+    "answerWords": 255,
+    "analyses": [
+      "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/deepseek/analysis.json"
+    ],
+    "numbers": {
+      "checked": 12,
+      "unverified": [],
+      "ratios": []
+    },
+    "labelProblems": [],
+    "languageProblems": [],
+    "reports": [],
+    "answer": "**Answer:** Interest in DeepSeek is not growing in Chinese and Vietnamese Wikipedia—it is declining in both.\n\n| Language | Article | Verdict | Views/month | Trust | Bot share |\n|----------|---------|---------|-------------|-------|-----------|\n| Chinese (zh) | 深度求索 | declining | 7,499 | medium (55) | 29% |\n| Vietnamese (vi) | DeepSeek | declining | 531 | low (15) | 70% |\n\n**How far to trust it:** Medium for Chinese, low for Vietnamese.\n- **Both:** Data starts January 2025 when the articles were created/renamed. Twenty months of data is below the 24-month minimum needed to separate seasonality from trend, so annual estimates are provisional.\n- **Chinese:** 29% bot share is moderate. Human counts are reliable. Early 2025 spikes reflect launch coverage.\n- **Vietnamese:** 70% bot traffic is very high—a red flag. Even human counts may be contaminated, and interest is event-driven (4 spike months) rather than steady. Trend is fragile.\n\n**Recommendation:** Interest spiked at launch (Jan–Mar 2025), then fell 78–82%/year. Do not rely on Wikipedia growth to decide integration. Instead:\n1. Check search volume trends (Google Trends, Baidu Trends, Baidu Index) for sustained user demand in these markets.\n2. Run direct user research: Do customers in China and Vietnam ask for DeepSeek? Would they prefer it over incumbent options?\n3. Recheck Vietnamese in 3 months—if bot detection improved, the real human trend may differ from the current 70% noise.\n\nWikipedia views measure curiosity (product launches spike), not sustained demand or willingness to use. For a product decision, search trends and direct demand signals are more predictive."
+  },
+  {
+    "turn": 2,
+    "prompt": "The coordinator sent a message while you were working:\nFollow-up message from the same user: \"Compare it with ChatGPT in the same languages.\"\n\nReply with the answer you would send to the user.\n\nAddress this before completing your current task.",
+    "toolCalls": 2,
+    "answerWords": 305,
+    "analyses": [
+      "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chatgpt/analysis.json"
+    ],
+    "numbers": {
+      "checked": 36,
+      "unverified": [],
+      "ratios": [
+        "4×",
+        "18×"
+      ]
+    },
+    "labelProblems": [],
+    "languageProblems": [],
+    "reports": [],
+    "answer": "## DeepSeek vs. ChatGPT: Wikipedia Interest Comparison\n\n| Product | Language | Verdict | Views/month | Share YoY | Trust | Bot% |\n|---------|----------|---------|-------------|-----------|-------|------|\n| **ChatGPT** | Chinese | declining | 30,752 | −39% | high (75) | 23% |\n| **DeepSeek** | Chinese | declining | 7,499 | −78%/yr | medium (55) | 29% |\n| **ChatGPT** | Vietnamese | **growing** | 9,530 | **+43%** | high (85) | 6% |\n| **DeepSeek** | Vietnamese | declining | 531 | −82%/yr | low (15) | 70% |\n\n### Key Findings\n\n**In Chinese (中文):**\n- ChatGPT has 4× the traffic of DeepSeek (30.7K vs 7.5K views/month)\n- Both declining, but ChatGPT's decline is gradual (−39% share/year, noisy trend) while DeepSeek is sharp (−78% trend, post-launch collapse)\n- ChatGPT trust is high (75); DeepSeek trust is only medium (55)\n\n**In Vietnamese (Tiếng Việt):**\n- ChatGPT is **growing (+43% share/year)** with high trust (85)\n- DeepSeek is **declining sharply (−82%/year)** with low trust (15, unreliable due to 70% bot traffic)\n- ChatGPT has 18× more traffic (9.5K vs 531 views/month) with minimal bots (6% vs 70%)\n- Vietnamese Wikipedia readers show sustained interest in ChatGPT, not DeepSeek\n\n### For Your Integration Decision\n\n**Vietnamese market is key:** ChatGPT interest is growing among Vietnamese Wikipedia readers (+43% share), even as platform traffic declined 29%. This signals strong, sustained curiosity about AI assistants in Vietnamese.\n\nDeepSeek shows a classic launch-spike-then-collapse pattern in both markets. It trails ChatGPT by a wide margin and is losing momentum everywhere.\n\n**Recommendation:** If choosing between them for these markets, ChatGPT shows stronger and more sustained interest—especially in Vietnamese. DeepSeek looks like a one-time launch event. Vietnamese interest in AI assistants is real and growing (ChatGPT +43%); it's not shifting to DeepSeek. Before integrating DeepSeek, validate with search trends and direct user research in both markets."
+  }
+]

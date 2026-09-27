@@ -1,0 +1,56 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topic \"German language\" --langs tr,it,nl --months 24 --lang en"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "English throughout; auto_checks language 0/0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "turn 2 'Italy has 2.3× the audience of Turkey' — computed ratio (6,849 / 2,942), flagged by auto_checks; turn 1 20/20 verified"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "0 label problems; tr flat, it/nl declining in table and text"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "'trust scores of 90–100, no anomalous spikes…'; limit: 'Wikipedia interest measures research curiosity, not willingness to pay'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": false,
+      "evidence": "turn 1 is fine ('test in Turkey first… Before full launch: validate with landing-page tests'), but turn 2 drops a market on Wikipedia data alone: 'Netherlands: Smallest and shrinking fastest (avoid)'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": true,
+      "evidence": "report.ts → ok true, pages 1, --lang en (out/german-language/report.pdf)"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "'Yes, the ranking changes…' with a revised ranking and updated recommendation"
+    },
+    {
+      "text": "Follow-up re-ranks by audience size using the existing numbers (avgMonthly or perMillion)",
+      "passed": true,
+      "evidence": "re-ranked by views/month 6,849 / 2,942 / 1,669 from the turn-1 data, no new tool call"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "total": 9,
+    "pass_rate": 0.78
+  },
+  "human_review": "'Turkey shows momentum' for a flat series is loose wording (not caught: no growth word). 'avoid' is a synonym the validate-first rule did not list."
+}

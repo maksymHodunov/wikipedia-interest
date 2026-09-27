@@ -74,6 +74,205 @@
         "Handles Slovak correctly: reports its numbers, or reports that it has no article on the topic",
         "Every number in the answer is found by scripts/check_claims.ts (no invented numbers)"
       ]
+    },
+    {
+      "id": 6,
+      "name": "copilot-es-pt-report",
+      "iteration": 6,
+      "lang": "en",
+      "locales": [
+        "es",
+        "pt"
+      ],
+      "origin": "user's PM test (Copilot, Claude Code)",
+      "prompt": "We're thinking about adding an AI coding assistant like GitHub Copilot to our app for Spanish and Portuguese speakers. Is interest actually growing there? Put together a short report for the team.",
+      "follow_up": "What about Claude Code instead of Copilot?",
+      "expected_output": "An English one-page PDF and summary for es/pt; on the follow-up, the agent checks whether Claude Code has its own article and does not present growth of the Claude chatbot or a name page as interest in Claude Code.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+        "Follow-up: verifies what the Claude Code match is (own article, the Claude chatbot, or a name page) and says so instead of reporting its growth as Claude Code interest"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "meditation-ja-ko-onepager",
+      "iteration": 6,
+      "lang": "en",
+      "locales": [
+        "ja",
+        "ko"
+      ],
+      "origin": "added: non-Latin scripts",
+      "prompt": "Our meditation app is live in English. Should we localize into Japanese or Korean first? Give me a one-pager I can send to our CEO.",
+      "follow_up": "Does the picture change if we look at 5 years instead of 2?",
+      "expected_output": "An English one-pager comparing ja and ko for meditation, recommending which to validate first; the follow-up re-runs with 60 months and compares.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "ev-uk-report",
+      "iteration": 6,
+      "lang": "uk",
+      "locales": [
+        "uk",
+        "pl",
+        "cs"
+      ],
+      "origin": "user's PM test (electric cars)",
+      "prompt": "Я хочу дослідити, чи зростає інтерес українців до електромобілів, щоб вирішити, чи варто їх рекламувати в нашому застосунку. Підготуй короткий звіт для команди.",
+      "follow_up": "А як це виглядає в польській і чеській Вікіпедії порівняно з українською?",
+      "expected_output": "A Ukrainian one-page PDF for uk; the follow-up adds pl and cs and compares them with uk.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "python-course-pl-ro",
+      "iteration": 6,
+      "lang": "uk",
+      "locales": [
+        "pl",
+        "ro"
+      ],
+      "origin": "added: ambiguous topic name",
+      "prompt": "Думаємо зробити курс з Python для школярів у Польщі й Румунії. Інтерес до цього взагалі росте? Коротко.",
+      "follow_up": "А якщо порівняти з JavaScript?",
+      "expected_output": "A short Ukrainian answer about the Python programming language (not the snake or a disambiguation page) in pl and ro; the follow-up compares with JavaScript.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+        "Analysed the Python programming language article, not the snake or a disambiguation page"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "deepseek-zh-vi-trust",
+      "iteration": 7,
+      "lang": "en",
+      "locales": [
+        "zh",
+        "vi"
+      ],
+      "origin": "added: new article inside the period",
+      "prompt": "Is interest in DeepSeek growing in Chinese and Vietnamese Wikipedia? We're deciding whether to integrate it into our assistant. How far can we trust the numbers?",
+      "follow_up": "Compare it with ChatGPT in the same languages.",
+      "expected_output": "An English answer that notices DeepSeek's article is new (short history, launch spike), so its growth number is distorted, and answers the trust question with reasons; the follow-up compares with ChatGPT.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+        "Says the DeepSeek article is new / has a short history and how that distorts its growth number (a launch spike, no full base year)"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "german-course-tr-it-nl-report",
+      "iteration": 7,
+      "lang": "en",
+      "locales": [
+        "tr",
+        "it",
+        "nl"
+      ],
+      "origin": "added: market ranking",
+      "prompt": "We run a language-learning app. Which market should we test next for German courses: Turkey, Italy or the Netherlands? One-page report please.",
+      "follow_up": "Our investors care more about audience size than growth. Does that change the ranking?",
+      "expected_output": "An English one-page PDF ranking tr/it/nl for 'German language' as a proxy; the follow-up re-ranks by size (humanViewsPerMonth / perMillion) without needing new data.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+        "Follow-up re-ranks by audience size using the existing numbers (humanViewsPerMonth or perMillion)"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "finlit-uk-kk",
+      "iteration": 7,
+      "lang": "uk",
+      "locales": [
+        "uk",
+        "kk"
+      ],
+      "origin": "added: country is not a language, possible missing article",
+      "prompt": "Ми думаємо додати курс з фінансової грамотності для України й Казахстану. Чи є там інтерес, і наскільки можна довіряти даним?",
+      "follow_up": "А якщо взяти ширшу тему — особисті фінанси?",
+      "expected_output": "A Ukrainian answer for uk and Kazakhstan that notes Kazakhstan reads both kk and ru, handles a missing article honestly, and answers the trust question; the follow-up uses 'Personal finance'.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+        "Notes that a country is not a language edition (Kazakhstan: Kazakh and Russian) or chooses editions explicitly"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "running-switzerland-report",
+      "iteration": 7,
+      "lang": "uk",
+      "locales": [
+        "de",
+        "fr",
+        "it",
+        "rm"
+      ],
+      "origin": "added: multilingual country",
+      "prompt": "Запускаємо застосунок для бігу у Швейцарії. Яку мову інтерфейсу робити першою: німецьку, французьку чи італійську? Підготуй звіт.",
+      "follow_up": "Додай ще ретороманську — це ж теж офіційна мова.",
+      "expected_output": "A Ukrainian one-page PDF for de/fr/it that notes these editions are read far beyond Switzerland; the follow-up adds rm and reports its tiny volume or missing article honestly.",
+      "assertions": [
+        "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+        "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+        "Every number in the answer is found in the analysis data (no unverified numbers)",
+        "Verdict labels in the answer match the data (no label problems)",
+        "States how far to trust the result (trust level with a reason) and at least one limitation",
+        "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+        "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+        "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+        "Notes that de/fr/it editions are read far beyond Switzerland, so they are a rough proxy for Swiss users"
+      ]
     }
   ]
 }

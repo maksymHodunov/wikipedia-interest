@@ -1,0 +1,51 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "read SKILL.md; analyze.ts --topics \"Financial literacy,Personal finance,Accounting\" --langs uk,kk (killed, see review), then --topic \"Financial literacy\" --langs uk,kk --lang uk"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": false,
+      "evidence": "check_claims --lang uk reported 0 problems, but the answer has an Italian/Portuguese word in Latin letters ('тому interesse не можна виміряти'), the calques 'артиклю' (article → стаття) and 'цілеуказку', 'Переглади'; turn 2 '133 vs 30'"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": true,
+      "evidence": "turn 1 9/9, turn 2 13/13 against both analyses"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "0 label problems; uk спадає in both turns"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "'довіра висока (70) … 18% автоматизованого трафіку та низький обсяг (133 переглядів/місяць)'; limit: 'вимірюють цікавість, не готовність платити'"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "'перевірте спад пошуком… Google Trends'; 'Для Казахстану: спочатку розпитайте ринок'"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "same editions and period; 'Теж спадає, але менше стрімко, ніж фінансова грамотність' with both topics in one table"
+    },
+    {
+      "text": "Notes that a country is not a language edition (Kazakhstan: Kazakh and Russian) or chooses editions explicitly",
+      "passed": false,
+      "evidence": "Kazakhstan is equated with kk ('Казахстан не вимірюється (немає статті)'); Russian, which most people in Kazakhstan read, is never mentioned"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "human_review": "Its basket run was killed by another eval agent's `pkill -f \"node scripts/analyze.ts\"` (both background runs exited with code 144 at 16:40:20). It then waited 180 s on the user's terminal panel (read_terminal) instead of its own job, and fell back to a single article. In turn 2 check_claims rejected the turn-1 numbers because it accepts only one analysis file."
+}

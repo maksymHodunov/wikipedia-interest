@@ -1,0 +1,52 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "analyze.ts --topic \"Electric vehicle\" --langs uk --lang uk; turn 2 adds pl, cs"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "language problems: 0 / 0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": false,
+      "evidence": "turn 2 '295 переглядів/місяць проти 60 в Україні — різниця в 5 разів' — computed ratio, not in the data [re-graded with the iteration-7 checks; originally PASS: numbers 7/7 and 16/16]"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "label problems: 0"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "довіра середня (45): 46% ботів, малий обсяг"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "'не варто запускати, спираючись лише на ці дані… перевірити попит'"
+    },
+    {
+      "text": "Produced the PDF with scripts/report.ts: ok true, one page, --lang equal to the user's language",
+      "passed": true,
+      "evidence": "report.ts → ok true, 1 page, lang uk; whole PDF in Ukrainian"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "table uk/pl/cs; cs reported as 'немає статті'"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.88
+  },
+  "human_review": "Title sensitivity: 'Electric vehicle' → uk 'Електротранспорт' (60 views/month, спадає), while the user's own run with 'Electric car' → 'Електромобіль' (490/month, без змін). One English title decides the conclusion.",
+  "regraded": "2026-09-27: computed ratios and platform excuses count as failures (iteration-7 checks); see evals/results/README.md"
+}

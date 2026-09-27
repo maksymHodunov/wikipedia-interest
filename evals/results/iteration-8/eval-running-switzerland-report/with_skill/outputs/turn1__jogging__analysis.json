@@ -1,0 +1,815 @@
+{
+  "topics": [
+    "Jogging"
+  ],
+  "langs": [
+    "de",
+    "fr",
+    "it"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/jogging",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/jogging/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/jogging/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/jogging/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/jogging/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "de",
+      "project": "de.wikipedia",
+      "article": "Jogging",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 13067,
+      "avgMonthlyLast12": 1089,
+      "perMillionLast12": 1.5,
+      "yoy": -0.6,
+      "robustGrowth": -20.7,
+      "relativeGrowth": -10,
+      "editionGrowth": -8,
+      "trendAnnual": -16.7,
+      "r2": 0.12,
+      "spikeShare": 0.04,
+      "peakMonth": {
+        "month": "2025-11",
+        "views": 3471
+      },
+      "botShare": 0.43,
+      "trust": {
+        "score": 50,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (43% of views are bots) — human counts may be contaminated too",
+          "trend is noisy (R²=0.12) — direction is not consistent month to month"
+        ],
+        "notes": [
+          {
+            "key": "bots40",
+            "vars": {
+              "pct": 43
+            }
+          },
+          {
+            "key": "noisy",
+            "vars": {
+              "rsq": "0.12"
+            }
+          }
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -10% YoY — the edition-wide change (-8%) is already removed; raw views -21%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-10%",
+            "ed": "-8%",
+            "raw": "-21%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 1159
+        },
+        {
+          "month": "2024-10",
+          "views": 1548
+        },
+        {
+          "month": "2024-11",
+          "views": 1034
+        },
+        {
+          "month": "2024-12",
+          "views": 956
+        },
+        {
+          "month": "2025-01",
+          "views": 1215
+        },
+        {
+          "month": "2025-02",
+          "views": 1162
+        },
+        {
+          "month": "2025-03",
+          "views": 1112
+        },
+        {
+          "month": "2025-04",
+          "views": 1107
+        },
+        {
+          "month": "2025-05",
+          "views": 1084
+        },
+        {
+          "month": "2025-06",
+          "views": 914
+        },
+        {
+          "month": "2025-07",
+          "views": 925
+        },
+        {
+          "month": "2025-08",
+          "views": 925
+        },
+        {
+          "month": "2025-09",
+          "views": 948
+        },
+        {
+          "month": "2025-10",
+          "views": 1019
+        },
+        {
+          "month": "2025-11",
+          "views": 3471
+        },
+        {
+          "month": "2025-12",
+          "views": 924
+        },
+        {
+          "month": "2026-01",
+          "views": 857
+        },
+        {
+          "month": "2026-02",
+          "views": 642
+        },
+        {
+          "month": "2026-03",
+          "views": 841
+        },
+        {
+          "month": "2026-04",
+          "views": 755
+        },
+        {
+          "month": "2026-05",
+          "views": 1012
+        },
+        {
+          "month": "2026-06",
+          "views": 860
+        },
+        {
+          "month": "2026-07",
+          "views": 872
+        },
+        {
+          "month": "2026-08",
+          "views": 866
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 1.5525339963586715
+        },
+        {
+          "month": "2024-10",
+          "views": 1.9248961000647538
+        },
+        {
+          "month": "2024-11",
+          "views": 1.3517541375504458
+        },
+        {
+          "month": "2024-12",
+          "views": 1.1768978082225867
+        },
+        {
+          "month": "2025-01",
+          "views": 1.3467158269595325
+        },
+        {
+          "month": "2025-02",
+          "views": 1.5121041615320028
+        },
+        {
+          "month": "2025-03",
+          "views": 1.37838399111216
+        },
+        {
+          "month": "2025-04",
+          "views": 1.503495308780899
+        },
+        {
+          "month": "2025-05",
+          "views": 1.5221296554112598
+        },
+        {
+          "month": "2025-06",
+          "views": 1.4206779747618081
+        },
+        {
+          "month": "2025-07",
+          "views": 1.3302689153137406
+        },
+        {
+          "month": "2025-08",
+          "views": 1.2554394237292543
+        },
+        {
+          "month": "2025-09",
+          "views": 1.361851480183876
+        },
+        {
+          "month": "2025-10",
+          "views": 1.3611483249968521
+        },
+        {
+          "month": "2025-11",
+          "views": 4.729432040694033
+        },
+        {
+          "month": "2025-12",
+          "views": 1.310277272807773
+        },
+        {
+          "month": "2026-01",
+          "views": 1.0984370614623011
+        },
+        {
+          "month": "2026-02",
+          "views": 0.95508139153038
+        },
+        {
+          "month": "2026-03",
+          "views": 1.2128457800785455
+        },
+        {
+          "month": "2026-04",
+          "views": 1.1389702634113577
+        },
+        {
+          "month": "2026-05",
+          "views": 1.4407148344112626
+        },
+        {
+          "month": "2026-06",
+          "views": 1.25916225203283
+        },
+        {
+          "month": "2026-07",
+          "views": 1.256984661587007
+        },
+        {
+          "month": "2026-08",
+          "views": 1.259795374550432
+        }
+      ],
+      "name": "de",
+      "topic": "Jogging",
+      "resolution": {
+        "lang": "de",
+        "project": "de.wikipedia",
+        "article": "Jogging",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-11"
+      ]
+    },
+    {
+      "lang": "fr",
+      "project": "fr.wikipedia",
+      "article": "Jogging (sport)",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 6498,
+      "avgMonthlyLast12": 542,
+      "perMillionLast12": 0.9,
+      "yoy": -34.5,
+      "robustGrowth": -24.5,
+      "relativeGrowth": -16,
+      "editionGrowth": -10.1,
+      "trendAnnual": -31.4,
+      "r2": 0.44,
+      "spikeShare": 0.04,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 2271
+      },
+      "botShare": 0.15,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": [],
+        "notes": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -16% YoY — the edition-wide change (-10%) is already removed; raw views -24%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-16%",
+            "ed": "-10%",
+            "raw": "-24%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 646
+        },
+        {
+          "month": "2024-10",
+          "views": 750
+        },
+        {
+          "month": "2024-11",
+          "views": 851
+        },
+        {
+          "month": "2024-12",
+          "views": 706
+        },
+        {
+          "month": "2025-01",
+          "views": 2271
+        },
+        {
+          "month": "2025-02",
+          "views": 665
+        },
+        {
+          "month": "2025-03",
+          "views": 657
+        },
+        {
+          "month": "2025-04",
+          "views": 704
+        },
+        {
+          "month": "2025-05",
+          "views": 738
+        },
+        {
+          "month": "2025-06",
+          "views": 592
+        },
+        {
+          "month": "2025-07",
+          "views": 646
+        },
+        {
+          "month": "2025-08",
+          "views": 693
+        },
+        {
+          "month": "2025-09",
+          "views": 612
+        },
+        {
+          "month": "2025-10",
+          "views": 704
+        },
+        {
+          "month": "2025-11",
+          "views": 739
+        },
+        {
+          "month": "2025-12",
+          "views": 569
+        },
+        {
+          "month": "2026-01",
+          "views": 598
+        },
+        {
+          "month": "2026-02",
+          "views": 494
+        },
+        {
+          "month": "2026-03",
+          "views": 460
+        },
+        {
+          "month": "2026-04",
+          "views": 521
+        },
+        {
+          "month": "2026-05",
+          "views": 534
+        },
+        {
+          "month": "2026-06",
+          "views": 451
+        },
+        {
+          "month": "2026-07",
+          "views": 418
+        },
+        {
+          "month": "2026-08",
+          "views": 398
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 0.9716752658975075
+        },
+        {
+          "month": "2024-10",
+          "views": 1.0736990046067227
+        },
+        {
+          "month": "2024-11",
+          "views": 1.1807271737646519
+        },
+        {
+          "month": "2024-12",
+          "views": 0.9830225982191763
+        },
+        {
+          "month": "2025-01",
+          "views": 2.906751057453252
+        },
+        {
+          "month": "2025-02",
+          "views": 1.0145189066979183
+        },
+        {
+          "month": "2025-03",
+          "views": 0.9799204529809816
+        },
+        {
+          "month": "2025-04",
+          "views": 1.155777808125701
+        },
+        {
+          "month": "2025-05",
+          "views": 1.1480428832284981
+        },
+        {
+          "month": "2025-06",
+          "views": 1.0173943604462616
+        },
+        {
+          "month": "2025-07",
+          "views": 1.0615126640251915
+        },
+        {
+          "month": "2025-08",
+          "views": 1.1096556599179854
+        },
+        {
+          "month": "2025-09",
+          "views": 1.0400609557293465
+        },
+        {
+          "month": "2025-10",
+          "views": 1.1616541841396824
+        },
+        {
+          "month": "2025-11",
+          "views": 1.16574348406181
+        },
+        {
+          "month": "2025-12",
+          "views": 0.9387557110478179
+        },
+        {
+          "month": "2026-01",
+          "views": 0.9129458876377682
+        },
+        {
+          "month": "2026-02",
+          "views": 0.8519492023460032
+        },
+        {
+          "month": "2026-03",
+          "views": 0.7681084587311163
+        },
+        {
+          "month": "2026-04",
+          "views": 0.9407843921868589
+        },
+        {
+          "month": "2026-05",
+          "views": 0.8813922832986526
+        },
+        {
+          "month": "2026-06",
+          "views": 0.8074249654026906
+        },
+        {
+          "month": "2026-07",
+          "views": 0.7135455863218678
+        },
+        {
+          "month": "2026-08",
+          "views": 0.7115061005248141
+        }
+      ],
+      "name": "fr",
+      "topic": "Jogging",
+      "resolution": {
+        "lang": "fr",
+        "project": "fr.wikipedia",
+        "article": "Jogging (sport)",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-01"
+      ]
+    },
+    {
+      "lang": "it",
+      "project": "it.wikipedia",
+      "article": "Jogging",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 7467,
+      "avgMonthlyLast12": 622,
+      "perMillionLast12": 1.6,
+      "yoy": 0.9,
+      "robustGrowth": -43.8,
+      "relativeGrowth": -34.7,
+      "editionGrowth": -13.4,
+      "trendAnnual": -33,
+      "r2": 0.22,
+      "spikeShare": 0.04,
+      "peakMonth": {
+        "month": "2025-11",
+        "views": 3157
+      },
+      "botShare": 0.56,
+      "trust": {
+        "score": 65,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (56% of views are bots) — human counts may be contaminated too"
+        ],
+        "notes": [
+          {
+            "key": "bots40",
+            "vars": {
+              "pct": 56
+            }
+          }
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -35% YoY — the edition-wide change (-13%) is already removed; raw views -44%",
+        "note": {
+          "key": "basisRelative",
+          "vars": {
+            "rel": "-35%",
+            "ed": "-13%",
+            "raw": "-44%"
+          }
+        }
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 660
+        },
+        {
+          "month": "2024-10",
+          "views": 649
+        },
+        {
+          "month": "2024-11",
+          "views": 613
+        },
+        {
+          "month": "2024-12",
+          "views": 634
+        },
+        {
+          "month": "2025-01",
+          "views": 741
+        },
+        {
+          "month": "2025-02",
+          "views": 498
+        },
+        {
+          "month": "2025-03",
+          "views": 659
+        },
+        {
+          "month": "2025-04",
+          "views": 570
+        },
+        {
+          "month": "2025-05",
+          "views": 648
+        },
+        {
+          "month": "2025-06",
+          "views": 545
+        },
+        {
+          "month": "2025-07",
+          "views": 502
+        },
+        {
+          "month": "2025-08",
+          "views": 678
+        },
+        {
+          "month": "2025-09",
+          "views": 561
+        },
+        {
+          "month": "2025-10",
+          "views": 586
+        },
+        {
+          "month": "2025-11",
+          "views": 3157
+        },
+        {
+          "month": "2025-12",
+          "views": 537
+        },
+        {
+          "month": "2026-01",
+          "views": 385
+        },
+        {
+          "month": "2026-02",
+          "views": 317
+        },
+        {
+          "month": "2026-03",
+          "views": 309
+        },
+        {
+          "month": "2026-04",
+          "views": 231
+        },
+        {
+          "month": "2026-05",
+          "views": 341
+        },
+        {
+          "month": "2026-06",
+          "views": 332
+        },
+        {
+          "month": "2026-07",
+          "views": 379
+        },
+        {
+          "month": "2026-08",
+          "views": 332
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 1.5442049405718696
+        },
+        {
+          "month": "2024-10",
+          "views": 1.4787730389962819
+        },
+        {
+          "month": "2024-11",
+          "views": 1.4251514669229355
+        },
+        {
+          "month": "2024-12",
+          "views": 1.4518097137830885
+        },
+        {
+          "month": "2025-01",
+          "views": 1.3921170808565047
+        },
+        {
+          "month": "2025-02",
+          "views": 1.097338883796803
+        },
+        {
+          "month": "2025-03",
+          "views": 1.4292797322635902
+        },
+        {
+          "month": "2025-04",
+          "views": 1.3494440091816737
+        },
+        {
+          "month": "2025-05",
+          "views": 1.4526057612160246
+        },
+        {
+          "month": "2025-06",
+          "views": 1.4100993488730422
+        },
+        {
+          "month": "2025-07",
+          "views": 1.2336897460552139
+        },
+        {
+          "month": "2025-08",
+          "views": 1.5554804535332254
+        },
+        {
+          "month": "2025-09",
+          "views": 1.4136112316628353
+        },
+        {
+          "month": "2025-10",
+          "views": 1.5021107847870843
+        },
+        {
+          "month": "2025-11",
+          "views": 7.574737980587763
+        },
+        {
+          "month": "2025-12",
+          "views": 1.416295499880877
+        },
+        {
+          "month": "2026-01",
+          "views": 0.8915118448671949
+        },
+        {
+          "month": "2026-02",
+          "views": 0.8544123117223971
+        },
+        {
+          "month": "2026-03",
+          "views": 0.8216558793176946
+        },
+        {
+          "month": "2026-04",
+          "views": 0.6579237674097985
+        },
+        {
+          "month": "2026-05",
+          "views": 0.9165030659419602
+        },
+        {
+          "month": "2026-06",
+          "views": 0.9472888671088536
+        },
+        {
+          "month": "2026-07",
+          "views": 1.04467073531647
+        },
+        {
+          "month": "2026-08",
+          "views": 0.843177813139154
+        }
+      ],
+      "name": "it",
+      "topic": "Jogging",
+      "resolution": {
+        "lang": "it",
+        "project": "it.wikipedia",
+        "article": "Jogging",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-11"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "fr",
+      "score": 37,
+      "why": "declining (share of edition views -16% YoY — the edition-wide change (-10%) is already removed; raw views -24%), trust high, 0.9 views per 1M edition views"
+    },
+    {
+      "name": "de",
+      "score": 24,
+      "why": "declining (share of edition views -10% YoY — the edition-wide change (-8%) is already removed; raw views -21%), trust medium, 1.5 views per 1M edition views"
+    },
+    {
+      "name": "it",
+      "score": 14,
+      "why": "declining (share of edition views -35% YoY — the edition-wide change (-13%) is already removed; raw views -44%), trust medium, 1.6 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

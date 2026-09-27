@@ -1,0 +1,15 @@
+{
+  "turns": [
+    {
+      "total_tokens": 49371,
+      "duration_ms": 39771,
+      "tool_calls": 4
+    },
+    {
+      "total_tokens": 52641,
+      "duration_ms": 28869,
+      "tool_calls": 2
+    }
+  ],
+  "model": "claude-haiku-4-5-20251001"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "turn": 1,
+    "prompt": "<available_skills>\n<skill><name>wikipedia-interest</name><description>Measure how interest in a topic changes across Wikipedia language editions and turn it into a data-backed recommendation or a one-page PDF report. Use this skill when a product team asks which topic, course or content area to build next, which language or market to localize into or launch next, or whether interest in a subject i",
+    "toolCalls": 14,
+    "answerWords": 195,
+    "analyses": [
+      "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/financial-literacy/analysis.json"
+    ],
+    "numbers": {
+      "checked": 9,
+      "unverified": [],
+      "ratios": []
+    },
+    "labelProblems": [],
+    "languageProblems": [
+      "calques — a Wikipedia article is «стаття» (артикль is grammar); «цілеуказ…» is not Ukrainian: \"цілеуказку\", \"артиклю\"",
+      "words in Latin letters in Ukrainian text — write them in Ukrainian (vs → проти, keyword → ключові слова, landing page → цільова сторінка): \"interesse\""
+    ],
+    "reports": [],
+    "answer": "## Аналіз інтересу до фінансової грамотності в Україні та Казахстані\n\n**Відповідь:** Україна — спадає: частка переглядів −39% р/р. Казахстан не вимірюється (немає статті).\n\n| Мова | Стаття | Вердикт | Відносна р/р | Сира р/р | Перегл./місяць | Довіра |\n|---|---|---|---|---|---|---|\n| uk | Фінансова грамотність | спадає | −38.5% | −58.8% | 133 | висока (70) |\n| kk | — | не вимірюється | — | — | — | — |\n\n**Наскільки довіряти даним:** Для України довіра висока (70) з припусками: 18% автоматизованого трафіку та низький обсяг (133 переглядів/місяць) — малі числа коливаються дико.\n\nКазахстан: Вікіпедія немає статті про фінансову грамотність, тому interesse не можна виміряти. Це не доказ низького попиту — читачі можуть використовувати іншу мову чи інші джерела.\n\n**Рекомендація:** Для України перевірте спад пошуком — чи шукають люди інформацію про фінансову грамотність у Google Trends або у вашій аналітиці? Для Казахстану: спочатку розпитайте ринок — Вікіпедія не вимірює попит там, де статей немає. Розгляньте також інтерес до «Економіки» як широкого цілеуказку.\n\n**Обмеження:** Переглади Вікіпедії вимірюють цікавість, не готовність платити. Казахстан виключений з аналізу — немає артиклю про фінансову грамотність. Дані України — останні 24 місяці (вересень 2024 – серпень 2026)."
+  },
+  {
+    "turn": 2,
+    "prompt": "The coordinator sent a message while you were working:\nFollow-up message from the same user: \"А якщо взяти ширшу тему — особисті фінанси?\"\n\nReply with the answer you would send to the user.\n\nAddress this before completing your current task.",
+    "toolCalls": 6,
+    "answerWords": 154,
+    "analyses": [
+      "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/personal-finance/analysis.json"
+    ],
+    "numbers": {
+      "checked": 13,
+      "unverified": [],
+      "ratios": []
+    },
+    "labelProblems": [],
+    "languageProblems": [
+      "words in Latin letters in Ukrainian text — write them in Ukrainian (vs → проти, keyword → ключові слова, landing page → цільова сторінка): \"vs\""
+    ],
+    "reports": [],
+    "answer": "## Follow-up: Аналіз особистих фінансів\n\n**Порівняння:** Теж спадає, але менше стрімко, ніж фінансова грамотність.\n\n| Тема | Стаття | Вердикт | Відносна р/р | Перегл./місяць | Довіра |\n|---|---|---|---|---|---|\n| Фінансова грамотність | Фінансова грамотність | спадає | −38.5% | 133 | висока (70) |\n| Особисті фінанси | Фінанси домогосподарства | спадає | −23.9% | 30 | середня (45) |\n\n**Наскільки довіряти даним:**\n\n- **Особисті фінанси**: Довіра середня (45) — дуже високий автоматизований трафік (40% ботів) та дуже малий обсяг (30 переглядів/місяць). При таких малих числах тренд ненадійний.\n\n- **Порівняно з фінансовою грамотністю**: та має більшу аудиторію (133 vs 30 перегл./місяць) та вищу довіру (70 vs 45).\n\nКазахстан: Виключена — немає статті про особисті фінанси.\n\n**Рекомендація:** Фінансова грамотність — кращий вибір для аналізу (більша аудиторія, чистіші дані). Проте обидві теми в спаді. Перед запуском курсу перевірте Google Trends та ринкові дані, щоб розібратися, чи це реальний спад попиту чи лише явище на Вікіпедії."
+  }
+]

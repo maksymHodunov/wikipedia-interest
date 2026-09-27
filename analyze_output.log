@@ -1,0 +1,85 @@
+[analyze 0s] 1 topic(s) × 3 language(s); cold runs take ~5 s per series (longer if throttled)
+[analyze 0s] resolving "Running" (1/1)
+[analyze 0s] fetching Running@fr "Course à pied"
+[wikipedia-interest] HTTP 429 (throttled) — retry 1/5 in 36 s
+[analyze 37s] fetching Running@it "Corsa (sport)"
+[analyze 37s] done: 2 series, 1 excluded
+{
+ "period": "2024-09 → 2026-08",
+ "normalized": true,
+ "series": [
+  {
+   "name": "fr",
+   "article": "Course à pied",
+   "match": "langlink/high",
+   "verdict": "declining — share of edition views -21% YoY — the edition-wide change (-10%) is already removed; raw views -24%",
+   "verdictLabel": "спадає",
+   "trustLabel": "висока (100)",
+   "relativeGrowth": -21,
+   "robustGrowth": -23.8,
+   "editionGrowth": -10.1,
+   "yoy": -28.5,
+   "trendAnnual": -38.7,
+   "r2": 0.6,
+   "humanViewsPerMonth": 2094,
+   "perMillion": 3.5,
+   "botShare": 0.12,
+   "spikeMonths": "none",
+   "peak": "2024-10: 5298",
+   "trust": "high (100)",
+   "trustReasons": []
+  },
+  {
+   "name": "it",
+   "article": "Corsa (sport)",
+   "match": "langlink/high",
+   "verdict": "declining — share of edition views -30% YoY — the edition-wide change (-13%) is already removed; raw views -39%",
+   "verdictLabel": "спадає",
+   "trustLabel": "висока (100)",
+   "relativeGrowth": -29.8,
+   "robustGrowth": -39.5,
+   "editionGrowth": -13.4,
+   "yoy": -35.7,
+   "trendAnnual": -35.2,
+   "r2": 0.58,
+   "humanViewsPerMonth": 537,
+   "perMillion": 1.4,
+   "botShare": 0.11,
+   "spikeMonths": "none",
+   "peak": "2024-10: 1117",
+   "trust": "high (100)",
+   "trustReasons": []
+  }
+ ],
+ "ranking": [
+  "fr (score 36): declining (share of edition views -21% YoY — the edition-wide change (-10%) is already removed; raw views -24%), trust high, 3.5 views per 1M edition views",
+  "it (score 24): declining (share of edition views -30% YoY — the edition-wide change (-13%) is already removed; raw views -39%), trust high, 1.4 views per 1M edition views"
+ ],
+ "excluded": [
+  {
+   "topic": "Running",
+   "lang": "de",
+   "reason": "no article linked to the topic (text search only)",
+   "searchHits": [
+    "Running Man",
+    "Running",
+    "The Running Man (2025)",
+    "Running Wild"
+   ]
+  }
+ ],
+ "warnings": [
+  "excluded Running@de: no article on this topic in those editions (Wikipedia cannot measure interest there; not proof of low demand). To use a proxy article, pick one from \"excluded[].searchHits\" or scripts/resolve.ts --search and pass --articles <lang>=\"<Title>\"."
+ ],
+ "files": {
+  "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/chart.svg",
+  "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/chart_indexed.svg",
+  "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/data.csv",
+  "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/analysis.json"
+ },
+ "next": [
+  "Answer in uk: copy verdictLabel/trustLabel as printed; before sending, check your draft with node scripts/check_claims.ts --analysis \"/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/analysis.json\" --file draft.md --lang uk",
+  "If the user asked for any report (report, one-pager, summary for the team/CEO, PDF, звіт), the PDF is required before you answer: node scripts/report.ts --analysis \"/Users/mh/Developer/genesis-academy/wikipedia-interest/out/running/analysis.json\" --lang uk --title \"…\" --verdict \"…\" --findings \"…|…|…\"",
+  "humanViewsPerMonth already excludes bots — never subtract botShare from it."
+ ]
+}

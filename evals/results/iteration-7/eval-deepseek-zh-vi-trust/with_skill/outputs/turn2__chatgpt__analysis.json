@@ -1,0 +1,520 @@
+{
+  "topics": [
+    "ChatGPT"
+  ],
+  "langs": [
+    "zh",
+    "vi"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chatgpt",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chatgpt/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chatgpt/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chatgpt/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chatgpt/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "zh",
+      "project": "zh.wikipedia",
+      "article": "ChatGPT",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 369018,
+      "avgMonthlyLast12": 30752,
+      "perMillionLast12": 74.6,
+      "yoy": -42.1,
+      "robustGrowth": -46.7,
+      "relativeGrowth": -39,
+      "editionGrowth": -10.8,
+      "trendAnnual": -30.5,
+      "r2": 0.19,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-12",
+        "views": 98611
+      },
+      "botShare": 0.23,
+      "trust": {
+        "score": 75,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (23%)",
+          "trend is noisy (R²=0.19) — direction is not consistent month to month"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -39% YoY — the edition-wide change (-11%) is already removed; raw views -47%"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 31547
+        },
+        {
+          "month": "2024-10",
+          "views": 33283
+        },
+        {
+          "month": "2024-11",
+          "views": 43220
+        },
+        {
+          "month": "2024-12",
+          "views": 98611
+        },
+        {
+          "month": "2025-01",
+          "views": 77206
+        },
+        {
+          "month": "2025-02",
+          "views": 55893
+        },
+        {
+          "month": "2025-03",
+          "views": 66569
+        },
+        {
+          "month": "2025-04",
+          "views": 94294
+        },
+        {
+          "month": "2025-05",
+          "views": 51960
+        },
+        {
+          "month": "2025-06",
+          "views": 35231
+        },
+        {
+          "month": "2025-07",
+          "views": 23007
+        },
+        {
+          "month": "2025-08",
+          "views": 25992
+        },
+        {
+          "month": "2025-09",
+          "views": 36415
+        },
+        {
+          "month": "2025-10",
+          "views": 24253
+        },
+        {
+          "month": "2025-11",
+          "views": 25932
+        },
+        {
+          "month": "2025-12",
+          "views": 21024
+        },
+        {
+          "month": "2026-01",
+          "views": 19377
+        },
+        {
+          "month": "2026-02",
+          "views": 16994
+        },
+        {
+          "month": "2026-03",
+          "views": 22283
+        },
+        {
+          "month": "2026-04",
+          "views": 39724
+        },
+        {
+          "month": "2026-05",
+          "views": 45696
+        },
+        {
+          "month": "2026-06",
+          "views": 53362
+        },
+        {
+          "month": "2026-07",
+          "views": 39147
+        },
+        {
+          "month": "2026-08",
+          "views": 24811
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 69.97486188521155
+        },
+        {
+          "month": "2024-10",
+          "views": 72.92009872912074
+        },
+        {
+          "month": "2024-11",
+          "views": 99.34087627396342
+        },
+        {
+          "month": "2024-12",
+          "views": 219.01073452428287
+        },
+        {
+          "month": "2025-01",
+          "views": 172.68166643180504
+        },
+        {
+          "month": "2025-02",
+          "views": 116.23597988107062
+        },
+        {
+          "month": "2025-03",
+          "views": 128.0269589553674
+        },
+        {
+          "month": "2025-04",
+          "views": 206.57101265220618
+        },
+        {
+          "month": "2025-05",
+          "views": 112.87948419046245
+        },
+        {
+          "month": "2025-06",
+          "views": 89.62235572236095
+        },
+        {
+          "month": "2025-07",
+          "views": 54.66942782088616
+        },
+        {
+          "month": "2025-08",
+          "views": 55.25858483529591
+        },
+        {
+          "month": "2025-09",
+          "views": 89.04738053760202
+        },
+        {
+          "month": "2025-10",
+          "views": 49.804626653702584
+        },
+        {
+          "month": "2025-11",
+          "views": 58.11989547679627
+        },
+        {
+          "month": "2025-12",
+          "views": 49.14547705682184
+        },
+        {
+          "month": "2026-01",
+          "views": 52.157397464678894
+        },
+        {
+          "month": "2026-02",
+          "views": 53.64197119288522
+        },
+        {
+          "month": "2026-03",
+          "views": 60.880263420208884
+        },
+        {
+          "month": "2026-04",
+          "views": 99.12644112574877
+        },
+        {
+          "month": "2026-05",
+          "views": 88.60040158302643
+        },
+        {
+          "month": "2026-06",
+          "views": 126.24286152769896
+        },
+        {
+          "month": "2026-07",
+          "views": 99.84762187269193
+        },
+        {
+          "month": "2026-08",
+          "views": 68.50800345419944
+        }
+      ],
+      "name": "zh",
+      "topic": "ChatGPT",
+      "resolution": {
+        "lang": "zh",
+        "project": "zh.wikipedia",
+        "article": "ChatGPT",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "vi",
+      "project": "vi.wikipedia",
+      "article": "ChatGPT",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 114365,
+      "avgMonthlyLast12": 9530,
+      "perMillionLast12": 200.6,
+      "yoy": 3.5,
+      "robustGrowth": 14,
+      "relativeGrowth": 43.2,
+      "editionGrowth": -28.8,
+      "trendAnnual": 32.1,
+      "r2": 0.14,
+      "spikeShare": 0.04,
+      "peakMonth": {
+        "month": "2025-04",
+        "views": 24162
+      },
+      "botShare": 0.06,
+      "trust": {
+        "score": 85,
+        "label": "high",
+        "reasons": [
+          "trend is noisy (R²=0.14) — direction is not consistent month to month"
+        ]
+      },
+      "verdict": {
+        "label": "growing",
+        "basis": "share of edition views +43% YoY — the edition-wide change (-29%) is already removed; raw views +14%"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 4697
+        },
+        {
+          "month": "2024-10",
+          "views": 4616
+        },
+        {
+          "month": "2024-11",
+          "views": 4844
+        },
+        {
+          "month": "2024-12",
+          "views": 7820
+        },
+        {
+          "month": "2025-01",
+          "views": 6072
+        },
+        {
+          "month": "2025-02",
+          "views": 9997
+        },
+        {
+          "month": "2025-03",
+          "views": 14139
+        },
+        {
+          "month": "2025-04",
+          "views": 24162
+        },
+        {
+          "month": "2025-05",
+          "views": 11040
+        },
+        {
+          "month": "2025-06",
+          "views": 9539
+        },
+        {
+          "month": "2025-07",
+          "views": 7331
+        },
+        {
+          "month": "2025-08",
+          "views": 6286
+        },
+        {
+          "month": "2025-09",
+          "views": 7394
+        },
+        {
+          "month": "2025-10",
+          "views": 6646
+        },
+        {
+          "month": "2025-11",
+          "views": 6705
+        },
+        {
+          "month": "2025-12",
+          "views": 6285
+        },
+        {
+          "month": "2026-01",
+          "views": 6376
+        },
+        {
+          "month": "2026-02",
+          "views": 4877
+        },
+        {
+          "month": "2026-03",
+          "views": 9883
+        },
+        {
+          "month": "2026-04",
+          "views": 15299
+        },
+        {
+          "month": "2026-05",
+          "views": 15855
+        },
+        {
+          "month": "2026-06",
+          "views": 11966
+        },
+        {
+          "month": "2026-07",
+          "views": 11351
+        },
+        {
+          "month": "2026-08",
+          "views": 11728
+        }
+      ],
+      "levelShift": null,
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 70.34187514126968
+        },
+        {
+          "month": "2024-10",
+          "views": 61.23300183940435
+        },
+        {
+          "month": "2024-11",
+          "views": 72.19300977024486
+        },
+        {
+          "month": "2024-12",
+          "views": 110.09497268201616
+        },
+        {
+          "month": "2025-01",
+          "views": 90.26514762751914
+        },
+        {
+          "month": "2025-02",
+          "views": 151.9562424390483
+        },
+        {
+          "month": "2025-03",
+          "views": 197.25188599881727
+        },
+        {
+          "month": "2025-04",
+          "views": 355.8504444912556
+        },
+        {
+          "month": "2025-05",
+          "views": 165.88200770720263
+        },
+        {
+          "month": "2025-06",
+          "views": 185.6265647707401
+        },
+        {
+          "month": "2025-07",
+          "views": 135.88065856245083
+        },
+        {
+          "month": "2025-08",
+          "views": 116.73954655024704
+        },
+        {
+          "month": "2025-09",
+          "views": 136.71023009455877
+        },
+        {
+          "month": "2025-10",
+          "views": 121.18892425136072
+        },
+        {
+          "month": "2025-11",
+          "views": 98.89018079499594
+        },
+        {
+          "month": "2025-12",
+          "views": 134.1578874186285
+        },
+        {
+          "month": "2026-01",
+          "views": 122.14734652035524
+        },
+        {
+          "month": "2026-02",
+          "views": 124.77668376374167
+        },
+        {
+          "month": "2026-03",
+          "views": 235.50339917928625
+        },
+        {
+          "month": "2026-04",
+          "views": 353.2046482368903
+        },
+        {
+          "month": "2026-05",
+          "views": 354.4520824713754
+        },
+        {
+          "month": "2026-06",
+          "views": 259.3416471627632
+        },
+        {
+          "month": "2026-07",
+          "views": 225.0826506031168
+        },
+        {
+          "month": "2026-08",
+          "views": 241.966337959963
+        }
+      ],
+      "name": "vi",
+      "topic": "ChatGPT",
+      "resolution": {
+        "lang": "vi",
+        "project": "vi.wikipedia",
+        "article": "ChatGPT",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-04"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "vi",
+      "score": 102,
+      "why": "growing (share of edition views +43% YoY — the edition-wide change (-29%) is already removed; raw views +14%), trust high, 200.6 views per 1M edition views"
+    },
+    {
+      "name": "zh",
+      "score": 27,
+      "why": "declining (share of edition views -39% YoY — the edition-wide change (-11%) is already removed; raw views -47%), trust high, 74.6 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

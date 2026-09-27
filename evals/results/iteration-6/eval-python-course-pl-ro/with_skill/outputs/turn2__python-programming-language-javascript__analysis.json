@@ -1,0 +1,1004 @@
+{
+  "topics": [
+    "Python (programming language)",
+    "JavaScript"
+  ],
+  "langs": [
+    "pl",
+    "ro"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/python-programming-language-javascript",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/python-programming-language-javascript/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/python-programming-language-javascript/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/python-programming-language-javascript/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/python-programming-language-javascript/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "pl",
+      "project": "pl.wikipedia",
+      "article": "Python",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 33427,
+      "avgMonthlyLast12": 2786,
+      "perMillionLast12": 14.7,
+      "yoy": -29.8,
+      "robustGrowth": -35.6,
+      "relativeGrowth": -23.3,
+      "editionGrowth": -11.9,
+      "trendAnnual": -37.9,
+      "r2": 0.61,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 5746
+      },
+      "botShare": 0.11,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -23% YoY (raw -36%, whole edition -12%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 4437
+        },
+        {
+          "month": "2024-10",
+          "views": 4940
+        },
+        {
+          "month": "2024-11",
+          "views": 5199
+        },
+        {
+          "month": "2024-12",
+          "views": 4332
+        },
+        {
+          "month": "2025-01",
+          "views": 5746
+        },
+        {
+          "month": "2025-02",
+          "views": 4450
+        },
+        {
+          "month": "2025-03",
+          "views": 4839
+        },
+        {
+          "month": "2025-04",
+          "views": 3699
+        },
+        {
+          "month": "2025-05",
+          "views": 3257
+        },
+        {
+          "month": "2025-06",
+          "views": 2553
+        },
+        {
+          "month": "2025-07",
+          "views": 2124
+        },
+        {
+          "month": "2025-08",
+          "views": 2034
+        },
+        {
+          "month": "2025-09",
+          "views": 2908
+        },
+        {
+          "month": "2025-10",
+          "views": 3724
+        },
+        {
+          "month": "2025-11",
+          "views": 3999
+        },
+        {
+          "month": "2025-12",
+          "views": 3117
+        },
+        {
+          "month": "2026-01",
+          "views": 3336
+        },
+        {
+          "month": "2026-02",
+          "views": 2740
+        },
+        {
+          "month": "2026-03",
+          "views": 2941
+        },
+        {
+          "month": "2026-04",
+          "views": 2738
+        },
+        {
+          "month": "2026-05",
+          "views": 2493
+        },
+        {
+          "month": "2026-06",
+          "views": 1862
+        },
+        {
+          "month": "2026-07",
+          "views": 1424
+        },
+        {
+          "month": "2026-08",
+          "views": 2145
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 23.0501621347989
+        },
+        {
+          "month": "2024-10",
+          "views": 23.670119265010406
+        },
+        {
+          "month": "2024-11",
+          "views": 23.746655171257576
+        },
+        {
+          "month": "2024-12",
+          "views": 19.710900692746705
+        },
+        {
+          "month": "2025-01",
+          "views": 22.78967680153129
+        },
+        {
+          "month": "2025-02",
+          "views": 21.087980671316103
+        },
+        {
+          "month": "2025-03",
+          "views": 21.580169972447088
+        },
+        {
+          "month": "2025-04",
+          "views": 18.556274395336725
+        },
+        {
+          "month": "2025-05",
+          "views": 16.76708556752904
+        },
+        {
+          "month": "2025-06",
+          "views": 14.94872210647063
+        },
+        {
+          "month": "2025-07",
+          "views": 11.374153280906377
+        },
+        {
+          "month": "2025-08",
+          "views": 10.329575307890666
+        },
+        {
+          "month": "2025-09",
+          "views": 15.359494460937414
+        },
+        {
+          "month": "2025-10",
+          "views": 18.50060670464372
+        },
+        {
+          "month": "2025-11",
+          "views": 17.516842461548002
+        },
+        {
+          "month": "2025-12",
+          "views": 16.391067027279956
+        },
+        {
+          "month": "2026-01",
+          "views": 16.33022103600332
+        },
+        {
+          "month": "2026-02",
+          "views": 15.391848602811121
+        },
+        {
+          "month": "2026-03",
+          "views": 16.46512314618865
+        },
+        {
+          "month": "2026-04",
+          "views": 15.915103143411901
+        },
+        {
+          "month": "2026-05",
+          "views": 13.850800807133332
+        },
+        {
+          "month": "2026-06",
+          "views": 10.368702888911626
+        },
+        {
+          "month": "2026-07",
+          "views": 7.936309245691036
+        },
+        {
+          "month": "2026-08",
+          "views": 12.196294498493204
+        }
+      ],
+      "name": "Python (programming language) (pl)",
+      "topic": "Python (programming language)",
+      "resolution": {
+        "lang": "pl",
+        "project": "pl.wikipedia",
+        "article": "Python",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "ro",
+      "project": "ro.wikipedia",
+      "article": "Python",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 3090,
+      "avgMonthlyLast12": 258,
+      "perMillionLast12": 9.4,
+      "yoy": -40.1,
+      "robustGrowth": -36.3,
+      "relativeGrowth": -26.1,
+      "editionGrowth": -23.7,
+      "trendAnnual": -42.6,
+      "r2": 0.71,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 604
+      },
+      "botShare": 0.32,
+      "trust": {
+        "score": 55,
+        "label": "medium",
+        "reasons": [
+          "high automated traffic (32% of views are bots)",
+          "low volume (258 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -26% YoY (raw -36%, whole edition -24%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 416
+        },
+        {
+          "month": "2024-10",
+          "views": 517
+        },
+        {
+          "month": "2024-11",
+          "views": 438
+        },
+        {
+          "month": "2024-12",
+          "views": 384
+        },
+        {
+          "month": "2025-01",
+          "views": 604
+        },
+        {
+          "month": "2025-02",
+          "views": 453
+        },
+        {
+          "month": "2025-03",
+          "views": 582
+        },
+        {
+          "month": "2025-04",
+          "views": 383
+        },
+        {
+          "month": "2025-05",
+          "views": 470
+        },
+        {
+          "month": "2025-06",
+          "views": 381
+        },
+        {
+          "month": "2025-07",
+          "views": 236
+        },
+        {
+          "month": "2025-08",
+          "views": 292
+        },
+        {
+          "month": "2025-09",
+          "views": 288
+        },
+        {
+          "month": "2025-10",
+          "views": 345
+        },
+        {
+          "month": "2025-11",
+          "views": 347
+        },
+        {
+          "month": "2025-12",
+          "views": 283
+        },
+        {
+          "month": "2026-01",
+          "views": 282
+        },
+        {
+          "month": "2026-02",
+          "views": 253
+        },
+        {
+          "month": "2026-03",
+          "views": 311
+        },
+        {
+          "month": "2026-04",
+          "views": 179
+        },
+        {
+          "month": "2026-05",
+          "views": 256
+        },
+        {
+          "month": "2026-06",
+          "views": 262
+        },
+        {
+          "month": "2026-07",
+          "views": 139
+        },
+        {
+          "month": "2026-08",
+          "views": 145
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 14.195814125333273
+        },
+        {
+          "month": "2024-10",
+          "views": 14.80615026289365
+        },
+        {
+          "month": "2024-11",
+          "views": 10.372093158730749
+        },
+        {
+          "month": "2024-12",
+          "views": 9.810282673331665
+        },
+        {
+          "month": "2025-01",
+          "views": 13.804094394957174
+        },
+        {
+          "month": "2025-02",
+          "views": 12.162300177166857
+        },
+        {
+          "month": "2025-03",
+          "views": 15.984853609639494
+        },
+        {
+          "month": "2025-04",
+          "views": 12.42688901042509
+        },
+        {
+          "month": "2025-05",
+          "views": 14.0655945710875
+        },
+        {
+          "month": "2025-06",
+          "views": 15.75914663352365
+        },
+        {
+          "month": "2025-07",
+          "views": 8.79217365407282
+        },
+        {
+          "month": "2025-08",
+          "views": 10.780528740631185
+        },
+        {
+          "month": "2025-09",
+          "views": 11.071498042882064
+        },
+        {
+          "month": "2025-10",
+          "views": 11.991606709502076
+        },
+        {
+          "month": "2025-11",
+          "views": 7.632450398860421
+        },
+        {
+          "month": "2025-12",
+          "views": 10.852054213334974
+        },
+        {
+          "month": "2026-01",
+          "views": 9.59443049433908
+        },
+        {
+          "month": "2026-02",
+          "views": 10.690114044502817
+        },
+        {
+          "month": "2026-03",
+          "views": 13.073876989699047
+        },
+        {
+          "month": "2026-04",
+          "views": 7.500989900189482
+        },
+        {
+          "month": "2026-05",
+          "views": 9.318853679072513
+        },
+        {
+          "month": "2026-06",
+          "views": 9.80327704094593
+        },
+        {
+          "month": "2026-07",
+          "views": 5.332884808306962
+        },
+        {
+          "month": "2026-08",
+          "views": 6.375895631953052
+        }
+      ],
+      "name": "Python (programming language) (ro)",
+      "topic": "Python (programming language)",
+      "resolution": {
+        "lang": "ro",
+        "project": "ro.wikipedia",
+        "article": "Python",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "pl",
+      "project": "pl.wikipedia",
+      "article": "JavaScript",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 13744,
+      "avgMonthlyLast12": 1145,
+      "perMillionLast12": 6.1,
+      "yoy": -41.3,
+      "robustGrowth": -48.6,
+      "relativeGrowth": -39.7,
+      "editionGrowth": -11.9,
+      "trendAnnual": -46,
+      "r2": 0.74,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 2764
+      },
+      "botShare": 0.49,
+      "trust": {
+        "score": 65,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (49% of views are bots) — human counts may be contaminated too"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -40% YoY (raw -49%, whole edition -12%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 2651
+        },
+        {
+          "month": "2024-10",
+          "views": 2764
+        },
+        {
+          "month": "2024-11",
+          "views": 2653
+        },
+        {
+          "month": "2024-12",
+          "views": 2240
+        },
+        {
+          "month": "2025-01",
+          "views": 2703
+        },
+        {
+          "month": "2025-02",
+          "views": 2213
+        },
+        {
+          "month": "2025-03",
+          "views": 2405
+        },
+        {
+          "month": "2025-04",
+          "views": 1572
+        },
+        {
+          "month": "2025-05",
+          "views": 1254
+        },
+        {
+          "month": "2025-06",
+          "views": 1108
+        },
+        {
+          "month": "2025-07",
+          "views": 916
+        },
+        {
+          "month": "2025-08",
+          "views": 936
+        },
+        {
+          "month": "2025-09",
+          "views": 1470
+        },
+        {
+          "month": "2025-10",
+          "views": 1569
+        },
+        {
+          "month": "2025-11",
+          "views": 1468
+        },
+        {
+          "month": "2025-12",
+          "views": 1178
+        },
+        {
+          "month": "2026-01",
+          "views": 1226
+        },
+        {
+          "month": "2026-02",
+          "views": 1148
+        },
+        {
+          "month": "2026-03",
+          "views": 1120
+        },
+        {
+          "month": "2026-04",
+          "views": 984
+        },
+        {
+          "month": "2026-05",
+          "views": 1140
+        },
+        {
+          "month": "2026-06",
+          "views": 809
+        },
+        {
+          "month": "2026-07",
+          "views": 712
+        },
+        {
+          "month": "2026-08",
+          "views": 920
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 13.771913414323162
+        },
+        {
+          "month": "2024-10",
+          "views": 13.243767135321612
+        },
+        {
+          "month": "2024-11",
+          "views": 12.117691127014108
+        },
+        {
+          "month": "2024-12",
+          "views": 10.192155482860715
+        },
+        {
+          "month": "2025-01",
+          "views": 10.720587607820933
+        },
+        {
+          "month": "2025-02",
+          "views": 10.487123870926412
+        },
+        {
+          "month": "2025-03",
+          "views": 10.725420290087879
+        },
+        {
+          "month": "2025-04",
+          "views": 7.886040375633775
+        },
+        {
+          "month": "2025-05",
+          "views": 6.455611084335712
+        },
+        {
+          "month": "2025-06",
+          "views": 6.487733683497634
+        },
+        {
+          "month": "2025-07",
+          "views": 4.905237478959624
+        },
+        {
+          "month": "2025-08",
+          "views": 4.753432885047031
+        },
+        {
+          "month": "2025-09",
+          "views": 7.764256140845254
+        },
+        {
+          "month": "2025-10",
+          "views": 7.794697078299138
+        },
+        {
+          "month": "2025-11",
+          "views": 6.430288755577011
+        },
+        {
+          "month": "2025-12",
+          "views": 6.194634891926785
+        },
+        {
+          "month": "2026-01",
+          "views": 6.001454133735034
+        },
+        {
+          "month": "2026-02",
+          "views": 6.448847516798237
+        },
+        {
+          "month": "2026-03",
+          "views": 6.270295111775344
+        },
+        {
+          "month": "2026-04",
+          "views": 5.7196718382459135
+        },
+        {
+          "month": "2026-05",
+          "views": 6.333699526727637
+        },
+        {
+          "month": "2026-06",
+          "views": 4.504984230466974
+        },
+        {
+          "month": "2026-07",
+          "views": 3.968154622845518
+        },
+        {
+          "month": "2026-08",
+          "views": 5.231044726626456
+        }
+      ],
+      "name": "JavaScript (pl)",
+      "topic": "JavaScript",
+      "resolution": {
+        "lang": "pl",
+        "project": "pl.wikipedia",
+        "article": "JavaScript",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "ro",
+      "project": "ro.wikipedia",
+      "article": "JavaScript",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 2253,
+      "avgMonthlyLast12": 188,
+      "perMillionLast12": 7.1,
+      "yoy": -48,
+      "robustGrowth": -52.5,
+      "relativeGrowth": -33.9,
+      "editionGrowth": -23.7,
+      "trendAnnual": -40.1,
+      "r2": 0.54,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 599
+      },
+      "botShare": 0.84,
+      "trust": {
+        "score": 45,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (84% of views are bots) — human counts may be contaminated too",
+          "low volume (188 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -34% YoY (raw -53%, whole edition -24%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 318
+        },
+        {
+          "month": "2024-10",
+          "views": 351
+        },
+        {
+          "month": "2024-11",
+          "views": 461
+        },
+        {
+          "month": "2024-12",
+          "views": 397
+        },
+        {
+          "month": "2025-01",
+          "views": 599
+        },
+        {
+          "month": "2025-02",
+          "views": 388
+        },
+        {
+          "month": "2025-03",
+          "views": 423
+        },
+        {
+          "month": "2025-04",
+          "views": 304
+        },
+        {
+          "month": "2025-05",
+          "views": 405
+        },
+        {
+          "month": "2025-06",
+          "views": 289
+        },
+        {
+          "month": "2025-07",
+          "views": 226
+        },
+        {
+          "month": "2025-08",
+          "views": 173
+        },
+        {
+          "month": "2025-09",
+          "views": 146
+        },
+        {
+          "month": "2025-10",
+          "views": 169
+        },
+        {
+          "month": "2025-11",
+          "views": 177
+        },
+        {
+          "month": "2025-12",
+          "views": 247
+        },
+        {
+          "month": "2026-01",
+          "views": 174
+        },
+        {
+          "month": "2026-02",
+          "views": 168
+        },
+        {
+          "month": "2026-03",
+          "views": 149
+        },
+        {
+          "month": "2026-04",
+          "views": 166
+        },
+        {
+          "month": "2026-05",
+          "views": 220
+        },
+        {
+          "month": "2026-06",
+          "views": 193
+        },
+        {
+          "month": "2026-07",
+          "views": 196
+        },
+        {
+          "month": "2026-08",
+          "views": 248
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 10.85160791311534
+        },
+        {
+          "month": "2024-10",
+          "views": 10.05214456919859
+        },
+        {
+          "month": "2024-11",
+          "views": 10.916746452454053
+        },
+        {
+          "month": "2024-12",
+          "views": 10.142401618001745
+        },
+        {
+          "month": "2025-01",
+          "views": 13.689822090363156
+        },
+        {
+          "month": "2025-02",
+          "views": 10.417157767639603
+        },
+        {
+          "month": "2025-03",
+          "views": 11.617857520408085
+        },
+        {
+          "month": "2025-04",
+          "views": 9.863640363366128
+        },
+        {
+          "month": "2025-05",
+          "views": 12.120352768703059
+        },
+        {
+          "month": "2025-06",
+          "views": 11.953788391307965
+        },
+        {
+          "month": "2025-07",
+          "views": 8.419623922968041
+        },
+        {
+          "month": "2025-08",
+          "views": 6.3870940826342295
+        },
+        {
+          "month": "2025-09",
+          "views": 5.612634424516602
+        },
+        {
+          "month": "2025-10",
+          "views": 5.874149373640147
+        },
+        {
+          "month": "2025-11",
+          "views": 3.8932095694475337
+        },
+        {
+          "month": "2025-12",
+          "views": 9.471580885843599
+        },
+        {
+          "month": "2026-01",
+          "views": 5.919967751826242
+        },
+        {
+          "month": "2026-02",
+          "views": 7.098573752871436
+        },
+        {
+          "month": "2026-03",
+          "views": 6.263690261945845
+        },
+        {
+          "month": "2026-04",
+          "views": 6.956225270566782
+        },
+        {
+          "month": "2026-05",
+          "views": 8.00838988045294
+        },
+        {
+          "month": "2026-06",
+          "views": 7.221497972910552
+        },
+        {
+          "month": "2026-07",
+          "views": 7.519751240490392
+        },
+        {
+          "month": "2026-08",
+          "views": 10.904980115340392
+        }
+      ],
+      "name": "JavaScript (ro)",
+      "topic": "JavaScript",
+      "resolution": {
+        "lang": "ro",
+        "project": "ro.wikipedia",
+        "article": "JavaScript",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "Python (programming language) (pl)",
+      "score": 39,
+      "why": "declining (share of edition views -23% YoY (raw -36%, whole edition -12%)), trust high, 14.7 views per 1M edition views"
+    },
+    {
+      "name": "Python (programming language) (ro)",
+      "score": 23,
+      "why": "declining (share of edition views -26% YoY (raw -36%, whole edition -24%)), trust medium, 9.4 views per 1M edition views"
+    },
+    {
+      "name": "JavaScript (ro)",
+      "score": 16,
+      "why": "declining (share of edition views -34% YoY (raw -53%, whole edition -24%)), trust medium, 7.1 views per 1M edition views"
+    },
+    {
+      "name": "JavaScript (pl)",
+      "score": 15,
+      "why": "declining (share of edition views -40% YoY (raw -49%, whole edition -12%)), trust medium, 6.1 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

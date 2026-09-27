@@ -1,0 +1,95 @@
+{
+  "iteration": "evals/results/iteration-7",
+  "baseline": "evals/results/iteration-7",
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": null,
+      "assertions": "0/0",
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    },
+    "without_skill": {
+      "pass_rate": null,
+      "assertions": "0/0",
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    },
+    "delta": {
+      "pass_rate": null,
+      "time_seconds": null,
+      "tokens": null,
+      "tool_calls": null
+    }
+  },
+  "with_skill_all_evals": {
+    "pass_rate": {
+      "mean": 0.77,
+      "stddev": 0.08,
+      "n": 4
+    },
+    "assertions": "26/34",
+    "time_seconds": {
+      "mean": 295.51,
+      "stddev": 123.03,
+      "n": 4
+    },
+    "tokens": {
+      "mean": 60144.5,
+      "stddev": 7547.9,
+      "n": 4
+    },
+    "tool_calls": {
+      "mean": 12.25,
+      "stddev": 7.89,
+      "n": 4
+    }
+  },
+  "per_eval": [
+    {
+      "eval": "eval-deepseek-zh-vi-trust",
+      "passRate": 0.88,
+      "passed": 7,
+      "total": 8,
+      "turns": 2,
+      "seconds": 148.153,
+      "tokens": 53885,
+      "calls": 4,
+      "baseline": null
+    },
+    {
+      "eval": "eval-finlit-uk-kk",
+      "passRate": 0.75,
+      "passed": 6,
+      "total": 8,
+      "turns": 2,
+      "seconds": 436.313,
+      "tokens": 60260,
+      "calls": 18,
+      "baseline": null
+    },
+    {
+      "eval": "eval-german-course-tr-it-nl-report",
+      "passRate": 0.78,
+      "passed": 7,
+      "total": 9,
+      "turns": 2,
+      "seconds": 201.367,
+      "tokens": 54002,
+      "calls": 5,
+      "baseline": null
+    },
+    {
+      "eval": "eval-running-switzerland-report",
+      "passRate": 0.67,
+      "passed": 6,
+      "total": 9,
+      "turns": 2,
+      "seconds": 396.22,
+      "tokens": 72431,
+      "calls": 22,
+      "baseline": null
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "assertion_results": [
+    {
+      "text": "Loaded the skill (read SKILL.md) and ran scripts/analyze.ts for the question",
+      "passed": true,
+      "evidence": "analyze.ts --topic \"Python (programming language)\" --langs pl,ro --lang uk; turn 2 JavaScript"
+    },
+    {
+      "text": "The whole answer is in the user's language (check_claims --lang reports no language problems)",
+      "passed": true,
+      "evidence": "language problems: 0 / 0"
+    },
+    {
+      "text": "Every number in the answer is found in the analysis data (no unverified numbers)",
+      "passed": true,
+      "evidence": "numbers 10/10 and 28/28"
+    },
+    {
+      "text": "Verdict labels in the answer match the data (no label problems)",
+      "passed": true,
+      "evidence": "label problems: 0"
+    },
+    {
+      "text": "States how far to trust the result (trust level with a reason) and at least one limitation",
+      "passed": true,
+      "evidence": "довіра висока (100) / середня (55): 258 переглядів/міс, 32% ботів"
+    },
+    {
+      "text": "Recommends validating before investing — not launching or dropping on Wikipedia data alone",
+      "passed": true,
+      "evidence": "'валідуйте додатково через пошукові запити … опитування учнів'"
+    },
+    {
+      "text": "Follow-up: reuses the previous setup and says what changed versus the previous answer",
+      "passed": true,
+      "evidence": "Python vs JavaScript table per edition"
+    },
+    {
+      "text": "Analysed the Python programming language article, not the snake or a disambiguation page",
+      "passed": true,
+      "evidence": "topic 'Python (programming language)' chosen by the agent"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1
+  },
+  "human_review": "Clean. Uses country names (Польща/Румунія) for editions — acceptable for a quick answer."
+}

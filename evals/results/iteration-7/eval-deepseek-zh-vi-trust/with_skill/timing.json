@@ -1,0 +1,16 @@
+{
+ "turns": [
+  {
+   "total_tokens": 50096,
+   "duration_ms": 39861,
+   "tool_calls": 3
+  },
+  {
+   "total_tokens": 53885,
+   "duration_ms": 108292,
+   "tool_calls": 1
+  }
+ ],
+ "model": "claude-haiku-4-5-20251001",
+ "method": "duration = transcript timestamps from the turn's user message to its last assistant message; tool_calls exclude the final hand-back; total_tokens = subagent context size from the task notification"
+}

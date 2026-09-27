@@ -13,7 +13,7 @@ test("extractNumbers: percent, signs, thousands, decimals, multipliers; ignores 
 
 test("small plain numbers must be nearly exact (regression: '2.4x' matched the spike factor 2.5)", () => {
   const m = computeMetrics({ lang: "uk", project: "uk.wikipedia", article: "X", user });
-  assert.deepEqual(checkClaims("у 2.4x більше", { series: [m] }).unverified, ["2.4"]);
+  assert.deepEqual(checkClaims("R² = 0.7 у 2.4 рази вище", { series: [m] }).unverified, ["0.7"]);
   assert.deepEqual(checkClaims("спайк = 2.5× медіани; R² = " + m.r2, { series: [m] }).unverified, []);
   assert.deepEqual(checkClaims("−63% (округлено з −63.0%)", { series: [m] }).unverified, []);
 });
@@ -89,4 +89,67 @@ test("checkLanguage (uk) flags Russian calques only in the phrases where they ar
   assert.notDeepEqual(checkLanguage("Відносна доля інтересу практично не змінилась", "uk"), []);  // seen in testing
   assert.notDeepEqual(checkLanguage("детальне пояснення на українській мові", "uk"), []);          // seen in testing
   assert.deepEqual(checkLanguage("Така вже доля цього розділу; звіт українською мовою.", "uk"), []);
+});
+
+test("titleMatches: topic words must be in the article title (regression: 'Claude Code' → 'Claude (AI)')", async () => {
+  const { titleMatches } = await import("../scripts/lib/resolve.ts");
+  assert.equal(titleMatches("Claude Code", "Claude (AI)"), false);
+  assert.equal(titleMatches("Python", "Python (programming language)"), true);
+  assert.equal(titleMatches("Electric cars", "Electric car"), true);
+  assert.equal(titleMatches("Intermittent fasting", "Intermittent fasting"), true);
+  assert.equal(titleMatches("GitHub Copilot", "GitHub Copilot"), true);
+});
+
+test("ratios are never in the data: '4×', '2.3x', '18 times', 'в 4 рази' (evals 7: three of four scenarios)", () => {
+  const m = computeMetrics({ lang: "uk", project: "uk.wikipedia", article: "X", user });
+  const r = checkClaims("ChatGPT has 4× the traffic, 2.3x the audience, 18 times more views; майже в 4 рази більше, у 2,5 раза", { series: [m] });
+  assert.deepEqual(r.ratios, ["4×", "2.3×", "18×"]);
+  assert.deepEqual(r.unverified, []);
+  // the skill's own rules are not claims: spike = 2.5× neighbours, level shift = 20×
+  assert.deepEqual(checkClaims("місяць > 2.5× сусідніх; стрибок понад 20×", { series: [m] }).ratios, []);
+});
+
+test("a range is two percentages, not a minus sign (regression: '78–82%/year' left 78 unverified)", () => {
+  assert.deepEqual(extractNumbers("fell 78–82%/year").map((c) => [c.value, c.percent, c.signed]), [[78, true, false], [82, true, false]]);
+  assert.deepEqual(extractNumbers("видання втратили 8–13% в році").map((c) => c.value), [8, 13]);
+  assert.deepEqual(extractNumbers("between 500-600 views and +10–15%").map((c) => c.value), [500, 600, 10, 15]);
+  assert.deepEqual(extractNumbers("спадає на -21% р/р").map((c) => c.value), [-21]);
+});
+
+test("Ukrainian: words in Latin letters, Russian spellings and calques are flagged; names, codes and paths are not", () => {
+  const p = checkLanguage("тому interesse не можна виміряти; 133 vs 30; перевірте keyword volumes і landing page", "uk");
+  assert.ok(p.some((x) => x.includes('"interesse"') && x.includes('"vs"') && x.includes('"keyword"') && x.includes('"landing"')), p.join("\n"));
+  assert.ok(checkLanguage("при меньших темпах падіння", "uk").some((x) => x.includes("меньших")));
+  assert.ok(checkLanguage("немає артиклю про фінансову грамотність", "uk").some((x) => x.includes("артиклю")));
+  assert.ok(checkLanguage("можуть шукати інформацію на французькому, навіть якщо", "uk").some((x) => x.includes("на французькому")));
+  assert.deepEqual(checkLanguage("на французькому ринку і на німецькому сайті", "uk"), []);
+  assert.ok(checkLanguage("статті на французькій мові", "uk").some((x) => x.includes("на французькій мові")));
+  const clean = "Французька (fr · Course à pied) — 2 094 переглядів; перевірте Google Trends і ChatGPT. Файл: `out/running/report.pdf`, " +
+    "дані: wikimedia.org/api/rest_v1, розділи uk, kk, de, rm; course à pied; R² = 0,2; A/B-тест; SEO.";
+  assert.deepEqual(checkLanguage(clean, "uk", ["Course à pied", "Running"]), []);
+});
+
+test("platform excuse: a relative decline must not be blamed on the platform (evals 3, 6, 7)", () => {
+  const rel = [{ lang: "fr", verdict: { label: "declining" as const, basis: "share of edition views −21% YoY — the edition-wide change (−10%) is already removed; raw views −28%" } }];
+  for (const bad of [
+    "Інтерес до бігу спадає на всіх платформах через загальну втрату трафіку Вікіпедії.",
+    "The 2-year sharp decline appears to be recent platform-wide effect (Wikipedia traffic dropped overall).",
+    "The drop is mostly due to the platform-wide decline.",
+    "Спад у всіх мовах також відбився загальне скорочення трафіку в Вікіпедії у 2025–2026 роках.", // iteration 8
+  ]) assert.equal(checkLabels(bad, rel).length, 1, bad);
+  for (const ok of [
+    "Chess is gaining relative share despite the platform-wide traffic decline.",
+    "Raw views fell 28%, largely due to the platform-wide decline; the share removes that effect.",
+    "Усі видання втратили людський трафік (uk −28%) через AI-пошук.",
+    "Відносна частка вже враховує спад усього розділу, тож падіння — саме теми.",
+  ]) assert.deepEqual(checkLabels(ok, rel), [], ok);
+  // without relative growth (--no-normalize) there is nothing to blame on
+  assert.deepEqual(checkLabels("The drop is mostly due to the platform-wide decline.", [{ lang: "fr", verdict: { label: "declining", basis: "median monthly views −28% YoY" } }]), []);
+});
+
+test("trust written as a percentage is flagged (iteration 8: «100% довіра» passed as completeness 100 %)", () => {
+  for (const bad of ["Французька мова найнадійніша — 100% довіра Вікіпедії", "trust high (90%)", "90 % trust in the Czech numbers"])
+    assert.equal(checkLabels(bad, []).length, 1, bad);
+  for (const ok of ["довіра висока (70) з 18% автоматизованого трафіку", "trust high (90); 28% of views are bots", "довіра середня (50)"])
+    assert.deepEqual(checkLabels(ok, []), [], ok);
 });

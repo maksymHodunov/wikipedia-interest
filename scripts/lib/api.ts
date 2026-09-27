@@ -3,7 +3,7 @@
  *
  * Endpoints:
  *  - REST pageviews  https://wikimedia.org/api/rest_v1/metrics/pageviews/...
- *  - Action API      https://{lang}.wikipedia.org/w/api.php  (search, langlinks)
+ *  - Action API      https://{lang}.wikipedia.org/w/api.php  (search, langlinks, disambiguation pageprops)
  */
 import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, statSync, writeFileSync, existsSync } from "node:fs";
@@ -143,4 +143,12 @@ export async function langlinks(lang: string, title: string): Promise<Record<str
     if (p.title) out[lang] = p.title;
   }
   return out;
+}
+
+/** Is this title (after redirects) a disambiguation page? ("Python", "Claude", "Mercury" are.) */
+export async function isDisambiguation(lang: string, title: string): Promise<boolean> {
+  const data = await actionApi<{ query?: { pages?: { pageprops?: Record<string, unknown> }[] } }>(lang, {
+    action: "query", prop: "pageprops", ppprop: "disambiguation", titles: title, redirects: 1,
+  });
+  return (data.query?.pages ?? []).some((p) => p.pageprops !== undefined && "disambiguation" in p.pageprops);
 }
