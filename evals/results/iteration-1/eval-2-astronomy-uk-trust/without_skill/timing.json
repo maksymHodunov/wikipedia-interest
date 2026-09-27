@@ -1,0 +1,7 @@
+{
+  "total_tokens": 65448,
+  "duration_ms": 273336,
+  "tool_calls": 19,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "re-run with stronger isolation; the first baseline run read SKILL.md and ran the skill's scripts despite instructions and was discarded (kept as without_skill_INVALID_used-skill)"
+}

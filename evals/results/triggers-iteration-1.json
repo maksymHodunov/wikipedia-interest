@@ -1,0 +1,73 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "runs_per_query": 1,
+  "setup": "clean subagent per query; <available_skills> block with this skill + 3 distractors (pdf, web-research, i18n-translation)",
+  "results": [
+    {
+      "query": "Is interest in yoga growing among Polish speakers? We're considering a Polish version of our yoga app.",
+      "should_trigger": true,
+      "triggered": true,
+      "evidence": "1st call: Read SKILL.md; analyze.ts --topic Yoga --langs pl (3 tool calls)"
+    },
+    {
+      "query": "which of these course topics should we add first — photography, astronomy or chess? most of our users are in Ukraine",
+      "should_trigger": true,
+      "triggered": true,
+      "evidence": "1st call: Read SKILL.md; analyze.ts --topics \"Photography,Astronomy,Chess\" --langs uk; answer 'Validate Chess first with a landing page'"
+    },
+    {
+      "query": "Ми думаємо локалізувати застосунок чеською або словацькою. Де більше інтересу до медитації?",
+      "should_trigger": true,
+      "triggered": true,
+      "evidence": "1st call: Read SKILL.md; analyze.ts --topic Meditation --langs cs,sk"
+    },
+    {
+      "query": "Need a one-pager for investors on how interest in cryptocurrency changed in German vs French over the last 5 years",
+      "should_trigger": true,
+      "triggered": true,
+      "evidence": "1st call: Read SKILL.md; analyze.ts --langs de,fr --months 60; report.ts produced the one-page PDF"
+    },
+    {
+      "query": "is the hype around intermittent fasting dying down in europe or not?",
+      "should_trigger": true,
+      "triggered": true,
+      "evidence": "1st call: Read SKILL.md; analyze.ts --langs de,fr,es,it,pl,nl (pl, nl excluded: no article)"
+    },
+    {
+      "query": "Help me write a Wikipedia article about our startup so it passes the notability review",
+      "should_trigger": false,
+      "triggered": false,
+      "evidence": "1 tool call (final answer); did not read any SKILL.md"
+    },
+    {
+      "query": "Our Google Analytics export in ~/Downloads/ga_poland.csv shows fewer Polish users this month — can you find out why?",
+      "should_trigger": false,
+      "triggered": false,
+      "evidence": "looked for the CSV in ~/Downloads; did not read our SKILL.md"
+    },
+    {
+      "query": "Translate our onboarding screens (en.json) into Czech and Slovak",
+      "should_trigger": false,
+      "triggered": true,
+      "evidence": "chose the i18n-translation skill first; then, searching its working directory (which was the skill folder) for en.json, it read our SKILL.md and concluded 'this is a Wikipedia interest analysis skill, not onboarding screens'. Counted as a false trigger; caused by the test's working directory, not by the description."
+    },
+    {
+      "query": "What is intermittent fasting and is it safe for people with diabetes?",
+      "should_trigger": false,
+      "triggered": false,
+      "evidence": "chose the web-research skill; did not read our SKILL.md"
+    },
+    {
+      "query": "Make a one-page PDF summary of this meeting transcript for the team",
+      "should_trigger": false,
+      "triggered": false,
+      "evidence": "asked for the missing transcript and named the pdf skill; did not read our SKILL.md"
+    }
+  ],
+  "summary": {
+    "correct": 9,
+    "total": 10,
+    "should_trigger": "5/5 triggered",
+    "should_not_trigger": "4/5 not triggered (1 false trigger caused by the test's working directory being the skill folder)"
+  }
+}

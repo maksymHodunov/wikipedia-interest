@@ -1,0 +1,7 @@
+{
+  "total_tokens": 47422,
+  "duration_ms": 30991,
+  "tool_calls": 5,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "human review: 'clear choice for localization' is a launch recommendation; SKILL.md asks for 'validate X first' (iteration 2 did say 'Validate Turkish first')"
+}

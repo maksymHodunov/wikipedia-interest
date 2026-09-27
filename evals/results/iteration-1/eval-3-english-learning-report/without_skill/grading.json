@@ -1,0 +1,45 @@
+{
+  "assertion_results": [
+    {
+      "text": "Produced a one-page PDF report",
+      "passed": false,
+      "evidence": "no PDF; wrote 5 files (md, txt, json, csv, README) totalling ~1 000 lines"
+    },
+    {
+      "text": "Passed its own verdict and findings into a report tool",
+      "passed": false,
+      "evidence": "no report tool"
+    },
+    {
+      "text": "Recommends 2–3 audiences to research next, each with a reason tied to a metric",
+      "passed": true,
+      "evidence": "Germany and Poland first, justified by EF English Proficiency Index scores (615, 600)"
+    },
+    {
+      "text": "Says which article was used as the proxy for 'learning English' and what it measures",
+      "passed": false,
+      "evidence": "no Wikipedia data used at all, although the user asked to compare Wikipedia interest (the web search for Wikipedia views failed and it gave up)"
+    },
+    {
+      "text": "Mentions at least one limitation or assumption",
+      "passed": false,
+      "evidence": "no limitations; states as fact 'Wikipedia заблокована в Туреччині' — false since Dec 2019 (tr Wikipedia has ~109 M human views/month in the data)"
+    },
+    {
+      "text": "No invented numbers (verifiable against data)",
+      "passed": false,
+      "evidence": "EF scores, market shares and '52% Duolingo' taken from web snippets, not verifiable; one factual error"
+    },
+    {
+      "text": "Verdict labels in the answer and the PDF match analysis.json (no 'growing' for a flat or declining series)",
+      "passed": false,
+      "evidence": "no Wikipedia data, so no verdict labels to match"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 6,
+    "total": 7,
+    "pass_rate": 0.14
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "skill_name": "wikipedia-interest",
+  "evals": [
+    {
+      "id": 1,
+      "name": "fasting-pl-cs",
+      "prompt": "Порівняй зростання інтересу до інтервального голодування в польськомовній та чеськомовній Wikipedia за останні два роки.",
+      "expected_output": "A comparison of pl and cs over 24 months. Polish Wikipedia has no article on intermittent fasting, so the answer reports that as a finding (or clearly labels a proxy article) instead of silently using an unrelated article. Czech numbers come from the script, with the trust level and at least one limitation.",
+      "files": [],
+      "assertions": [
+        "Ran scripts/analyze.ts with --langs containing pl and cs and a 24-month period",
+        "States that Polish Wikipedia has no article on intermittent fasting, or explicitly labels any Polish article used as a proxy",
+        "Gives the Czech growth (relative or raw YoY) with a number that appears in analysis.json",
+        "States the trust level for the Czech series",
+        "Mentions at least one limitation: views ≠ willingness to pay, or the edition-wide traffic decline",
+        "Every number in the answer is found by scripts/check_claims.ts (no invented numbers)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "astronomy-uk-trust",
+      "prompt": "Ми думаємо додати курс з астрономії до освітнього застосунку. Чи зростає інтерес до цієї теми в україномовній Wikipedia, і наскільки цьому зростанню можна довіряти?",
+      "expected_output": "A direction (growing/flat/declining) for Ukrainian Wikipedia with numbers, based on a basket of astronomy articles or with an explicit note that one article is a narrow proxy for a course; an explicit answer to 'how far to trust it' with the trust label and concrete reasons (spikes, bots, the whole uk edition declining); a recommendation on what to validate next.",
+      "files": [],
+      "assertions": [
+        "Uses more than one astronomy-related article, or explicitly says a single article is a narrow proxy for a course",
+        "Gives a direction for uk with a number that appears in analysis.json",
+        "Answers the trust question with a trust label and at least one concrete reason (spikes/September, bots, edition-wide decline, low volume)",
+        "Separates the topic's own trend from the whole Ukrainian Wikipedia decline (relative vs raw, or mentions editionGrowth)",
+        "Recommends a validation step beyond Wikipedia (landing page, ads test, search volumes, user interviews)",
+        "Every number in the answer is found by scripts/check_claims.ts (no invented numbers)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "english-learning-report",
+      "prompt": "Ми створюємо застосунок для вивчення мов. Порівняй інтерес до вивчення англійської у німецькій, французькій, іспанській, польській і турецькій Wikipedia та підготуй короткий звіт: які аудиторії варто дослідити наступними й чому?",
+      "expected_output": "A one-page PDF produced by scripts/report.ts with the agent's own verdict and findings, plus a chat answer that recommends 2–3 audiences to research next with data-based reasons, explains which article is the proxy for 'learning English', and states limitations.",
+      "files": [],
+      "assertions": [
+        "Ran scripts/report.ts and its final output has \"ok\": true and \"pages\": 1",
+        "Passed its own --verdict and --findings (not the auto-generated draft)",
+        "Recommends 2–3 audiences to research next, each with a reason tied to a metric",
+        "Says which article was used as the proxy for 'learning English' and what that proxy measures",
+        "Mentions at least one limitation or assumption",
+        "report.ts output has an empty numbers.unverified list",
+        "Verdict labels in the answer and the PDF match analysis.json (no 'growing' for a flat or declining series; scripts/check_claims.ts labelProblems is empty)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "chess-tr-id-casual",
+      "prompt": "hey, we're thinking about localizing our chess app into turkish or indonesian next. is chess actually getting more popular there? quick answer pls",
+      "expected_output": "A short answer (not a report) comparing tr and id for 'Chess' with a verdict and number for each, the trust level, and one caveat.",
+      "files": [],
+      "assertions": [
+        "Ran scripts/analyze.ts with --langs containing tr and id",
+        "Gives a verdict with a number for both Turkish and Indonesian",
+        "Picks or leans towards one option, or explains why the data does not separate them",
+        "Keeps the answer under ~200 words (the user asked for a quick answer)",
+        "Every number in the answer is found by scripts/check_claims.ts (no invented numbers)"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "fasting-followup",
+      "follow_up_of": 1,
+      "prompt": "А тепер те саме за 5 років, і додай словацьку.",
+      "expected_output": "Re-runs the previous analysis with --months 60 and sk added, reuses the previous setup (topic, flags), and compares the new result with the previous answer.",
+      "files": [],
+      "assertions": [
+        "Re-ran scripts/analyze.ts with --months 60 (or an equivalent 5-year --start/--end) and --langs containing pl, cs and sk",
+        "Compares the new result with the previous 2-year answer",
+        "Handles Slovak correctly: reports its numbers, or reports that it has no article on the topic",
+        "Every number in the answer is found by scripts/check_claims.ts (no invented numbers)"
+      ]
+    }
+  ]
+}

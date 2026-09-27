@@ -1,0 +1,334 @@
+{
+  "report_metadata": {
+    "title": "English Language Learning Interest: Comparative Analysis",
+    "subtitle": "Wikipedia Communities - German, French, Spanish, Polish, Turkish",
+    "date": "2026-09-27",
+    "scope": "Language app market research",
+    "data_sources": [
+      "EF English Proficiency Index 2025",
+      "Eurostat Foreign Language Learning Statistics 2024",
+      "Statista Language Learning Apps Market 2025-2026",
+      "Business of Apps Market Research 2026"
+    ]
+  },
+  "countries": {
+    "Germany": {
+      "proficiency": {
+        "ef_score": 615,
+        "global_rank": 4,
+        "category": "Very High",
+        "yoy_improvement": "+17 points",
+        "trend": "Strong growth"
+      },
+      "education": {
+        "primary_school_enrollment": "82.5% (EU average)",
+        "secondary_school_enrollment": "89%+",
+        "notes": "Likely higher than average in regions with high professional demand"
+      },
+      "market": {
+        "global_market_share": "5.69%",
+        "european_rank": "1st",
+        "app_landscape": {
+          "duolingo_share": "40-50%",
+          "babbel_share": "17%",
+          "notes": "Babbel is German company; strong premium segment"
+        },
+        "market_size": "Largest in Europe"
+      },
+      "wikipedia": {
+        "accessibility": "Full access",
+        "articles": "6M+",
+        "notes": "Robust English language learning content available"
+      },
+      "research_tier": "Tier 1 - Immediate Expansion",
+      "target_audience": {
+        "age_range": "25-45",
+        "profile": "Employed professionals, corporate training",
+        "income_level": "High",
+        "willingness_to_pay": "High"
+      },
+      "strategic_focus": [
+        "Professional/business English",
+        "Technical vocabulary",
+        "Accent training for professionals",
+        "Premium tier positioning"
+      ],
+      "opportunities": [
+        "Highest proficiency = faster time-to-value",
+        "Proven market adoption",
+        "Strong Wikipedia ecosystem",
+        "Professional learner base with budget"
+      ],
+      "risks": [
+        "Mature, competitive market",
+        "Babbel and Duolingo already entrenched",
+        "High customer acquisition cost"
+      ]
+    },
+    "Poland": {
+      "proficiency": {
+        "ef_score": 600,
+        "global_rank": 15,
+        "category": "Very High",
+        "yoy_improvement": "Newly promoted",
+        "trend": "Strong growth momentum"
+      },
+      "education": {
+        "primary_school_enrollment": "99-100%",
+        "secondary_school_enrollment": "89%+",
+        "notes": "Near-universal English education from young age"
+      },
+      "market": {
+        "global_market_share": "~1.3%",
+        "european_rank": "5-6",
+        "app_landscape": {
+          "duolingo_share": "50-60%",
+          "babbel_share": "5-10%",
+          "notes": "Duolingo dominates; Babbel has limited presence"
+        },
+        "market_size": "Growing"
+      },
+      "wikipedia": {
+        "accessibility": "Full access",
+        "articles": "Growing edition",
+        "notes": "Strong academic and professional content"
+      },
+      "research_tier": "Tier 1 - Immediate Expansion",
+      "target_audience": {
+        "age_range": "16-35",
+        "profile": "Digitally native, young professionals, students",
+        "income_level": "Mixed (lower than Germany)",
+        "willingness_to_pay": "Low-Medium (preference for free/freemium)"
+      },
+      "strategic_focus": [
+        "Affordable, gamified learning",
+        "Conversational English",
+        "Certification prep (TOEFL/IELTS)",
+        "Community features"
+      ],
+      "opportunities": [
+        "Recently promoted to Very High proficiency = momentum",
+        "Large young, digitally native population",
+        "Freemium model success (Duolingo dominates)",
+        "Tech industry growth (Krakow hub)"
+      ],
+      "risks": [
+        "Price-sensitive market",
+        "Duolingo dominance creates high competition",
+        "Lower GDP per capita than Western Europe"
+      ]
+    },
+    "France": {
+      "proficiency": {
+        "ef_score": 539,
+        "global_rank": "Not specified",
+        "category": "High",
+        "yoy_improvement": "+15 points",
+        "trend": "Steady improvement"
+      },
+      "education": {
+        "primary_school_enrollment": "90-97%",
+        "secondary_school_enrollment": "89%+",
+        "notes": "High adoption, slightly below Germany"
+      },
+      "market": {
+        "global_market_share": "2.70%",
+        "european_rank": "3rd",
+        "app_landscape": {
+          "duolingo_share": "40-50%",
+          "babbel_share": "8-12%",
+          "notes": "Duolingo strong; Babbel presence moderate"
+        },
+        "market_size": "Large"
+      },
+      "wikipedia": {
+        "accessibility": "Full access",
+        "articles": "2.78M (4th largest Wikipedia edition)",
+        "notes": "Excellent resource coverage for content sourcing"
+      },
+      "research_tier": "Tier 2 - Secondary Focus",
+      "target_audience": {
+        "age_range": "20-40",
+        "profile": "Education-driven, quality-conscious",
+        "income_level": "High",
+        "willingness_to_pay": "Medium-High"
+      },
+      "strategic_focus": [
+        "Cultural/conversational English",
+        "European English standards",
+        "Quality over gamification",
+        "French-English code-switching"
+      ],
+      "opportunities": [
+        "Established demand",
+        "Strong Wikipedia base for content",
+        "Cultural differentiation vs. Duolingo",
+        "Quality-driven learner segment"
+      ],
+      "risks": [
+        "Strong French language identity",
+        "Potential resistance to English prioritization",
+        "Incumbent competition (Duolingo, Babbel)"
+      ]
+    },
+    "Spain": {
+      "proficiency": {
+        "ef_score": 540,
+        "global_rank": "Not specified",
+        "category": "High",
+        "yoy_improvement": "+2 points",
+        "trend": "Stable"
+      },
+      "education": {
+        "primary_school_enrollment": "99-100%",
+        "secondary_school_enrollment": "89%+",
+        "notes": "Near-universal English education"
+      },
+      "market": {
+        "global_market_share": "1.76%",
+        "european_rank": "4th",
+        "app_landscape": {
+          "duolingo_share": "50-60%",
+          "babbel_share": "8-12%",
+          "notes": "Duolingo dominates; highly competitive"
+        },
+        "market_size": "Large"
+      },
+      "wikipedia": {
+        "accessibility": "Full access",
+        "articles": "Extensive Spanish content edition",
+        "notes": "595M+ Spanish speakers globally; strong content base"
+      },
+      "research_tier": "Tier 2 - Secondary Focus",
+      "target_audience": {
+        "age_range": "18-45",
+        "profile": "Urban, mobile-first, mixed income",
+        "income_level": "Medium",
+        "willingness_to_pay": "Low-Medium"
+      },
+      "strategic_focus": [
+        "Business Spanish + English bridge",
+        "Latin American English variants",
+        "Mobile-first platform",
+        "Regional content differentiation"
+      ],
+      "opportunities": [
+        "Large market with sustained demand",
+        "Mobile-first culture aligns with app model",
+        "Spanish content synergies (Latin America)",
+        "Urban tech sector growth"
+      ],
+      "risks": [
+        "Duolingo already dominant (50-60% share)",
+        "Price-sensitive market",
+        "Differentiation challenge vs. incumbents"
+      ]
+    },
+    "Turkey": {
+      "proficiency": {
+        "ef_score": 488,
+        "global_rank": "50-60",
+        "category": "Low",
+        "yoy_improvement": "Stagnant",
+        "trend": "Flat or declining"
+      },
+      "education": {
+        "primary_school_enrollment": "N/A (non-EU member)",
+        "secondary_school_enrollment": "N/A",
+        "notes": "Less formalized English education pipeline"
+      },
+      "market": {
+        "global_market_share": "~2.3%",
+        "european_rank": "Growing",
+        "app_landscape": {
+          "duolingo_share": "52%",
+          "babbel_share": "5%",
+          "notes": "Duolingo highly dominant; early-adopter tech community"
+        },
+        "market_size": "Growing, large population base"
+      },
+      "wikipedia": {
+        "accessibility": "BLOCKED domestically",
+        "articles": "~3B pageviews/year potential",
+        "notes": "Wikipedia blockade = app-dependent learners, content sourcing challenge"
+      },
+      "research_tier": "Tier 3 - Strategic Long-term Growth",
+      "target_audience": {
+        "age_range": "18-35 (urban tech professionals)",
+        "profile": "Aspirational learners, tech workers, entrepreneurs",
+        "income_level": "Low-Medium (growing middle class)",
+        "willingness_to_pay": "Low (but high growth potential)"
+      },
+      "strategic_focus": [
+        "Foundational English learning",
+        "Tech/startup vocabulary",
+        "Community-driven content",
+        "Alternative distribution (non-Wikipedia)"
+      ],
+      "opportunities": [
+        "Highest user growth potential (low baseline + 85M population)",
+        "App-dependent learners (Wikipedia blocked)",
+        "Strong early-adopter community (Istanbul, Ankara tech hubs)",
+        "Untapped market for premium content",
+        "Duolingo dominance indicates strong demand"
+      ],
+      "risks": [
+        "Wikipedia BLOCKED = cannot leverage content",
+        "Lower GDP per capita ($9k) = lower willingness to pay",
+        "Political instability; stricter internet regulations",
+        "Requires alternative distribution channels",
+        "Longer-term strategy needed (not immediate expansion)"
+      ]
+    }
+  },
+  "research_priority_tiers": {
+    "tier_1_immediate": {
+      "timeline": "Months 1-6",
+      "countries": ["Germany", "Poland"],
+      "rationale": "High proficiency, proven market adoption, strong Wikipedia resources",
+      "research_focus": [
+        "Competitive user research (Duolingo, Babbel)",
+        "Proficiency gap analysis",
+        "Pricing elasticity study",
+        "Content sourcing from Wikipedia"
+      ]
+    },
+    "tier_2_secondary": {
+      "timeline": "Months 6-12",
+      "countries": ["France", "Spain"],
+      "rationale": "Established demand, cultural differentiation opportunities, large markets",
+      "research_focus": [
+        "Cultural learning preferences",
+        "Regional English variants",
+        "Differentiation vs. incumbents",
+        "Content localization"
+      ]
+    },
+    "tier_3_strategic": {
+      "timeline": "Months 12+",
+      "countries": ["Turkey"],
+      "rationale": "Highest growth potential, app-dependent users, long-term market play",
+      "research_focus": [
+        "Urban tech community partnerships",
+        "Alternative distribution channels",
+        "Proprietary content strategy",
+        "Regulatory risk assessment"
+      ]
+    }
+  },
+  "key_findings": {
+    "proficiency_divide": "Germany & Poland (600+) vs. Turkey (488) shows two-tier market",
+    "market_maturity": "Germany mature/competitive; Poland growing momentum; Turkey emerging",
+    "wikipedia_critical": "Wikipedia availability enables content strategy in EU; Turkey blockade requires alternatives",
+    "education_pipeline": "Near-universal English in Poland & Spain; high in France & Germany; undefined in Turkey",
+    "pricing_strategy": "Premium in Germany; freemium in Poland/Spain; value-based approach needed for Turkey",
+    "competition_context": "Duolingo dominates most markets (40-60% share); Babbel strong in Germany"
+  },
+  "success_metrics": [
+    "Market-specific positioning effectiveness",
+    "Wikipedia content integration (where applicable)",
+    "Proficiency-based content matching",
+    "Local partnership penetration",
+    "User acquisition cost vs. LTV by market"
+  ]
+}

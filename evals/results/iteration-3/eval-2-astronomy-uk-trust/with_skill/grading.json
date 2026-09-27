@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Uses more than one astronomy-related article, or says a single article is a narrow proxy",
+      "passed": true,
+      "evidence": "trace call 3: --topics \"Astronomy,Solar System,Galaxy,Black hole\""
+    },
+    {
+      "text": "Gives a direction for uk with a number that appears in analysis.json",
+      "passed": true,
+      "evidence": "\"падає… −47%\" (relativeGrowth −47.2)"
+    },
+    {
+      "text": "Answers the trust question with a trust label and at least one concrete reason",
+      "passed": true,
+      "evidence": "\"Довіра… висока… спайки в вересні збігаються зі школярським роком. Астрономія має 28% автоматизованого трафіку\""
+    },
+    {
+      "text": "Separates the topic's own trend from the whole Ukrainian Wikipedia decline",
+      "passed": true,
+      "evidence": "\"втратила 28% трафіку загалом… Астрономія падає на −47% у відносній частці — це сильніше, ніж платформа\""
+    },
+    {
+      "text": "Recommends a validation step beyond Wikipedia",
+      "passed": true,
+      "evidence": "Google Trends, focus groups via social networks"
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 18, unverified []"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "assertion_results": [
+    {
+      "text": "Re-ran analyze.ts with --months 60 and --langs containing pl, cs and sk",
+      "passed": true,
+      "evidence": "trace call 6: --topic \"Intermittent fasting\" --langs pl,cs,sk --months 60"
+    },
+    {
+      "text": "Compares the new result with the previous 2-year answer",
+      "passed": false,
+      "evidence": "the answer describes the 5-year result only; no sentence relates it to the earlier −51% / 2-year finding"
+    },
+    {
+      "text": "Handles Slovak correctly",
+      "passed": true,
+      "evidence": "\"Словацька Wikipedia: Повна відсутність покриття\" — matches excluded[sk].reason 'no article found'"
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 10, unverified []"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  }
+}

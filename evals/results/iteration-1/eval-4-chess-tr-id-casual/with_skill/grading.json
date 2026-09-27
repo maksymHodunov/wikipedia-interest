@@ -1,0 +1,35 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/analyze.ts with --langs containing tr and id",
+      "passed": true,
+      "evidence": "trace call 2: --topic \"Chess\" --langs tr,id --months 24"
+    },
+    {
+      "text": "Gives a verdict with a number for both Turkish and Indonesian",
+      "passed": true,
+      "evidence": "\"growing in Turkey (+22% YoY relative share) but declining in Indonesia (−15% YoY)\""
+    },
+    {
+      "text": "Picks or leans towards one option",
+      "passed": true,
+      "evidence": "\"Localize into Turkish.\""
+    },
+    {
+      "text": "Keeps the answer under ~200 words",
+      "passed": false,
+      "evidence": "225 words: the full answer template (table + 4 sections) was used for a 'quick answer pls' request"
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 14, unverified [] (first check flagged '–26' from '2025–26' — a checker bug, fixed)"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  }
+}

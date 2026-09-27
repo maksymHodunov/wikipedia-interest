@@ -1,0 +1,213 @@
+{
+  "analysis_date": "2026-09-27T15:56:43.655609",
+  "czech_article": "P\u0159eru\u0161ovan\u00fd p\u016fst",
+  "polish_article": "G\u0142od\u00f3wka lecznicza (Note: Direct intermittent fasting article not found in Polish Wikipedia)",
+  "czech_data": {
+    "year1_avg_daily_views": 16.77,
+    "year2_avg_daily_views": 8.33,
+    "growth_percent": -50.35
+  },
+  "polish_data": {
+    "year1_avg_daily_views": 13.27,
+    "year2_avg_daily_views": 9.65,
+    "growth_percent": -27.27
+  },
+  "monthly_data": {
+    "czech": [
+      {
+        "month": "202410",
+        "avg_daily_views": 22.71
+      },
+      {
+        "month": "202411",
+        "avg_daily_views": 13.77
+      },
+      {
+        "month": "202412",
+        "avg_daily_views": 13.42
+      },
+      {
+        "month": "202501",
+        "avg_daily_views": 19.65
+      },
+      {
+        "month": "202502",
+        "avg_daily_views": 13.71
+      },
+      {
+        "month": "202503",
+        "avg_daily_views": 15.32
+      },
+      {
+        "month": "202504",
+        "avg_daily_views": 36.23
+      },
+      {
+        "month": "202505",
+        "avg_daily_views": 13.29
+      },
+      {
+        "month": "202506",
+        "avg_daily_views": 10.07
+      },
+      {
+        "month": "202507",
+        "avg_daily_views": 8.16
+      },
+      {
+        "month": "202508",
+        "avg_daily_views": 16.94
+      },
+      {
+        "month": "202509",
+        "avg_daily_views": 13.9
+      },
+      {
+        "month": "202510",
+        "avg_daily_views": 6.9
+      },
+      {
+        "month": "202511",
+        "avg_daily_views": 7.57
+      },
+      {
+        "month": "202512",
+        "avg_daily_views": 9.52
+      },
+      {
+        "month": "202601",
+        "avg_daily_views": 17.48
+      },
+      {
+        "month": "202602",
+        "avg_daily_views": 10.07
+      },
+      {
+        "month": "202603",
+        "avg_daily_views": 7.52
+      },
+      {
+        "month": "202604",
+        "avg_daily_views": 6.57
+      },
+      {
+        "month": "202605",
+        "avg_daily_views": 4.87
+      },
+      {
+        "month": "202606",
+        "avg_daily_views": 7.4
+      },
+      {
+        "month": "202607",
+        "avg_daily_views": 5.57
+      },
+      {
+        "month": "202608",
+        "avg_daily_views": 5.97
+      },
+      {
+        "month": "202609",
+        "avg_daily_views": 4.92
+      }
+    ],
+    "polish": [
+      {
+        "month": "202410",
+        "avg_daily_views": 10.29
+      },
+      {
+        "month": "202411",
+        "avg_daily_views": 11.2
+      },
+      {
+        "month": "202412",
+        "avg_daily_views": 13.19
+      },
+      {
+        "month": "202501",
+        "avg_daily_views": 19.52
+      },
+      {
+        "month": "202502",
+        "avg_daily_views": 16.29
+      },
+      {
+        "month": "202503",
+        "avg_daily_views": 14.9
+      },
+      {
+        "month": "202504",
+        "avg_daily_views": 12.53
+      },
+      {
+        "month": "202505",
+        "avg_daily_views": 10.81
+      },
+      {
+        "month": "202506",
+        "avg_daily_views": 9.43
+      },
+      {
+        "month": "202507",
+        "avg_daily_views": 20.74
+      },
+      {
+        "month": "202508",
+        "avg_daily_views": 11.55
+      },
+      {
+        "month": "202509",
+        "avg_daily_views": 17.2
+      },
+      {
+        "month": "202510",
+        "avg_daily_views": 12.0
+      },
+      {
+        "month": "202511",
+        "avg_daily_views": 10.4
+      },
+      {
+        "month": "202512",
+        "avg_daily_views": 9.32
+      },
+      {
+        "month": "202601",
+        "avg_daily_views": 8.1
+      },
+      {
+        "month": "202602",
+        "avg_daily_views": 10.0
+      },
+      {
+        "month": "202603",
+        "avg_daily_views": 10.74
+      },
+      {
+        "month": "202604",
+        "avg_daily_views": 7.33
+      },
+      {
+        "month": "202605",
+        "avg_daily_views": 6.58
+      },
+      {
+        "month": "202606",
+        "avg_daily_views": 7.37
+      },
+      {
+        "month": "202607",
+        "avg_daily_views": 11.13
+      },
+      {
+        "month": "202608",
+        "avg_daily_views": 7.0
+      },
+      {
+        "month": "202609",
+        "avg_daily_views": 8.27
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/analyze.ts with --langs containing pl and cs and a 24-month period",
+      "passed": false,
+      "evidence": "no skill: wrote its own Python (15 tool calls) against the REST API with a spoofed browser User-Agent; hit HTTP 429"
+    },
+    {
+      "text": "States that Polish Wikipedia has no article on intermittent fasting, or explicitly labels any Polish article used as a proxy",
+      "passed": true,
+      "evidence": "\"Польська Вікіпедія не має окремої статті… використано статтю про медичне голодування як найближчий еквівалент\""
+    },
+    {
+      "text": "Gives the Czech growth with a number from the data",
+      "passed": false,
+      "evidence": "\"−50,4%\" computed from agent=all-agents daily data (bots and crawlers included: ~253 views/month vs 183 human views/month)"
+    },
+    {
+      "text": "States the trust level for the Czech series",
+      "passed": false,
+      "evidence": "no trust or reliability assessment"
+    },
+    {
+      "text": "Mentions at least one limitation: views ≠ willingness to pay, or the edition-wide traffic decline",
+      "passed": false,
+      "evidence": "neither mentioned; compares two different articles (cs intermittent fasting vs pl therapeutic fasting) as if equivalent"
+    },
+    {
+      "text": "No invented numbers (verifiable against data)",
+      "passed": false,
+      "evidence": "numbers not verifiable by script; 'seasonal winter peaks in both' stated without evidence"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 5,
+    "total": 6,
+    "pass_rate": 0.17
+  }
+}

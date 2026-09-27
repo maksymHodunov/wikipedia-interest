@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="760" height="350" fill="#ffffff"/>
+<text x="56" y="22" font-size="15" font-weight="bold" fill="#1f2933">5 topics: monthly Wikipedia pageviews</text>
+<text x="56" y="40" font-size="11" fill="#52606d">2023-09 → 2026-08 · human (non-bot) views per 1M views of each language edition · ○ = spike month</text>
+<line x1="56" x2="650" y1="306" y2="306" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="310" font-size="10" text-anchor="end" fill="#52606d">0</text>
+<line x1="56" x2="650" y1="226" y2="226" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="230" font-size="10" text-anchor="end" fill="#52606d">100</text>
+<line x1="56" x2="650" y1="146" y2="146" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="150" font-size="10" text-anchor="end" fill="#52606d">200</text>
+<line x1="56" x2="650" y1="66" y2="66" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="70" font-size="10" text-anchor="end" fill="#52606d">300</text>
+<text x="56" y="58" font-size="10" fill="#52606d">views / 1M edition views</text>
+<text x="56" y="322" font-size="10" text-anchor="middle" fill="#52606d">2023-09</text>
+<text x="157.82857142857142" y="322" font-size="10" text-anchor="middle" fill="#52606d">2024-03</text>
+<text x="259.65714285714284" y="322" font-size="10" text-anchor="middle" fill="#52606d">2024-09</text>
+<text x="361.48571428571427" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-03</text>
+<text x="463.31428571428575" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-09</text>
+<text x="565.1428571428571" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-03</text>
+<text x="650" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-08</text>
+<path d="M56.0,222.2 L73.0,279.0 L89.9,280.5 L106.9,278.6 L123.9,280.3 L140.9,281.7 L157.8,289.3 L174.8,287.7 L191.8,288.6 L208.7,293.9 L225.7,297.5 L242.7,296.9 L259.7,255.7 L276.6,288.9 L293.6,289.3 L310.6,290.5 L327.5,292.8 L344.5,293.3 L361.5,295.3 L378.5,294.7 L395.4,296.9 L412.4,300.6 L429.4,302.1 L446.3,301.1 L463.3,284.6 L480.3,298.3 L497.3,299.4 L514.2,297.0 L531.2,300.1 L548.2,299.4 L565.1,300.0 L582.1,299.9 L599.1,297.4 L616.1,301.3 L633.0,301.1 L650.0,300.3" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="56" cy="222.24016931178355" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="259.65714285714284" cy="255.6760705729494" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="463.31428571428575" cy="284.5558172194241" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<path d="M56.0,208.7 L73.0,173.6 L89.9,172.1 L106.9,151.6 L123.9,117.4 L140.9,85.6 L157.8,181.6 L174.8,171.6 L191.8,210.3 L208.7,249.7 L225.7,264.9 L242.7,266.5 L259.7,219.9 L276.6,210.2 L293.6,221.3 L310.6,215.0 L327.5,206.1 L344.5,194.5 L361.5,222.9 L378.5,236.1 L395.4,251.3 L412.4,275.9 L429.4,281.5 L446.3,275.3 L463.3,235.2 L480.3,252.8 L497.3,258.4 L514.2,255.3 L531.2,262.1 L548.2,241.8 L565.1,255.7 L582.1,249.9 L599.1,260.9 L616.1,278.2 L633.0,283.2 L650.0,283.0" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56.0,282.2 L73.0,280.4 L89.9,273.6 L106.9,275.5 L123.9,274.0 L140.9,271.2 L157.8,270.5 L174.8,263.8 L191.8,268.2 L208.7,280.7 L225.7,282.9 L242.7,282.8 L259.7,281.4 L276.6,273.9 L293.6,275.1 L310.6,277.8 L327.5,274.2 L344.5,275.4 L361.5,272.6 L378.5,274.3 L395.4,279.6 L412.4,287.6 L429.4,288.1 L446.3,285.5 L463.3,279.1 L480.3,272.4 L497.3,280.3 L514.2,278.2 L531.2,280.0 L548.2,274.2 L565.1,278.8 L582.1,272.9 L599.1,282.0 L616.1,288.9 L633.0,293.0 L650.0,288.0" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56.0,291.6 L73.0,282.2 L89.9,288.7 L106.9,289.4 L123.9,288.1 L140.9,277.2 L157.8,280.6 L174.8,267.8 L191.8,271.8 L208.7,293.7 L225.7,297.3 L242.7,296.8 L259.7,292.5 L276.6,284.3 L293.6,288.5 L310.6,289.0 L327.5,289.1 L344.5,282.6 L361.5,286.7 L378.5,284.5 L395.4,287.6 L412.4,296.7 L429.4,298.6 L446.3,295.1 L463.3,295.6 L480.3,296.2 L497.3,297.3 L514.2,295.2 L531.2,297.5 L548.2,294.0 L565.1,295.0 L582.1,291.2 L599.1,294.3 L616.1,296.8 L633.0,298.7 L650.0,292.0" fill="none" stroke="#eda100" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56.0,288.1 L73.0,291.5 L89.9,274.7 L106.9,276.1 L123.9,278.2 L140.9,287.3 L157.8,292.3 L174.8,290.5 L191.8,278.9 L208.7,292.8 L225.7,302.8 L242.7,302.3 L259.7,289.6 L276.6,293.8 L293.6,286.0 L310.6,291.5 L327.5,293.1 L344.5,294.1 L361.5,295.0 L378.5,292.8 L395.4,300.0 L412.4,303.6 L429.4,304.0 L446.3,303.1 L463.3,298.0 L480.3,300.7 L497.3,297.6 L514.2,299.4 L531.2,302.1 L548.2,301.6 L565.1,300.5 L582.1,299.2 L599.1,302.4 L616.1,303.4 L633.0,304.5 L650.0,302.8" fill="none" stroke="#e87ba4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="658" cy="283.01914628849255" r="3" fill="#eb6834"/>
+<text x="664" y="287.01914628849255" font-size="10" fill="#1f2933">Solar System 28.7</text>
+<circle cx="658" cy="296.01914628849255" r="3" fill="#1baf7a"/>
+<text x="664" y="300.01914628849255" font-size="10" fill="#1f2933">Black hole 22.5</text>
+<circle cx="658" cy="309.01914628849255" r="3" fill="#eda100"/>
+<text x="664" y="313.01914628849255" font-size="10" fill="#1f2933">Galaxy 17.5</text>
+<circle cx="658" cy="322.01914628849255" r="3" fill="#2a78d6"/>
+<text x="664" y="326.01914628849255" font-size="10" fill="#1f2933">Astronomy 7.1</text>
+<circle cx="658" cy="335.01914628849255" r="3" fill="#e87ba4"/>
+<text x="664" y="339.01914628849255" font-size="10" fill="#1f2933">Telescope 4</text>
+<line x1="56" x2="650" y1="306" y2="306" stroke="#9aa5b1" stroke-width="1"/>
+</svg>

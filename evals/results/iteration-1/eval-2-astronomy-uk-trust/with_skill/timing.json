@@ -1,0 +1,7 @@
+{
+  "total_tokens": 67656,
+  "duration_ms": 346999,
+  "tool_calls": 33,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "analyze.ts ran silently for minutes (cold cache + HTTP 429 from parallel eval runs); Claude Code moved it to the background and the agent spent ~20 calls polling ps/ls/sleep, then re-ran it"
+}

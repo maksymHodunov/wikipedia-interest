@@ -1,0 +1,7 @@
+{
+  "total_tokens": 57573,
+  "duration_ms": 131694,
+  "tool_calls": 11,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "human review: PDF verdict 'Турецька хвиля: єдиний растущий ринок' contradicts its own table (tr: flat); findings mention a non-existent 'Бельгійська' series; also wrote an extra Markdown report"
+}

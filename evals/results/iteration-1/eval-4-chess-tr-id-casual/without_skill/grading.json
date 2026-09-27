@@ -1,0 +1,35 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/analyze.ts with --langs containing tr and id",
+      "passed": false,
+      "evidence": "no skill: 2 WebSearch calls, no data fetched or analysed"
+    },
+    {
+      "text": "Gives a verdict with a number for both Turkish and Indonesian",
+      "passed": false,
+      "evidence": "numbers are Chess.com account counts (411K vs ~300K) = size, not growth; growth claims ('rapid growth', 'growing more slowly') have no numbers"
+    },
+    {
+      "text": "Picks or leans towards one option",
+      "passed": true,
+      "evidence": "\"Indonesia > Turkey for chess localization\""
+    },
+    {
+      "text": "Keeps the answer under ~200 words",
+      "passed": true,
+      "evidence": "133 words"
+    },
+    {
+      "text": "Every number in the answer is traceable to data (check_claims)",
+      "passed": false,
+      "evidence": "no analysis data; numbers come from search snippets of a blog post, not verifiable by script"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 3,
+    "total": 5,
+    "pass_rate": 0.4
+  }
+}

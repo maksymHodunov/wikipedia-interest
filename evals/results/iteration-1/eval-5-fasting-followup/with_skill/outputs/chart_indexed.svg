@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="760" height="350" fill="#ffffff"/>
+<text x="56" y="22" font-size="15" font-weight="bold" fill="#1f2933">Intermittent fasting: indexed growth (median of first 6 months = 100)</text>
+<text x="56" y="40" font-size="11" fill="#52606d">2021-09 → 2026-08 · human views, each series rebased to its own start · ○ = spike month</text>
+<line x1="56" x2="650" y1="306" y2="306" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="310" font-size="10" text-anchor="end" fill="#52606d">0</text>
+<line x1="56" x2="650" y1="246" y2="246" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="250" font-size="10" text-anchor="end" fill="#52606d">100</text>
+<line x1="56" x2="650" y1="186" y2="186" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="190" font-size="10" text-anchor="end" fill="#52606d">200</text>
+<line x1="56" x2="650" y1="126" y2="126" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="130" font-size="10" text-anchor="end" fill="#52606d">300</text>
+<line x1="56" x2="650" y1="66" y2="66" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="70" font-size="10" text-anchor="end" fill="#52606d">400</text>
+<text x="56" y="322" font-size="10" text-anchor="middle" fill="#52606d">2021-09</text>
+<text x="116.40677966101696" y="322" font-size="10" text-anchor="middle" fill="#52606d">2022-03</text>
+<text x="176.8135593220339" y="322" font-size="10" text-anchor="middle" fill="#52606d">2022-09</text>
+<text x="237.22033898305085" y="322" font-size="10" text-anchor="middle" fill="#52606d">2023-03</text>
+<text x="297.6271186440678" y="322" font-size="10" text-anchor="middle" fill="#52606d">2023-09</text>
+<text x="358.03389830508473" y="322" font-size="10" text-anchor="middle" fill="#52606d">2024-03</text>
+<text x="418.4406779661017" y="322" font-size="10" text-anchor="middle" fill="#52606d">2024-09</text>
+<text x="478.8474576271186" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-03</text>
+<text x="539.2542372881356" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-09</text>
+<text x="599.6610169491526" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-03</text>
+<text x="650" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-08</text>
+<path d="M56.0,291.6 L66.1,277.1 L76.1,258.0 L86.2,234.0 L96.3,109.7 L106.3,194.8 L116.4,218.9 L126.5,190.1 L136.5,192.4 L146.6,207.1 L156.7,208.5 L166.7,190.4 L176.8,200.1 L186.9,229.9 L196.9,234.8 L207.0,242.7 L217.1,160.2 L227.2,182.1 L237.2,192.8 L247.3,179.4 L257.4,157.2 L267.4,211.0 L277.5,188.3 L287.6,209.9 L297.6,262.1 L307.7,278.1 L317.8,276.0 L327.8,279.0 L337.9,235.4 L348.0,251.8 L358.0,235.7 L368.1,257.0 L378.2,237.6 L388.2,261.2 L398.3,258.0 L408.4,265.2 L418.4,270.1 L428.5,248.1 L438.6,276.0 L448.6,279.2 L458.7,261.3 L468.8,281.2 L478.8,272.6 L488.9,218.5 L499.0,285.5 L509.1,284.3 L519.1,291.7 L529.2,270.7 L539.3,281.3 L549.3,293.1 L559.4,292.2 L569.5,286.1 L579.5,262.7 L589.6,288.1 L599.7,289.7 L609.7,293.7 L619.8,296.0 L629.9,295.5 L639.9,297.7 L650.0,295.1" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="488.9152542372881" cy="218.51141552511416" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="579.5254237288135" cy="262.71232876712327" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="658" cy="295.1324200913242" r="3" fill="#2a78d6"/>
+<text x="664" y="299.1324200913242" font-size="10" fill="#1f2933">cs 18.1</text>
+<line x1="56" x2="650" y1="306" y2="306" stroke="#9aa5b1" stroke-width="1"/>
+</svg>

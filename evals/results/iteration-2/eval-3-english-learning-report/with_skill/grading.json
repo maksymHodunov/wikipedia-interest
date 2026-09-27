@@ -1,0 +1,45 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/report.ts and its final output has \"ok\": true and \"pages\": 1",
+      "passed": false,
+      "evidence": "report.ts not called; first tried to Write report.md (blocked by the Claude Code subagent harness: 'Subagents should return findings as text'), then returned the report as text"
+    },
+    {
+      "text": "Passed its own --verdict and --findings",
+      "passed": false,
+      "evidence": "no report.ts call"
+    },
+    {
+      "text": "Recommends 2–3 audiences to research next, each with a reason tied to a metric",
+      "passed": true,
+      "evidence": "tr (+7% relative, 65.3 per 1M), es (25,962/month, flat), de (−1%, but 73% bots)"
+    },
+    {
+      "text": "Says which article was used as the proxy for 'learning English' and what that proxy measures",
+      "passed": true,
+      "evidence": "\"'English language' — найкращий доступний проксі… хоча вона вимірює інтерес до мови в цілому\""
+    },
+    {
+      "text": "Mentions at least one limitation or assumption",
+      "passed": true,
+      "evidence": "\"Wikipedia вимірює цікавість, не готовність платити\"; platform-wide decline; proxy caveat"
+    },
+    {
+      "text": "No unverified numbers",
+      "passed": false,
+      "evidence": "check_claims unverified: 25% (computed from 73% bots), −28% and −5% (copied from SKILL.md examples for uk/en, not in this analysis); also calls tr '+7%' growing although the verdict is flat"
+    },
+    {
+      "text": "Verdict labels in the answer and the PDF match analysis.json (no 'growing' for a flat or declining series)",
+      "passed": false,
+      "evidence": "labelProblems: 1 ('Єдиний ринок з зростаючим інтересом: +7%' for tr = flat)"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 4,
+    "total": 7,
+    "pass_rate": 0.43
+  }
+}

@@ -1,0 +1,1248 @@
+{
+  "topics": [
+    "English language"
+  ],
+  "langs": [
+    "de",
+    "fr",
+    "es",
+    "pl",
+    "tr"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/english-language",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/english-language/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/english-language/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/english-language/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/english-language/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "de",
+      "project": "de.wikipedia",
+      "article": "Englische Sprache",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 281719,
+      "avgMonthlyLast12": 23477,
+      "perMillionLast12": 33.3,
+      "yoy": -8,
+      "robustGrowth": -7.4,
+      "relativeGrowth": -0.7,
+      "editionGrowth": -8,
+      "trendAnnual": -8.8,
+      "r2": 0.37,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 30967
+      },
+      "botShare": 0.73,
+      "trust": {
+        "score": 65,
+        "label": "medium",
+        "reasons": [
+          "very high automated traffic (73% of views are bots) — human counts may be contaminated too"
+        ]
+      },
+      "verdict": {
+        "label": "flat",
+        "basis": "no clear change — -1% is inside the ±10% noise band (share of edition views -1% YoY (raw -7%, whole edition -8%))"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 23967
+        },
+        {
+          "month": "2024-10",
+          "views": 25193
+        },
+        {
+          "month": "2024-11",
+          "views": 26386
+        },
+        {
+          "month": "2024-12",
+          "views": 26007
+        },
+        {
+          "month": "2025-01",
+          "views": 30967
+        },
+        {
+          "month": "2025-02",
+          "views": 23877
+        },
+        {
+          "month": "2025-03",
+          "views": 27856
+        },
+        {
+          "month": "2025-04",
+          "views": 26330
+        },
+        {
+          "month": "2025-05",
+          "views": 26787
+        },
+        {
+          "month": "2025-06",
+          "views": 23082
+        },
+        {
+          "month": "2025-07",
+          "views": 22744
+        },
+        {
+          "month": "2025-08",
+          "views": 22995
+        },
+        {
+          "month": "2025-09",
+          "views": 24452
+        },
+        {
+          "month": "2025-10",
+          "views": 25580
+        },
+        {
+          "month": "2025-11",
+          "views": 23704
+        },
+        {
+          "month": "2025-12",
+          "views": 23070
+        },
+        {
+          "month": "2026-01",
+          "views": 25610
+        },
+        {
+          "month": "2026-02",
+          "views": 21820
+        },
+        {
+          "month": "2026-03",
+          "views": 23948
+        },
+        {
+          "month": "2026-04",
+          "views": 23635
+        },
+        {
+          "month": "2026-05",
+          "views": 23683
+        },
+        {
+          "month": "2026-06",
+          "views": 24277
+        },
+        {
+          "month": "2026-07",
+          "views": 21586
+        },
+        {
+          "month": "2026-08",
+          "views": 20354
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 32.104902753001106
+        },
+        {
+          "month": "2024-10",
+          "views": 31.326813597500866
+        },
+        {
+          "month": "2024-11",
+          "views": 34.49456931664029
+        },
+        {
+          "month": "2024-12",
+          "views": 32.01629842933558
+        },
+        {
+          "month": "2025-01",
+          "views": 34.32407326210357
+        },
+        {
+          "month": "2025-02",
+          "views": 31.07100780111844
+        },
+        {
+          "month": "2025-03",
+          "views": 34.529014798939144
+        },
+        {
+          "month": "2025-04",
+          "views": 35.76064271020874
+        },
+        {
+          "month": "2025-05",
+          "views": 37.61373346817474
+        },
+        {
+          "month": "2025-06",
+          "views": 35.87755909568058
+        },
+        {
+          "month": "2025-07",
+          "views": 32.70879590258996
+        },
+        {
+          "month": "2025-08",
+          "views": 31.20954545800455
+        },
+        {
+          "month": "2025-09",
+          "views": 35.126574254700564
+        },
+        {
+          "month": "2025-10",
+          "views": 34.16896384045091
+        },
+        {
+          "month": "2025-11",
+          "views": 32.29802854872122
+        },
+        {
+          "month": "2025-12",
+          "views": 32.71439035029796
+        },
+        {
+          "month": "2026-01",
+          "views": 32.82493949130633
+        },
+        {
+          "month": "2026-02",
+          "views": 32.46086598628176
+        },
+        {
+          "month": "2026-03",
+          "views": 34.53654071500714
+        },
+        {
+          "month": "2026-04",
+          "views": 35.65504923937408
+        },
+        {
+          "month": "2026-05",
+          "views": 33.715859113994
+        },
+        {
+          "month": "2026-06",
+          "views": 35.544979061163964
+        },
+        {
+          "month": "2026-07",
+          "views": 31.116136358964603
+        },
+        {
+          "month": "2026-08",
+          "views": 29.60955548914491
+        }
+      ],
+      "name": "de",
+      "topic": "English language",
+      "resolution": {
+        "lang": "de",
+        "project": "de.wikipedia",
+        "article": "Englische Sprache",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "fr",
+      "project": "fr.wikipedia",
+      "article": "Anglais",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 190481,
+      "avgMonthlyLast12": 15873,
+      "perMillionLast12": 26.7,
+      "yoy": -19.3,
+      "robustGrowth": -21,
+      "relativeGrowth": -13.1,
+      "editionGrowth": -10.1,
+      "trendAnnual": -21.8,
+      "r2": 0.63,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-11",
+        "views": 22843
+      },
+      "botShare": 0.14,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -13% YoY (raw -21%, whole edition -10%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 21346
+        },
+        {
+          "month": "2024-10",
+          "views": 22033
+        },
+        {
+          "month": "2024-11",
+          "views": 22843
+        },
+        {
+          "month": "2024-12",
+          "views": 21929
+        },
+        {
+          "month": "2025-01",
+          "views": 22776
+        },
+        {
+          "month": "2025-02",
+          "views": 20068
+        },
+        {
+          "month": "2025-03",
+          "views": 21549
+        },
+        {
+          "month": "2025-04",
+          "views": 18654
+        },
+        {
+          "month": "2025-05",
+          "views": 20097
+        },
+        {
+          "month": "2025-06",
+          "views": 15032
+        },
+        {
+          "month": "2025-07",
+          "views": 14057
+        },
+        {
+          "month": "2025-08",
+          "views": 15509
+        },
+        {
+          "month": "2025-09",
+          "views": 17276
+        },
+        {
+          "month": "2025-10",
+          "views": 16431
+        },
+        {
+          "month": "2025-11",
+          "views": 16308
+        },
+        {
+          "month": "2025-12",
+          "views": 15833
+        },
+        {
+          "month": "2026-01",
+          "views": 16696
+        },
+        {
+          "month": "2026-02",
+          "views": 14672
+        },
+        {
+          "month": "2026-03",
+          "views": 17380
+        },
+        {
+          "month": "2026-04",
+          "views": 17849
+        },
+        {
+          "month": "2026-05",
+          "views": 17898
+        },
+        {
+          "month": "2026-06",
+          "views": 15278
+        },
+        {
+          "month": "2026-07",
+          "views": 12861
+        },
+        {
+          "month": "2026-08",
+          "views": 11999
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 32.10739973041517
+        },
+        {
+          "month": "2024-10",
+          "views": 31.542413557999893
+        },
+        {
+          "month": "2024-11",
+          "views": 31.693714254178545
+        },
+        {
+          "month": "2024-12",
+          "views": 30.53357302598912
+        },
+        {
+          "month": "2025-01",
+          "views": 29.15198682719298
+        },
+        {
+          "month": "2025-02",
+          "views": 30.61558709716364
+        },
+        {
+          "month": "2025-03",
+          "views": 32.14049595325293
+        },
+        {
+          "month": "2025-04",
+          "views": 30.624828455648906
+        },
+        {
+          "month": "2025-05",
+          "views": 31.263167783527273
+        },
+        {
+          "month": "2025-06",
+          "views": 25.83356761187197
+        },
+        {
+          "month": "2025-07",
+          "views": 23.098581297526497
+        },
+        {
+          "month": "2025-08",
+          "views": 24.833549249160225
+        },
+        {
+          "month": "2025-09",
+          "views": 29.359629201274824
+        },
+        {
+          "month": "2025-10",
+          "views": 27.112414630112387
+        },
+        {
+          "month": "2025-11",
+          "views": 25.725229686170497
+        },
+        {
+          "month": "2025-12",
+          "views": 26.12182631462232
+        },
+        {
+          "month": "2026-01",
+          "views": 25.489204916388257
+        },
+        {
+          "month": "2026-02",
+          "views": 25.3032362283817
+        },
+        {
+          "month": "2026-03",
+          "views": 29.021141332058264
+        },
+        {
+          "month": "2026-04",
+          "views": 32.230442641349796
+        },
+        {
+          "month": "2026-05",
+          "views": 29.541496416627872
+        },
+        {
+          "month": "2026-06",
+          "views": 27.352192065237933
+        },
+        {
+          "month": "2026-07",
+          "views": 21.954329630826656
+        },
+        {
+          "month": "2026-08",
+          "views": 21.45065753818403
+        }
+      ],
+      "name": "fr",
+      "topic": "English language",
+      "resolution": {
+        "lang": "fr",
+        "project": "fr.wikipedia",
+        "article": "Anglais",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "es",
+      "project": "es.wikipedia",
+      "article": "Idioma inglés",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 311543,
+      "avgMonthlyLast12": 25962,
+      "perMillionLast12": 47.7,
+      "yoy": -29.1,
+      "robustGrowth": -31.8,
+      "relativeGrowth": -8.3,
+      "editionGrowth": -22.4,
+      "trendAnnual": -29.1,
+      "r2": 0.79,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 48499
+      },
+      "botShare": 0.15,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (15%)"
+        ]
+      },
+      "verdict": {
+        "label": "flat",
+        "basis": "no clear change — -8% is inside the ±10% noise band (share of edition views -8% YoY (raw -32%, whole edition -22%))"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 44673
+        },
+        {
+          "month": "2024-10",
+          "views": 48499
+        },
+        {
+          "month": "2024-11",
+          "views": 38330
+        },
+        {
+          "month": "2024-12",
+          "views": 32281
+        },
+        {
+          "month": "2025-01",
+          "views": 37793
+        },
+        {
+          "month": "2025-02",
+          "views": 43029
+        },
+        {
+          "month": "2025-03",
+          "views": 42713
+        },
+        {
+          "month": "2025-04",
+          "views": 32410
+        },
+        {
+          "month": "2025-05",
+          "views": 36031
+        },
+        {
+          "month": "2025-06",
+          "views": 27892
+        },
+        {
+          "month": "2025-07",
+          "views": 29773
+        },
+        {
+          "month": "2025-08",
+          "views": 26130
+        },
+        {
+          "month": "2025-09",
+          "views": 30033
+        },
+        {
+          "month": "2025-10",
+          "views": 31624
+        },
+        {
+          "month": "2025-11",
+          "views": 27226
+        },
+        {
+          "month": "2025-12",
+          "views": 23240
+        },
+        {
+          "month": "2026-01",
+          "views": 26184
+        },
+        {
+          "month": "2026-02",
+          "views": 24604
+        },
+        {
+          "month": "2026-03",
+          "views": 24649
+        },
+        {
+          "month": "2026-04",
+          "views": 26954
+        },
+        {
+          "month": "2026-05",
+          "views": 25543
+        },
+        {
+          "month": "2026-06",
+          "views": 24304
+        },
+        {
+          "month": "2026-07",
+          "views": 24804
+        },
+        {
+          "month": "2026-08",
+          "views": 22378
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 59.97618014046082
+        },
+        {
+          "month": "2024-10",
+          "views": 59.9574453827066
+        },
+        {
+          "month": "2024-11",
+          "views": 52.6587167656798
+        },
+        {
+          "month": "2024-12",
+          "views": 48.66631538856587
+        },
+        {
+          "month": "2025-01",
+          "views": 49.44653828845259
+        },
+        {
+          "month": "2025-02",
+          "views": 62.290815418390444
+        },
+        {
+          "month": "2025-03",
+          "views": 57.567255959375125
+        },
+        {
+          "month": "2025-04",
+          "views": 49.67016717821192
+        },
+        {
+          "month": "2025-05",
+          "views": 54.42454694461038
+        },
+        {
+          "month": "2025-06",
+          "views": 46.957583453257385
+        },
+        {
+          "month": "2025-07",
+          "views": 49.06947931060798
+        },
+        {
+          "month": "2025-08",
+          "views": 43.66238778663992
+        },
+        {
+          "month": "2025-09",
+          "views": 51.98167568477978
+        },
+        {
+          "month": "2025-10",
+          "views": 52.12168853787421
+        },
+        {
+          "month": "2025-11",
+          "views": 46.29643666210024
+        },
+        {
+          "month": "2025-12",
+          "views": 45.68273674676826
+        },
+        {
+          "month": "2026-01",
+          "views": 43.903079324660176
+        },
+        {
+          "month": "2026-02",
+          "views": 45.21767634833588
+        },
+        {
+          "month": "2026-03",
+          "views": 47.24204690518691
+        },
+        {
+          "month": "2026-04",
+          "views": 52.49804989922698
+        },
+        {
+          "month": "2026-05",
+          "views": 49.13571587699632
+        },
+        {
+          "month": "2026-06",
+          "views": 46.88644670554342
+        },
+        {
+          "month": "2026-07",
+          "views": 46.89923267058179
+        },
+        {
+          "month": "2026-08",
+          "views": 43.975731818088946
+        }
+      ],
+      "name": "es",
+      "topic": "English language",
+      "resolution": {
+        "lang": "es",
+        "project": "es.wikipedia",
+        "article": "Idioma inglés",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "pl",
+      "project": "pl.wikipedia",
+      "article": "Język angielski",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 97042,
+      "avgMonthlyLast12": 8087,
+      "perMillionLast12": 43,
+      "yoy": -18.3,
+      "robustGrowth": -19,
+      "relativeGrowth": -10.1,
+      "editionGrowth": -11.9,
+      "trendAnnual": -19.5,
+      "r2": 0.59,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 12414
+      },
+      "botShare": 0.17,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (17%)"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -10% YoY (raw -19%, whole edition -12%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 9611
+        },
+        {
+          "month": "2024-10",
+          "views": 10234
+        },
+        {
+          "month": "2024-11",
+          "views": 11661
+        },
+        {
+          "month": "2024-12",
+          "views": 11498
+        },
+        {
+          "month": "2025-01",
+          "views": 12414
+        },
+        {
+          "month": "2025-02",
+          "views": 9932
+        },
+        {
+          "month": "2025-03",
+          "views": 11547
+        },
+        {
+          "month": "2025-04",
+          "views": 9133
+        },
+        {
+          "month": "2025-05",
+          "views": 8562
+        },
+        {
+          "month": "2025-06",
+          "views": 7352
+        },
+        {
+          "month": "2025-07",
+          "views": 7962
+        },
+        {
+          "month": "2025-08",
+          "views": 8827
+        },
+        {
+          "month": "2025-09",
+          "views": 8458
+        },
+        {
+          "month": "2025-10",
+          "views": 10137
+        },
+        {
+          "month": "2025-11",
+          "views": 8455
+        },
+        {
+          "month": "2025-12",
+          "views": 7850
+        },
+        {
+          "month": "2026-01",
+          "views": 8902
+        },
+        {
+          "month": "2026-02",
+          "views": 7257
+        },
+        {
+          "month": "2026-03",
+          "views": 7886
+        },
+        {
+          "month": "2026-04",
+          "views": 7365
+        },
+        {
+          "month": "2026-05",
+          "views": 7429
+        },
+        {
+          "month": "2026-06",
+          "views": 7940
+        },
+        {
+          "month": "2026-07",
+          "views": 8244
+        },
+        {
+          "month": "2026-08",
+          "views": 7119
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 49.92903048851751
+        },
+        {
+          "month": "2024-10",
+          "views": 49.03643735994261
+        },
+        {
+          "month": "2024-11",
+          "views": 53.26211693634056
+        },
+        {
+          "month": "2024-12",
+          "views": 52.316698099077
+        },
+        {
+          "month": "2025-01",
+          "views": 49.2361726095039
+        },
+        {
+          "month": "2025-02",
+          "views": 47.06647730955316
+        },
+        {
+          "month": "2025-03",
+          "views": 51.49539629507057
+        },
+        {
+          "month": "2025-04",
+          "views": 45.816289281592404
+        },
+        {
+          "month": "2025-05",
+          "views": 44.07730630309598
+        },
+        {
+          "month": "2025-06",
+          "views": 43.048572239237004
+        },
+        {
+          "month": "2025-07",
+          "views": 42.63700961514904
+        },
+        {
+          "month": "2025-08",
+          "views": 44.82751290204075
+        },
+        {
+          "month": "2025-09",
+          "views": 44.673522747802146
+        },
+        {
+          "month": "2025-10",
+          "views": 50.36000272958468
+        },
+        {
+          "month": "2025-11",
+          "views": 37.03548462425315
+        },
+        {
+          "month": "2025-12",
+          "views": 41.28003726793316
+        },
+        {
+          "month": "2026-01",
+          "views": 43.57662699715275
+        },
+        {
+          "month": "2026-02",
+          "views": 40.76592894547456
+        },
+        {
+          "month": "2026-03",
+          "views": 44.149595760232465
+        },
+        {
+          "month": "2026-04",
+          "views": 42.810348667358895
+        },
+        {
+          "month": "2026-05",
+          "views": 41.274608582508435
+        },
+        {
+          "month": "2026-06",
+          "views": 44.21455474648675
+        },
+        {
+          "month": "2026-07",
+          "views": 45.945880211711305
+        },
+        {
+          "month": "2026-08",
+          "views": 40.47805153136276
+        }
+      ],
+      "name": "pl",
+      "topic": "English language",
+      "resolution": {
+        "lang": "pl",
+        "project": "pl.wikipedia",
+        "article": "Język angielski",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "tr",
+      "project": "tr.wikipedia",
+      "article": "İngilizce",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 84960,
+      "avgMonthlyLast12": 7080,
+      "perMillionLast12": 65.3,
+      "yoy": -16.5,
+      "robustGrowth": -14.6,
+      "relativeGrowth": 6.7,
+      "editionGrowth": -18.7,
+      "trendAnnual": -21.5,
+      "r2": 0.5,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-10",
+        "views": 12545
+      },
+      "botShare": 0.17,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (17%)"
+        ]
+      },
+      "verdict": {
+        "label": "flat",
+        "basis": "no clear change — +7% is inside the ±10% noise band (share of edition views +7% YoY (raw -15%, whole edition -19%))"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 9224
+        },
+        {
+          "month": "2024-10",
+          "views": 12545
+        },
+        {
+          "month": "2024-11",
+          "views": 9927
+        },
+        {
+          "month": "2024-12",
+          "views": 10783
+        },
+        {
+          "month": "2025-01",
+          "views": 9496
+        },
+        {
+          "month": "2025-02",
+          "views": 7264
+        },
+        {
+          "month": "2025-03",
+          "views": 8785
+        },
+        {
+          "month": "2025-04",
+          "views": 7723
+        },
+        {
+          "month": "2025-05",
+          "views": 7659
+        },
+        {
+          "month": "2025-06",
+          "views": 6114
+        },
+        {
+          "month": "2025-07",
+          "views": 6042
+        },
+        {
+          "month": "2025-08",
+          "views": 6188
+        },
+        {
+          "month": "2025-09",
+          "views": 7094
+        },
+        {
+          "month": "2025-10",
+          "views": 7703
+        },
+        {
+          "month": "2025-11",
+          "views": 7687
+        },
+        {
+          "month": "2025-12",
+          "views": 7886
+        },
+        {
+          "month": "2026-01",
+          "views": 8023
+        },
+        {
+          "month": "2026-02",
+          "views": 6428
+        },
+        {
+          "month": "2026-03",
+          "views": 6999
+        },
+        {
+          "month": "2026-04",
+          "views": 8312
+        },
+        {
+          "month": "2026-05",
+          "views": 6801
+        },
+        {
+          "month": "2026-06",
+          "views": 6556
+        },
+        {
+          "month": "2026-07",
+          "views": 5878
+        },
+        {
+          "month": "2026-08",
+          "views": 5593
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 80.42134016531102
+        },
+        {
+          "month": "2024-10",
+          "views": 93.38222050757231
+        },
+        {
+          "month": "2024-11",
+          "views": 75.34411071623909
+        },
+        {
+          "month": "2024-12",
+          "views": 70.01656028333312
+        },
+        {
+          "month": "2025-01",
+          "views": 63.5397563323948
+        },
+        {
+          "month": "2025-02",
+          "views": 58.32877305217109
+        },
+        {
+          "month": "2025-03",
+          "views": 62.2441705252207
+        },
+        {
+          "month": "2025-04",
+          "views": 57.05969380806348
+        },
+        {
+          "month": "2025-05",
+          "views": 57.76834393258118
+        },
+        {
+          "month": "2025-06",
+          "views": 53.79272496418481
+        },
+        {
+          "month": "2025-07",
+          "views": 50.72891966544101
+        },
+        {
+          "month": "2025-08",
+          "views": 56.15602430448704
+        },
+        {
+          "month": "2025-09",
+          "views": 63.64717151889022
+        },
+        {
+          "month": "2025-10",
+          "views": 66.41831980568429
+        },
+        {
+          "month": "2025-11",
+          "views": 57.45970960220068
+        },
+        {
+          "month": "2025-12",
+          "views": 67.57751664314864
+        },
+        {
+          "month": "2026-01",
+          "views": 65.8830744181064
+        },
+        {
+          "month": "2026-02",
+          "views": 62.38166843828794
+        },
+        {
+          "month": "2026-03",
+          "views": 65.06166416990942
+        },
+        {
+          "month": "2026-04",
+          "views": 86.08077761348004
+        },
+        {
+          "month": "2026-05",
+          "views": 63.29465751489762
+        },
+        {
+          "month": "2026-06",
+          "views": 66.67876973804987
+        },
+        {
+          "month": "2026-07",
+          "views": 59.09500414675415
+        },
+        {
+          "month": "2026-08",
+          "views": 59.69034743795005
+        }
+      ],
+      "name": "tr",
+      "topic": "English language",
+      "resolution": {
+        "lang": "tr",
+        "project": "tr.wikipedia",
+        "article": "İngilizce",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "tr",
+      "score": 69,
+      "why": "flat (no clear change — +7% is inside the ±10% noise band (share of edition views +7% YoY (raw -15%, whole edition -19%))), trust high, 65.3 views per 1M edition views"
+    },
+    {
+      "name": "es",
+      "score": 54,
+      "why": "flat (no clear change — -8% is inside the ±10% noise band (share of edition views -8% YoY (raw -32%, whole edition -22%))), trust high, 47.7 views per 1M edition views"
+    },
+    {
+      "name": "pl",
+      "score": 52,
+      "why": "declining (share of edition views -10% YoY (raw -19%, whole edition -12%)), trust high, 43 views per 1M edition views"
+    },
+    {
+      "name": "fr",
+      "score": 51,
+      "why": "declining (share of edition views -13% YoY (raw -21%, whole edition -10%)), trust high, 26.7 views per 1M edition views"
+    },
+    {
+      "name": "de",
+      "score": 47,
+      "why": "flat (no clear change — -1% is inside the ±10% noise band (share of edition views -1% YoY (raw -7%, whole edition -8%))), trust medium, 33.3 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

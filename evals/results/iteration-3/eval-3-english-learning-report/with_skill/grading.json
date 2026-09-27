@@ -1,0 +1,45 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/report.ts and its final output has \"ok\": true and \"pages\": 1",
+      "passed": true,
+      "evidence": "trace call 5; tool result {\"ok\": true, \"pages\": 1, \"numbers\": {\"checked\": 5, \"unverified\": []}}"
+    },
+    {
+      "text": "Passed its own --verdict and --findings",
+      "passed": true,
+      "evidence": "custom Ukrainian --verdict and --findings in the report.ts call"
+    },
+    {
+      "text": "Recommends 2–3 audiences to research next, each with a reason tied to a metric",
+      "passed": true,
+      "evidence": "tr (+7% relative, 65.3 per 1M) and es (25,962/month) for phase 1, then pl → de"
+    },
+    {
+      "text": "Says which article was used as the proxy for 'learning English' and what that proxy measures",
+      "passed": true,
+      "evidence": "\"Проксі: 'English language'… вимірює цікавість, не саме навчання\""
+    },
+    {
+      "text": "Mentions at least one limitation or assumption",
+      "passed": true,
+      "evidence": "\"Wikipedia ≠ платіжеспроможний попит… Німецька забруднена ботами… аналізуємо ДОЛЮ\""
+    },
+    {
+      "text": "report.ts output has an empty numbers.unverified list",
+      "passed": true,
+      "evidence": "numbers.unverified [] (the chat answer still has '500+ мільйонів спікерів', an outside fact)"
+    },
+    {
+      "text": "Verdict labels in the answer and the PDF match analysis.json (no 'growing' for a flat or declining series)",
+      "passed": false,
+      "evidence": "labelProblems: 1 in the chat answer ('ЄДИНА РАСТУЧА МОВА 📈'); the PDF verdict 'єдиний растущий ринок' contradicts its own table (tr: flat)"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.86
+  }
+}

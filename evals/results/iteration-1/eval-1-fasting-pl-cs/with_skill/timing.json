@@ -1,0 +1,6 @@
+{
+  "total_tokens": 48897,
+  "duration_ms": 83163,
+  "tool_calls": 5,
+  "model": "claude-haiku-4-5-20251001"
+}

@@ -1,0 +1,35 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/analyze.ts with --langs containing tr and id",
+      "passed": true,
+      "evidence": "trace call 3: --topic \"Chess\" --langs tr,id --months 24"
+    },
+    {
+      "text": "Gives a verdict with a number for both Turkish and Indonesian",
+      "passed": true,
+      "evidence": "\"growing in Turkish Wikipedia (+22% share of views YoY…) declining… Indonesian (−15% share YoY)\""
+    },
+    {
+      "text": "Picks or leans towards one option",
+      "passed": true,
+      "evidence": "\"Validate Turkish first; Indonesian demand is softer.\""
+    },
+    {
+      "text": "Keeps the answer under ~200 words",
+      "passed": true,
+      "evidence": "85 words"
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 6, unverified []"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  }
+}

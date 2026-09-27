@@ -1,0 +1,30 @@
+{
+  "assertion_results": [
+    {
+      "text": "Re-ran analyze.ts with --months 60 and --langs containing pl, cs and sk",
+      "passed": true,
+      "evidence": "trace call 8: --langs pl,cs,sk --months 60 --articles pl=\"Głodówka lecznicza\""
+    },
+    {
+      "text": "Compares the new result with the previous 2-year answer",
+      "passed": false,
+      "evidence": "describes the 5-year result only; no sentence relates it to the earlier 2-year answer"
+    },
+    {
+      "text": "Handles Slovak correctly",
+      "passed": true,
+      "evidence": "\"немає статті на Вікіпедії — не можна вимірити інтерес через цей канал. Це не означає низьке попиту\""
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 19, unverified []"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  }
+}

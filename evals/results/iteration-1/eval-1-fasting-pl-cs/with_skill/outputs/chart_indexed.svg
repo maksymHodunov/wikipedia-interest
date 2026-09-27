@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="760" height="350" fill="#ffffff"/>
+<text x="56" y="22" font-size="15" font-weight="bold" fill="#1f2933">Intermittent fasting: indexed growth (median of first 6 months = 100)</text>
+<text x="56" y="40" font-size="11" fill="#52606d">2024-09 → 2026-08 · human views, each series rebased to its own start · ○ = spike month</text>
+<line x1="56" x2="650" y1="306" y2="306" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="310" font-size="10" text-anchor="end" fill="#52606d">0</text>
+<line x1="56" x2="650" y1="226" y2="226" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="230" font-size="10" text-anchor="end" fill="#52606d">100</text>
+<line x1="56" x2="650" y1="146" y2="146" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="150" font-size="10" text-anchor="end" fill="#52606d">200</text>
+<line x1="56" x2="650" y1="66" y2="66" stroke="#e4e7eb" stroke-width="1"/>
+<text x="50" y="70" font-size="10" text-anchor="end" fill="#52606d">300</text>
+<text x="56" y="322" font-size="10" text-anchor="middle" fill="#52606d">2024-09</text>
+<text x="133.47826086956522" y="322" font-size="10" text-anchor="middle" fill="#52606d">2024-12</text>
+<text x="210.95652173913044" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-03</text>
+<text x="288.4347826086956" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-06</text>
+<text x="365.9130434782609" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-09</text>
+<text x="443.39130434782606" y="322" font-size="10" text-anchor="middle" fill="#52606d">2025-12</text>
+<text x="520.8695652173913" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-03</text>
+<text x="598.3478260869565" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-06</text>
+<text x="650" y="322" font-size="10" text-anchor="middle" fill="#52606d">2026-08</text>
+<path d="M56.0,218.9 L81.8,165.5 L107.7,233.1 L133.5,240.8 L159.3,197.6 L185.1,245.7 L211.0,224.9 L236.8,93.7 L262.6,256.1 L288.4,253.3 L314.3,271.2 L340.1,220.5 L365.9,246.2 L391.7,274.8 L417.6,272.5 L443.4,257.7 L469.2,201.0 L495.0,262.6 L520.9,266.3 L546.7,276.1 L572.5,281.8 L598.3,280.5 L624.2,285.8 L650.0,279.6" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="236.7826086956522" cy="93.70083102493078" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="469.2173913043478" cy="200.95844875346262" r="4" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="658" cy="279.6288088642659" r="3" fill="#2a78d6"/>
+<text x="664" y="283.6288088642659" font-size="10" fill="#1f2933">cs 33</text>
+<line x1="56" x2="650" y1="306" y2="306" stroke="#9aa5b1" stroke-width="1"/>
+</svg>

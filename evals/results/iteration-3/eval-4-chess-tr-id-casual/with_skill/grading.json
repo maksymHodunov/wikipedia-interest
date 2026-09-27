@@ -1,0 +1,35 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/analyze.ts with --langs containing tr and id",
+      "passed": true,
+      "evidence": "trace call 3"
+    },
+    {
+      "text": "Gives a verdict with a number for both Turkish and Indonesian",
+      "passed": true,
+      "evidence": "\"+22% share of edition views… Indonesian is declining (-15% share…)\""
+    },
+    {
+      "text": "Picks or leans towards one option",
+      "passed": true,
+      "evidence": "\"Turkish is the clear choice for localization\""
+    },
+    {
+      "text": "Keeps the answer under ~200 words",
+      "passed": true,
+      "evidence": "45 words"
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 6, unverified []"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  }
+}

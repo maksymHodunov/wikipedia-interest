@@ -1,0 +1,6 @@
+Country,EF_Score,Global_Rank,Proficiency_Category,YoY_Change,Primary_School_Enrollment,Secondary_School_Enrollment,App_Market_Share,Duolingo_Share,Babbel_Share,Wikipedia_Accessibility,Population_Millions,GDP_Per_Capita_USD,Tech_Sector_Growth,Research_Priority
+Germany,615,4,Very High,+17,82.5,89+,5.69%,40-50%,17%,Full,84,47000,Mature,Tier 1
+Poland,600,15,Very High,New Entry,99-100,89+,1.3%,50-60%,5-10%,Full,38,17000,Rapid,Tier 1
+France,539,N/A,High,+15,90-97,89+,2.70%,40-50%,8-12%,Full,68,43000,Steady,Tier 2
+Spain,540,N/A,High,+2,99-100,89+,1.76%,50-60%,8-12%,Full,48,29000,Steady,Tier 2
+Turkey,488,50-60,Low,Stagnant,N/A,N/A,2.3%,52%,5%,BLOCKED,85,9000,Rapid,Tier 3

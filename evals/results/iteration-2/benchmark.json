@@ -1,0 +1,164 @@
+{
+  "iteration": "evals/results/iteration-2",
+  "baseline": "evals/results/iteration-1",
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.86,
+        "stddev": 0.25,
+        "n": 4
+      },
+      "assertions": "20/24",
+      "time_seconds": {
+        "mean": 116.89,
+        "stddev": 68.35,
+        "n": 4
+      },
+      "tokens": {
+        "mean": 53321.25,
+        "stddev": 3486.73,
+        "n": 4
+      },
+      "tool_calls": {
+        "mean": 9,
+        "stddev": 2.45,
+        "n": 4
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.22,
+        "stddev": 0.1,
+        "n": 4
+      },
+      "assertions": "5/24",
+      "time_seconds": {
+        "mean": 176.33,
+        "stddev": 86.85,
+        "n": 4
+      },
+      "tokens": {
+        "mean": 60089.75,
+        "stddev": 8485.91,
+        "n": 4
+      },
+      "tool_calls": {
+        "mean": 14,
+        "stddev": 5.96,
+        "n": 4
+      }
+    },
+    "delta": {
+      "pass_rate": 0.64,
+      "time_seconds": -59.44,
+      "tokens": -6768.5,
+      "tool_calls": -5
+    }
+  },
+  "with_skill_all_evals": {
+    "pass_rate": {
+      "mean": 0.89,
+      "stddev": 0.23,
+      "n": 5
+    },
+    "assertions": "24/28",
+    "time_seconds": {
+      "mean": 105.77,
+      "stddev": 65.05,
+      "n": 5
+    },
+    "tokens": {
+      "mean": 53321.25,
+      "stddev": 3486.73,
+      "n": 4
+    },
+    "tool_calls": {
+      "mean": 8.4,
+      "stddev": 2.5,
+      "n": 5
+    }
+  },
+  "per_eval": [
+    {
+      "eval": "eval-1-fasting-pl-cs",
+      "passRate": 1,
+      "passed": 6,
+      "total": 6,
+      "seconds": 79.357,
+      "tokens": 55134,
+      "calls": 9,
+      "baseline": {
+        "eval": "eval-1-fasting-pl-cs",
+        "passRate": 0.17,
+        "passed": 1,
+        "total": 6,
+        "seconds": 179.497,
+        "tokens": 63890,
+        "calls": 15
+      }
+    },
+    {
+      "eval": "eval-2-astronomy-uk-trust",
+      "passRate": 1,
+      "passed": 6,
+      "total": 6,
+      "seconds": 218.347,
+      "tokens": 54513,
+      "calls": 11,
+      "baseline": {
+        "eval": "eval-2-astronomy-uk-trust",
+        "passRate": 0.17,
+        "passed": 1,
+        "total": 6,
+        "seconds": 273.336,
+        "tokens": 65448,
+        "calls": 19
+      }
+    },
+    {
+      "eval": "eval-3-english-learning-report",
+      "passRate": 0.43,
+      "passed": 3,
+      "total": 7,
+      "seconds": 134.631,
+      "tokens": 56258,
+      "calls": 11,
+      "baseline": {
+        "eval": "eval-3-english-learning-report",
+        "passRate": 0.14,
+        "passed": 1,
+        "total": 7,
+        "seconds": 214.947,
+        "tokens": 65584,
+        "calls": 18
+      }
+    },
+    {
+      "eval": "eval-4-chess-tr-id-casual",
+      "passRate": 1,
+      "passed": 5,
+      "total": 5,
+      "seconds": 35.211,
+      "tokens": 47380,
+      "calls": 5,
+      "baseline": {
+        "eval": "eval-4-chess-tr-id-casual",
+        "passRate": 0.4,
+        "passed": 2,
+        "total": 5,
+        "seconds": 37.553,
+        "tokens": 45437,
+        "calls": 4
+      }
+    },
+    {
+      "eval": "eval-5-fasting-followup",
+      "passRate": 1,
+      "passed": 4,
+      "total": 4,
+      "seconds": 61.309,
+      "calls": 6,
+      "baseline": null
+    }
+  ]
+}

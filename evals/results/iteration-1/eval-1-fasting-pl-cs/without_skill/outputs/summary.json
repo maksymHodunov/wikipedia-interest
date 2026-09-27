@@ -1,0 +1,31 @@
+{
+  "title": "Wikipedia Interest in Intermittent Fasting - Polish vs Czech",
+  "analysis_period": "September 27, 2024 - September 27, 2026",
+  "articles_analyzed": {
+    "czech": {
+      "title": "P\u0159eru\u0161ovan\u00fd p\u016fst",
+      "language": "Czech",
+      "status": "Dedicated article on intermittent fasting"
+    },
+    "polish": {
+      "title": "G\u0142od\u00f3wka lecznicza",
+      "language": "Polish",
+      "status": "Medical/therapeutic fasting (closest available related article)"
+    }
+  },
+  "key_statistics": {
+    "czech_year1_avg_daily_views": 16.77,
+    "czech_year2_avg_daily_views": 8.33,
+    "czech_growth_percent": -50.35,
+    "polish_year1_avg_daily_views": 13.27,
+    "polish_year2_avg_daily_views": 9.65,
+    "polish_growth_percent": -27.27
+  },
+  "findings": {
+    "overall_trend": "Both articles show declining interest over the two-year period",
+    "czech_decline": "50.35% decline in Czech Wikipedia",
+    "polish_decline": "27.27% decline in Polish Wikipedia",
+    "comparison": "Czech article had 26.4% higher views in Year 1",
+    "data_limitation": "Polish Wikipedia lacks a dedicated article on intermittent fasting; analysis uses medical fasting article instead"
+  }
+}

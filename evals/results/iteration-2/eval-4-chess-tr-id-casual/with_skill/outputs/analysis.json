@@ -1,0 +1,518 @@
+{
+  "topics": [
+    "Chess"
+  ],
+  "langs": [
+    "tr",
+    "id"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chess",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chess/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chess/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chess/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/chess/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "tr",
+      "project": "tr.wikipedia",
+      "article": "Satranç",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 48330,
+      "avgMonthlyLast12": 4028,
+      "perMillionLast12": 36.8,
+      "yoy": -9.2,
+      "robustGrowth": -1.3,
+      "relativeGrowth": 21.5,
+      "editionGrowth": -18.7,
+      "trendAnnual": -19.3,
+      "r2": 0.14,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2024-12",
+        "views": 6786
+      },
+      "botShare": 0.25,
+      "trust": {
+        "score": 75,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (25%)",
+          "trend is noisy (R²=0.14) — direction is not consistent month to month"
+        ]
+      },
+      "verdict": {
+        "label": "growing",
+        "basis": "share of edition views +22% YoY (raw -1%, whole edition -19%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 2195
+        },
+        {
+          "month": "2024-10",
+          "views": 6316
+        },
+        {
+          "month": "2024-11",
+          "views": 6100
+        },
+        {
+          "month": "2024-12",
+          "views": 6786
+        },
+        {
+          "month": "2025-01",
+          "views": 5489
+        },
+        {
+          "month": "2025-02",
+          "views": 4374
+        },
+        {
+          "month": "2025-03",
+          "views": 4862
+        },
+        {
+          "month": "2025-04",
+          "views": 4259
+        },
+        {
+          "month": "2025-05",
+          "views": 4196
+        },
+        {
+          "month": "2025-06",
+          "views": 3455
+        },
+        {
+          "month": "2025-07",
+          "views": 2763
+        },
+        {
+          "month": "2025-08",
+          "views": 2408
+        },
+        {
+          "month": "2025-09",
+          "views": 3774
+        },
+        {
+          "month": "2025-10",
+          "views": 4939
+        },
+        {
+          "month": "2025-11",
+          "views": 4131
+        },
+        {
+          "month": "2025-12",
+          "views": 4687
+        },
+        {
+          "month": "2026-01",
+          "views": 5243
+        },
+        {
+          "month": "2026-02",
+          "views": 5265
+        },
+        {
+          "month": "2026-03",
+          "views": 4390
+        },
+        {
+          "month": "2026-04",
+          "views": 3878
+        },
+        {
+          "month": "2026-05",
+          "views": 4554
+        },
+        {
+          "month": "2026-06",
+          "views": 3153
+        },
+        {
+          "month": "2026-07",
+          "views": 2307
+        },
+        {
+          "month": "2026-08",
+          "views": 2009
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 19.1375587232066
+        },
+        {
+          "month": "2024-10",
+          "views": 47.014914685199415
+        },
+        {
+          "month": "2024-11",
+          "views": 46.29788207606109
+        },
+        {
+          "month": "2024-12",
+          "views": 44.06309729042924
+        },
+        {
+          "month": "2025-01",
+          "views": 36.72806681850411
+        },
+        {
+          "month": "2025-02",
+          "views": 35.122529368143766
+        },
+        {
+          "month": "2025-03",
+          "views": 34.44862345971805
+        },
+        {
+          "month": "2025-04",
+          "views": 31.46668858326329
+        },
+        {
+          "month": "2025-05",
+          "views": 31.64851431532976
+        },
+        {
+          "month": "2025-06",
+          "views": 30.398080593925176
+        },
+        {
+          "month": "2025-07",
+          "views": 23.19827954909194
+        },
+        {
+          "month": "2025-08",
+          "views": 21.852570543827536
+        },
+        {
+          "month": "2025-09",
+          "views": 33.86022347227117
+        },
+        {
+          "month": "2025-10",
+          "views": 42.58601603534658
+        },
+        {
+          "month": "2025-11",
+          "views": 30.878894284726293
+        },
+        {
+          "month": "2025-12",
+          "views": 40.164319110631205
+        },
+        {
+          "month": "2026-01",
+          "views": 43.054338673081375
+        },
+        {
+          "month": "2026-02",
+          "views": 51.09512824013472
+        },
+        {
+          "month": "2026-03",
+          "views": 40.80878778481245
+        },
+        {
+          "month": "2026-04",
+          "views": 40.16136376143835
+        },
+        {
+          "month": "2026-05",
+          "views": 42.38257172810525
+        },
+        {
+          "month": "2026-06",
+          "views": 32.068053841377555
+        },
+        {
+          "month": "2026-07",
+          "views": 23.193632964709394
+        },
+        {
+          "month": "2026-08",
+          "views": 21.440713034657904
+        }
+      ],
+      "name": "tr",
+      "topic": "Chess",
+      "resolution": {
+        "lang": "tr",
+        "project": "tr.wikipedia",
+        "article": "Satranç",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "id",
+      "project": "id.wikipedia",
+      "article": "Catur",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 17202,
+      "avgMonthlyLast12": 1434,
+      "perMillionLast12": 20.5,
+      "yoy": -29.9,
+      "robustGrowth": -44.2,
+      "relativeGrowth": -14.6,
+      "editionGrowth": -37.8,
+      "trendAnnual": -38.9,
+      "r2": 0.54,
+      "spikeShare": 0.04,
+      "peakMonth": {
+        "month": "2025-11",
+        "views": 3972
+      },
+      "botShare": 0.3,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (30%)"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -15% YoY (raw -44%, whole edition -38%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 2918
+        },
+        {
+          "month": "2024-10",
+          "views": 2808
+        },
+        {
+          "month": "2024-11",
+          "views": 2466
+        },
+        {
+          "month": "2024-12",
+          "views": 2294
+        },
+        {
+          "month": "2025-01",
+          "views": 2364
+        },
+        {
+          "month": "2025-02",
+          "views": 2022
+        },
+        {
+          "month": "2025-03",
+          "views": 1460
+        },
+        {
+          "month": "2025-04",
+          "views": 1411
+        },
+        {
+          "month": "2025-05",
+          "views": 1505
+        },
+        {
+          "month": "2025-06",
+          "views": 1793
+        },
+        {
+          "month": "2025-07",
+          "views": 1605
+        },
+        {
+          "month": "2025-08",
+          "views": 1905
+        },
+        {
+          "month": "2025-09",
+          "views": 1596
+        },
+        {
+          "month": "2025-10",
+          "views": 1591
+        },
+        {
+          "month": "2025-11",
+          "views": 3972
+        },
+        {
+          "month": "2025-12",
+          "views": 1580
+        },
+        {
+          "month": "2026-01",
+          "views": 1114
+        },
+        {
+          "month": "2026-02",
+          "views": 1000
+        },
+        {
+          "month": "2026-03",
+          "views": 951
+        },
+        {
+          "month": "2026-04",
+          "views": 1001
+        },
+        {
+          "month": "2026-05",
+          "views": 968
+        },
+        {
+          "month": "2026-06",
+          "views": 1079
+        },
+        {
+          "month": "2026-07",
+          "views": 1065
+        },
+        {
+          "month": "2026-08",
+          "views": 1285
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 27.98692575129981
+        },
+        {
+          "month": "2024-10",
+          "views": 23.796160462391263
+        },
+        {
+          "month": "2024-11",
+          "views": 23.275038830900648
+        },
+        {
+          "month": "2024-12",
+          "views": 21.74102837604147
+        },
+        {
+          "month": "2025-01",
+          "views": 20.16957734258208
+        },
+        {
+          "month": "2025-02",
+          "views": 19.45358834184742
+        },
+        {
+          "month": "2025-03",
+          "views": 14.749394850513468
+        },
+        {
+          "month": "2025-04",
+          "views": 15.103858994226
+        },
+        {
+          "month": "2025-05",
+          "views": 15.508257853629084
+        },
+        {
+          "month": "2025-06",
+          "views": 21.91115068723597
+        },
+        {
+          "month": "2025-07",
+          "views": 20.08094736229437
+        },
+        {
+          "month": "2025-08",
+          "views": 21.508255280477076
+        },
+        {
+          "month": "2025-09",
+          "views": 19.97557397828037
+        },
+        {
+          "month": "2025-10",
+          "views": 20.659350105669784
+        },
+        {
+          "month": "2025-11",
+          "views": 43.626786592148484
+        },
+        {
+          "month": "2025-12",
+          "views": 23.920884973426926
+        },
+        {
+          "month": "2026-01",
+          "views": 15.860581784363859
+        },
+        {
+          "month": "2026-02",
+          "views": 17.42202923259707
+        },
+        {
+          "month": "2026-03",
+          "views": 15.418063715902187
+        },
+        {
+          "month": "2026-04",
+          "views": 16.408873322006237
+        },
+        {
+          "month": "2026-05",
+          "views": 15.238008163762874
+        },
+        {
+          "month": "2026-06",
+          "views": 18.16942825136951
+        },
+        {
+          "month": "2026-07",
+          "views": 16.995174886333796
+        },
+        {
+          "month": "2026-08",
+          "views": 22.86550916773461
+        }
+      ],
+      "name": "id",
+      "topic": "Chess",
+      "resolution": {
+        "lang": "id",
+        "project": "id.wikipedia",
+        "article": "Catur",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-11"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "tr",
+      "score": 69,
+      "why": "growing (share of edition views +22% YoY (raw -1%, whole edition -19%)), trust high, 36.8 views per 1M edition views"
+    },
+    {
+      "name": "id",
+      "score": 45,
+      "why": "declining (share of edition views -15% YoY (raw -44%, whole edition -38%)), trust high, 20.5 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

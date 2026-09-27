@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Uses more than one astronomy-related article, or says a single article is a narrow proxy",
+      "passed": false,
+      "evidence": "no article analysed: one allpages query, then 9 web searches/fetches; never fetched pageviews"
+    },
+    {
+      "text": "Gives a direction for uk with a number from the data",
+      "passed": false,
+      "evidence": "\"Невідомо без прямого аналізу\""
+    },
+    {
+      "text": "Answers the trust question with a trust label and at least one concrete reason",
+      "passed": false,
+      "evidence": "generic 'надійність 5.5 з 10' for Wikipedia pageviews in general, not derived from data about this topic"
+    },
+    {
+      "text": "Separates the topic's own trend from the whole Ukrainian Wikipedia decline",
+      "passed": false,
+      "evidence": "claims 'Українська Wikipedia швидко зростає' — the data shows the uk edition at −28% human views YoY"
+    },
+    {
+      "text": "Recommends a validation step beyond Wikipedia",
+      "passed": true,
+      "evidence": "surveys of 50–100 users, competitor analysis, curriculum check"
+    },
+    {
+      "text": "No invented numbers",
+      "passed": false,
+      "evidence": "'5.5 з 10', '40–50% ризик помилки', '87,5% студентів' — no source in the data"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 5,
+    "total": 6,
+    "pass_rate": 0.17
+  }
+}

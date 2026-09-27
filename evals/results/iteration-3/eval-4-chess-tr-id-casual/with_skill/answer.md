@@ -1,0 +1,1 @@
+Turkish shows strong chess growth (+22% share of edition views, 4,028 monthly views, trust 75), while Indonesian is declining (-15% share, 1,434 monthly views, trust 90). Turkish is the clear choice for localization based on Wikipedia data—chess interest is growing there despite platform-wide traffic losses.

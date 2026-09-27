@@ -1,0 +1,1005 @@
+{
+  "topics": [
+    "Astronomy",
+    "Solar System",
+    "Galaxy",
+    "Black hole"
+  ],
+  "langs": [
+    "uk"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/astronomy-solar-system-galaxy-black-hole",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/astronomy-solar-system-galaxy-black-hole/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/astronomy-solar-system-galaxy-black-hole/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/astronomy-solar-system-galaxy-black-hole/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/astronomy-solar-system-galaxy-black-hole/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Астрономія",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 6708,
+      "avgMonthlyLast12": 559,
+      "perMillionLast12": 9.7,
+      "yoy": -59.6,
+      "robustGrowth": -63,
+      "relativeGrowth": -47.2,
+      "editionGrowth": -28.2,
+      "trendAnnual": -63.9,
+      "r2": 0.66,
+      "spikeShare": 0.08,
+      "peakMonth": {
+        "month": "2024-09",
+        "views": 4687
+      },
+      "botShare": 0.28,
+      "trust": {
+        "score": 80,
+        "label": "high",
+        "reasons": [
+          "some spike months (8%)",
+          "notable automated traffic (28%)"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -47% YoY (raw -63%, whole edition -28%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 4687
+        },
+        {
+          "month": "2024-10",
+          "views": 1776
+        },
+        {
+          "month": "2024-11",
+          "views": 1746
+        },
+        {
+          "month": "2024-12",
+          "views": 1634
+        },
+        {
+          "month": "2025-01",
+          "views": 1558
+        },
+        {
+          "month": "2025-02",
+          "views": 1296
+        },
+        {
+          "month": "2025-03",
+          "views": 1068
+        },
+        {
+          "month": "2025-04",
+          "views": 1019
+        },
+        {
+          "month": "2025-05",
+          "views": 789
+        },
+        {
+          "month": "2025-06",
+          "views": 361
+        },
+        {
+          "month": "2025-07",
+          "views": 305
+        },
+        {
+          "month": "2025-08",
+          "views": 375
+        },
+        {
+          "month": "2025-09",
+          "views": 1642
+        },
+        {
+          "month": "2025-10",
+          "views": 635
+        },
+        {
+          "month": "2025-11",
+          "views": 557
+        },
+        {
+          "month": "2025-12",
+          "views": 622
+        },
+        {
+          "month": "2026-01",
+          "views": 449
+        },
+        {
+          "month": "2026-02",
+          "views": 425
+        },
+        {
+          "month": "2026-03",
+          "views": 410
+        },
+        {
+          "month": "2026-04",
+          "views": 405
+        },
+        {
+          "month": "2026-05",
+          "views": 600
+        },
+        {
+          "month": "2026-06",
+          "views": 281
+        },
+        {
+          "month": "2026-07",
+          "views": 322
+        },
+        {
+          "month": "2026-08",
+          "views": 360
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 62.904911783813255
+        },
+        {
+          "month": "2024-10",
+          "views": 21.393913701385102
+        },
+        {
+          "month": "2024-11",
+          "views": 20.826608819746774
+        },
+        {
+          "month": "2024-12",
+          "views": 19.35297233644207
+        },
+        {
+          "month": "2025-01",
+          "views": 16.554776882463283
+        },
+        {
+          "month": "2025-02",
+          "views": 15.814176012852826
+        },
+        {
+          "month": "2025-03",
+          "views": 13.415524776891532
+        },
+        {
+          "month": "2025-04",
+          "views": 14.123965280937036
+        },
+        {
+          "month": "2025-05",
+          "views": 11.428107434580639
+        },
+        {
+          "month": "2025-06",
+          "views": 6.728462155363881
+        },
+        {
+          "month": "2025-07",
+          "views": 4.902789893205663
+        },
+        {
+          "month": "2025-08",
+          "views": 6.067782764380536
+        },
+        {
+          "month": "2025-09",
+          "views": 26.805228475719865
+        },
+        {
+          "month": "2025-10",
+          "views": 9.614705878879356
+        },
+        {
+          "month": "2025-11",
+          "views": 8.296383767179343
+        },
+        {
+          "month": "2025-12",
+          "views": 11.207741139956289
+        },
+        {
+          "month": "2026-01",
+          "views": 7.424926878526344
+        },
+        {
+          "month": "2026-02",
+          "views": 8.234144505709923
+        },
+        {
+          "month": "2026-03",
+          "views": 7.439017384911052
+        },
+        {
+          "month": "2026-04",
+          "views": 7.586360884498498
+        },
+        {
+          "month": "2026-05",
+          "views": 10.723849664710798
+        },
+        {
+          "month": "2026-06",
+          "views": 5.816359361424182
+        },
+        {
+          "month": "2026-07",
+          "views": 6.075580943936596
+        },
+        {
+          "month": "2026-08",
+          "views": 7.09772420739763
+        }
+      ],
+      "name": "Astronomy",
+      "topic": "Astronomy",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Астрономія",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2024-09",
+        "2025-09"
+      ]
+    },
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Сонячна система",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 39782,
+      "avgMonthlyLast12": 3315,
+      "perMillionLast12": 57.8,
+      "yoy": -53.3,
+      "robustGrowth": -57.1,
+      "relativeGrowth": -41.6,
+      "editionGrowth": -28.2,
+      "trendAnnual": -59,
+      "r2": 0.64,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 11757
+      },
+      "botShare": 0.12,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -42% YoY (raw -57%, whole edition -28%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 8019
+        },
+        {
+          "month": "2024-10",
+          "views": 9945
+        },
+        {
+          "month": "2024-11",
+          "views": 8873
+        },
+        {
+          "month": "2024-12",
+          "views": 9606
+        },
+        {
+          "month": "2025-01",
+          "views": 11757
+        },
+        {
+          "month": "2025-02",
+          "views": 11425
+        },
+        {
+          "month": "2025-03",
+          "views": 8267
+        },
+        {
+          "month": "2025-04",
+          "views": 6305
+        },
+        {
+          "month": "2025-05",
+          "views": 4723
+        },
+        {
+          "month": "2025-06",
+          "views": 2017
+        },
+        {
+          "month": "2025-07",
+          "views": 1902
+        },
+        {
+          "month": "2025-08",
+          "views": 2369
+        },
+        {
+          "month": "2025-09",
+          "views": 5419
+        },
+        {
+          "month": "2025-10",
+          "views": 4389
+        },
+        {
+          "month": "2025-11",
+          "views": 3992
+        },
+        {
+          "month": "2025-12",
+          "views": 3515
+        },
+        {
+          "month": "2026-01",
+          "views": 3316
+        },
+        {
+          "month": "2026-02",
+          "views": 4140
+        },
+        {
+          "month": "2026-03",
+          "views": 3467
+        },
+        {
+          "month": "2026-04",
+          "views": 3743
+        },
+        {
+          "month": "2026-05",
+          "views": 3151
+        },
+        {
+          "month": "2026-06",
+          "views": 1680
+        },
+        {
+          "month": "2026-07",
+          "views": 1513
+        },
+        {
+          "month": "2026-08",
+          "views": 1457
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 107.6241705983355
+        },
+        {
+          "month": "2024-10",
+          "views": 119.7986890542088
+        },
+        {
+          "month": "2024-11",
+          "views": 105.83877437434887
+        },
+        {
+          "month": "2024-12",
+          "views": 113.77273700358782
+        },
+        {
+          "month": "2025-01",
+          "views": 124.92587407389013
+        },
+        {
+          "month": "2025-02",
+          "views": 139.41123529849037
+        },
+        {
+          "month": "2025-03",
+          "views": 103.84470349303585
+        },
+        {
+          "month": "2025-04",
+          "views": 87.39116888744653
+        },
+        {
+          "month": "2025-05",
+          "views": 68.40931738089273
+        },
+        {
+          "month": "2025-06",
+          "views": 37.59365143315498
+        },
+        {
+          "month": "2025-07",
+          "views": 30.57411926844974
+        },
+        {
+          "month": "2025-08",
+          "views": 38.332206316846644
+        },
+        {
+          "month": "2025-09",
+          "views": 88.46378386718999
+        },
+        {
+          "month": "2025-10",
+          "views": 66.45503008252203
+        },
+        {
+          "month": "2025-11",
+          "views": 59.45989945885086
+        },
+        {
+          "month": "2025-12",
+          "views": 63.336350654254595
+        },
+        {
+          "month": "2026-01",
+          "views": 54.83531743695625
+        },
+        {
+          "month": "2026-02",
+          "views": 80.21025471444491
+        },
+        {
+          "month": "2026-03",
+          "views": 62.90505676460152
+        },
+        {
+          "month": "2026-04",
+          "views": 70.11295997698242
+        },
+        {
+          "month": "2026-05",
+          "views": 56.3180838225062
+        },
+        {
+          "month": "2026-06",
+          "views": 34.77396344196664
+        },
+        {
+          "month": "2026-07",
+          "views": 28.547683130981582
+        },
+        {
+          "month": "2026-08",
+          "views": 28.7260671393843
+        }
+      ],
+      "name": "Solar System",
+      "topic": "Solar System",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Сонячна система",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Галактика",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 8988,
+      "avgMonthlyLast12": 749,
+      "perMillionLast12": 13.3,
+      "yoy": -52.7,
+      "robustGrowth": -57.6,
+      "relativeGrowth": -38.5,
+      "editionGrowth": -28.2,
+      "trendAnnual": -48,
+      "r2": 0.59,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-02",
+        "views": 2398
+      },
+      "botShare": 0.28,
+      "trust": {
+        "score": 90,
+        "label": "high",
+        "reasons": [
+          "notable automated traffic (28%)"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -39% YoY (raw -58%, whole edition -28%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 1258
+        },
+        {
+          "month": "2024-10",
+          "views": 2252
+        },
+        {
+          "month": "2024-11",
+          "views": 1829
+        },
+        {
+          "month": "2024-12",
+          "views": 1791
+        },
+        {
+          "month": "2025-01",
+          "views": 1987
+        },
+        {
+          "month": "2025-02",
+          "views": 2398
+        },
+        {
+          "month": "2025-03",
+          "views": 1922
+        },
+        {
+          "month": "2025-04",
+          "views": 1939
+        },
+        {
+          "month": "2025-05",
+          "views": 1585
+        },
+        {
+          "month": "2025-06",
+          "views": 622
+        },
+        {
+          "month": "2025-07",
+          "views": 578
+        },
+        {
+          "month": "2025-08",
+          "views": 845
+        },
+        {
+          "month": "2025-09",
+          "views": 796
+        },
+        {
+          "month": "2025-10",
+          "views": 808
+        },
+        {
+          "month": "2025-11",
+          "views": 729
+        },
+        {
+          "month": "2025-12",
+          "views": 747
+        },
+        {
+          "month": "2026-01",
+          "views": 644
+        },
+        {
+          "month": "2026-02",
+          "views": 777
+        },
+        {
+          "month": "2026-03",
+          "views": 758
+        },
+        {
+          "month": "2026-04",
+          "views": 987
+        },
+        {
+          "month": "2026-05",
+          "views": 815
+        },
+        {
+          "month": "2026-06",
+          "views": 556
+        },
+        {
+          "month": "2026-07",
+          "views": 485
+        },
+        {
+          "month": "2026-08",
+          "views": 886
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 16.883801797319624
+        },
+        {
+          "month": "2024-10",
+          "views": 27.127868049278856
+        },
+        {
+          "month": "2024-11",
+          "views": 21.816648070628208
+        },
+        {
+          "month": "2024-12",
+          "views": 21.212468454447823
+        },
+        {
+          "month": "2025-01",
+          "views": 21.113184637647333
+        },
+        {
+          "month": "2025-02",
+          "views": 29.26110654230021
+        },
+        {
+          "month": "2025-03",
+          "views": 24.142920057289817
+        },
+        {
+          "month": "2025-04",
+          "views": 26.875729813284504
+        },
+        {
+          "month": "2025-05",
+          "views": 22.957604922446528
+        },
+        {
+          "month": "2025-06",
+          "views": 11.593084378494002
+        },
+        {
+          "month": "2025-07",
+          "views": 9.291188715648763
+        },
+        {
+          "month": "2025-08",
+          "views": 13.672737162404141
+        },
+        {
+          "month": "2025-09",
+          "views": 12.994495655708292
+        },
+        {
+          "month": "2025-10",
+          "views": 12.234145433282707
+        },
+        {
+          "month": "2025-11",
+          "views": 10.858283242861292
+        },
+        {
+          "month": "2025-12",
+          "views": 13.460100693806025
+        },
+        {
+          "month": "2026-01",
+          "views": 10.649561046260503
+        },
+        {
+          "month": "2026-02",
+          "views": 15.053953602203789
+        },
+        {
+          "month": "2026-03",
+          "views": 13.753110189664824
+        },
+        {
+          "month": "2026-04",
+          "views": 18.488242451851896
+        },
+        {
+          "month": "2026-05",
+          "views": 14.566562461232166
+        },
+        {
+          "month": "2026-06",
+          "views": 11.508525996269913
+        },
+        {
+          "month": "2026-07",
+          "views": 9.151107943506984
+        },
+        {
+          "month": "2026-08",
+          "views": 17.468287910428614
+        }
+      ],
+      "name": "Galaxy",
+      "topic": "Galaxy",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Галактика",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    },
+    {
+      "lang": "uk",
+      "project": "uk.wikipedia",
+      "article": "Чорна діра",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 21722,
+      "avgMonthlyLast12": 1810,
+      "perMillionLast12": 31.7,
+      "yoy": -30.8,
+      "robustGrowth": -33.3,
+      "relativeGrowth": -10,
+      "editionGrowth": -28.2,
+      "trendAnnual": -39.2,
+      "r2": 0.54,
+      "spikeShare": 0,
+      "peakMonth": {
+        "month": "2025-01",
+        "views": 3745
+      },
+      "botShare": 0.13,
+      "trust": {
+        "score": 100,
+        "label": "high",
+        "reasons": []
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -10% YoY (raw -33%, whole edition -28%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 2291
+        },
+        {
+          "month": "2024-10",
+          "views": 3333
+        },
+        {
+          "month": "2024-11",
+          "views": 3235
+        },
+        {
+          "month": "2024-12",
+          "views": 2976
+        },
+        {
+          "month": "2025-01",
+          "views": 3745
+        },
+        {
+          "month": "2025-02",
+          "views": 3133
+        },
+        {
+          "month": "2025-03",
+          "views": 3326
+        },
+        {
+          "month": "2025-04",
+          "views": 2861
+        },
+        {
+          "month": "2025-05",
+          "views": 2282
+        },
+        {
+          "month": "2025-06",
+          "views": 1237
+        },
+        {
+          "month": "2025-07",
+          "views": 1389
+        },
+        {
+          "month": "2025-08",
+          "views": 1580
+        },
+        {
+          "month": "2025-09",
+          "views": 2060
+        },
+        {
+          "month": "2025-10",
+          "views": 2776
+        },
+        {
+          "month": "2025-11",
+          "views": 2159
+        },
+        {
+          "month": "2025-12",
+          "views": 1927
+        },
+        {
+          "month": "2026-01",
+          "views": 1964
+        },
+        {
+          "month": "2026-02",
+          "views": 2052
+        },
+        {
+          "month": "2026-03",
+          "views": 1871
+        },
+        {
+          "month": "2026-04",
+          "views": 2206
+        },
+        {
+          "month": "2026-05",
+          "views": 1677
+        },
+        {
+          "month": "2026-06",
+          "views": 1032
+        },
+        {
+          "month": "2026-07",
+          "views": 859
+        },
+        {
+          "month": "2026-08",
+          "views": 1139
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 30.74784572150974
+        },
+        {
+          "month": "2024-10",
+          "views": 40.14972655783589
+        },
+        {
+          "month": "2024-11",
+          "views": 38.587674416884774
+        },
+        {
+          "month": "2024-12",
+          "views": 35.2475187718798
+        },
+        {
+          "month": "2025-01",
+          "views": 39.79309334070924
+        },
+        {
+          "month": "2025-02",
+          "views": 38.22979432736721
+        },
+        {
+          "month": "2025-03",
+          "views": 41.779059370731495
+        },
+        {
+          "month": "2025-04",
+          "views": 39.655215572876216
+        },
+        {
+          "month": "2025-05",
+          "views": 33.05315737099242
+        },
+        {
+          "month": "2025-06",
+          "views": 23.055699961731637
+        },
+        {
+          "month": "2025-07",
+          "views": 22.32778741528743
+        },
+        {
+          "month": "2025-08",
+          "views": 25.565591380589993
+        },
+        {
+          "month": "2025-09",
+          "views": 33.628971169295326
+        },
+        {
+          "month": "2025-10",
+          "views": 42.03216302325841
+        },
+        {
+          "month": "2025-11",
+          "views": 32.15779632556589
+        },
+        {
+          "month": "2025-12",
+          "views": 34.72237488214754
+        },
+        {
+          "month": "2026-01",
+          "views": 32.47785387399942
+        },
+        {
+          "month": "2026-02",
+          "views": 39.75638711933356
+        },
+        {
+          "month": "2026-03",
+          "views": 33.94732079797214
+        },
+        {
+          "month": "2026-04",
+          "views": 41.32225212642886
+        },
+        {
+          "month": "2026-05",
+          "views": 29.97315981286668
+        },
+        {
+          "month": "2026-06",
+          "views": 21.361148971493797
+        },
+        {
+          "month": "2026-07",
+          "views": 16.207838605097937
+        },
+        {
+          "month": "2026-08",
+          "views": 22.456410756183057
+        }
+      ],
+      "name": "Black hole",
+      "topic": "Black hole",
+      "resolution": {
+        "lang": "uk",
+        "project": "uk.wikipedia",
+        "article": "Чорна діра",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": []
+    }
+  ],
+  "ranking": [
+    {
+      "name": "Black hole",
+      "score": 55,
+      "why": "declining (share of edition views -10% YoY (raw -33%, whole edition -28%)), trust high, 31.7 views per 1M edition views"
+    },
+    {
+      "name": "Solar System",
+      "score": 26,
+      "why": "declining (share of edition views -42% YoY (raw -57%, whole edition -28%)), trust high, 57.8 views per 1M edition views"
+    },
+    {
+      "name": "Galaxy",
+      "score": 22,
+      "why": "declining (share of edition views -39% YoY (raw -58%, whole edition -28%)), trust high, 13.3 views per 1M edition views"
+    },
+    {
+      "name": "Astronomy",
+      "score": 13,
+      "why": "declining (share of edition views -47% YoY (raw -63%, whole edition -28%)), trust high, 9.7 views per 1M edition views"
+    }
+  ],
+  "excluded": [],
+  "warnings": []
+}

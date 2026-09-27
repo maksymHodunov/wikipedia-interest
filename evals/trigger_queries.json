@@ -1,0 +1,12 @@
+[
+  { "query": "Is interest in yoga growing among Polish speakers? We're considering a Polish version of our yoga app.", "should_trigger": true },
+  { "query": "which of these course topics should we add first — photography, astronomy or chess? most of our users are in Ukraine", "should_trigger": true },
+  { "query": "Ми думаємо локалізувати застосунок чеською або словацькою. Де більше інтересу до медитації?", "should_trigger": true },
+  { "query": "Need a one-pager for investors on how interest in cryptocurrency changed in German vs French over the last 5 years", "should_trigger": true },
+  { "query": "is the hype around intermittent fasting dying down in europe or not?", "should_trigger": true },
+  { "query": "Help me write a Wikipedia article about our startup so it passes the notability review", "should_trigger": false },
+  { "query": "Our Google Analytics export in ~/Downloads/ga_poland.csv shows fewer Polish users this month — can you find out why?", "should_trigger": false },
+  { "query": "Translate our onboarding screens (en.json) into Czech and Slovak", "should_trigger": false },
+  { "query": "What is intermittent fasting and is it safe for people with diabetes?", "should_trigger": false },
+  { "query": "Make a one-page PDF summary of this meeting transcript for the team", "should_trigger": false }
+]

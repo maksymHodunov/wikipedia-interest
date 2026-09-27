@@ -1,0 +1,289 @@
+{
+  "topics": [
+    "Intermittent fasting"
+  ],
+  "langs": [
+    "pl",
+    "cs"
+  ],
+  "period": {
+    "start": "20240901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "cs",
+      "project": "cs.wikipedia",
+      "article": "Přerušovaný půst",
+      "months": 24,
+      "completeness": 1,
+      "totalLast12": 2198,
+      "avgMonthlyLast12": 183,
+      "perMillionLast12": 3,
+      "yoy": -53.6,
+      "robustGrowth": -58,
+      "relativeGrowth": -50.5,
+      "editionGrowth": -16.1,
+      "trendAnnual": -53.4,
+      "r2": 0.55,
+      "spikeShare": 0.08,
+      "peakMonth": {
+        "month": "2025-04",
+        "views": 958
+      },
+      "botShare": 0.12,
+      "trust": {
+        "score": 70,
+        "label": "high",
+        "reasons": [
+          "some spike months (8%)",
+          "low volume (183 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -51% YoY (raw -58%, whole edition -16%)"
+      },
+      "points": [
+        {
+          "month": "2024-09",
+          "views": 393
+        },
+        {
+          "month": "2024-10",
+          "views": 634
+        },
+        {
+          "month": "2024-11",
+          "views": 329
+        },
+        {
+          "month": "2024-12",
+          "views": 294
+        },
+        {
+          "month": "2025-01",
+          "views": 489
+        },
+        {
+          "month": "2025-02",
+          "views": 272
+        },
+        {
+          "month": "2025-03",
+          "views": 366
+        },
+        {
+          "month": "2025-04",
+          "views": 958
+        },
+        {
+          "month": "2025-05",
+          "views": 225
+        },
+        {
+          "month": "2025-06",
+          "views": 238
+        },
+        {
+          "month": "2025-07",
+          "views": 157
+        },
+        {
+          "month": "2025-08",
+          "views": 386
+        },
+        {
+          "month": "2025-09",
+          "views": 270
+        },
+        {
+          "month": "2025-10",
+          "views": 141
+        },
+        {
+          "month": "2025-11",
+          "views": 151
+        },
+        {
+          "month": "2025-12",
+          "views": 218
+        },
+        {
+          "month": "2026-01",
+          "views": 474
+        },
+        {
+          "month": "2026-02",
+          "views": 196
+        },
+        {
+          "month": "2026-03",
+          "views": 179
+        },
+        {
+          "month": "2026-04",
+          "views": 135
+        },
+        {
+          "month": "2026-05",
+          "views": 109
+        },
+        {
+          "month": "2026-06",
+          "views": 115
+        },
+        {
+          "month": "2026-07",
+          "views": 91
+        },
+        {
+          "month": "2026-08",
+          "views": 119
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2024-09",
+          "views": 6.308916430118421
+        },
+        {
+          "month": "2024-10",
+          "views": 8.944506475991986
+        },
+        {
+          "month": "2024-11",
+          "views": 4.778353391040544
+        },
+        {
+          "month": "2024-12",
+          "views": 4.178465323875619
+        },
+        {
+          "month": "2025-01",
+          "views": 5.863548323750029
+        },
+        {
+          "month": "2025-02",
+          "views": 3.8994729632909344
+        },
+        {
+          "month": "2025-03",
+          "views": 4.887305805374183
+        },
+        {
+          "month": "2025-04",
+          "views": 14.296329726250953
+        },
+        {
+          "month": "2025-05",
+          "views": 3.0558130398713383
+        },
+        {
+          "month": "2025-06",
+          "views": 4.229499164389579
+        },
+        {
+          "month": "2025-07",
+          "views": 2.5670435331832313
+        },
+        {
+          "month": "2025-08",
+          "views": 6.711277653571811
+        },
+        {
+          "month": "2025-09",
+          "views": 4.711511202560186
+        },
+        {
+          "month": "2025-10",
+          "views": 2.1188261444692906
+        },
+        {
+          "month": "2025-11",
+          "views": 2.0718006527132493
+        },
+        {
+          "month": "2025-12",
+          "views": 3.635313549212148
+        },
+        {
+          "month": "2026-01",
+          "views": 7.031597685803294
+        },
+        {
+          "month": "2026-02",
+          "views": 3.361552249575634
+        },
+        {
+          "month": "2026-03",
+          "views": 3.0840697425673573
+        },
+        {
+          "month": "2026-04",
+          "views": 2.468531570955389
+        },
+        {
+          "month": "2026-05",
+          "views": 1.8229595229398552
+        },
+        {
+          "month": "2026-06",
+          "views": 2.1421929965004947
+        },
+        {
+          "month": "2026-07",
+          "views": 1.71274564136819
+        },
+        {
+          "month": "2026-08",
+          "views": 2.3121265988404005
+        }
+      ],
+      "name": "cs",
+      "topic": "Intermittent fasting",
+      "resolution": {
+        "lang": "cs",
+        "project": "cs.wikipedia",
+        "article": "Přerušovaný půst",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-04",
+        "2026-01"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "cs",
+      "score": 6,
+      "why": "declining (share of edition views -51% YoY (raw -58%, whole edition -16%)), trust high, 3 views per 1M edition views"
+    }
+  ],
+  "excluded": [
+    {
+      "topic": "Intermittent fasting",
+      "lang": "pl",
+      "reason": "no article linked to the topic (text search only)",
+      "searchHits": [
+        "Stres oksydacyjny",
+        "Głodówka lecznicza",
+        "Paleolityczny styl życia",
+        "Skróty i skrótowce używane w medycynie"
+      ]
+    }
+  ],
+  "warnings": [
+    "excluded Intermittent fasting@pl: no article on this topic in those editions (a finding in itself — small or young audience). To use a proxy article, pick one from \"excluded[].searchHits\" or scripts/resolve.ts --search and pass --articles <lang>=\"<Title>\"."
+  ]
+}

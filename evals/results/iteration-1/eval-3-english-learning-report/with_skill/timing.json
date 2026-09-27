@@ -1,0 +1,7 @@
+{
+  "total_tokens": 59788,
+  "duration_ms": 404130,
+  "tool_calls": 14,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "977-word answer for a 'short report'; analyze.ts went to the background (silent long run), agent re-ran it"
+}

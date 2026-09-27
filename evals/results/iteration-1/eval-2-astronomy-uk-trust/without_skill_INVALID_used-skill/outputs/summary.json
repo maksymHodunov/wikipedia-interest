@@ -1,0 +1,67 @@
+{
+  "query": "Чи зростає інтерес до астрономії в українській Wikipedia, і наскільки цьому зростанню можна довіряти?",
+  "period": "2024-09 → 2026-08 (24 місяці)",
+  "language": "uk (Українська)",
+  "topics_analyzed": [
+    "Astronomy",
+    "Telescope",
+    "Black hole",
+    "Galaxy",
+    "Solar System"
+  ],
+  "main_verdict": "NOT_GROWING",
+  "main_verdict_ua": "Інтерес не зростає, навпаки падає",
+  "trust_level": "HIGH_TO_VERY_HIGH",
+  "trust_score": "75-100 з 100",
+  "key_findings": {
+    "is_interest_growing": false,
+    "all_topics_declining": true,
+    "platform_context": "Українська Wikipedia втратила -28% людського трафіку за період",
+    "relative_declines": {
+      "Astronomy": "-47%",
+      "Telescope": "-60%",
+      "Black hole": "-10%",
+      "Galaxy": "-39%",
+      "Solar System": "-42%"
+    },
+    "absolute_declines": {
+      "Astronomy": "-63%",
+      "Telescope": "-72%",
+      "Black hole": "-33%",
+      "Galaxy": "-58%",
+      "Solar System": "-57%"
+    }
+  },
+  "trust_assessment": {
+    "reasons_to_trust": [
+      "Офіційна API Wikimedia Foundation",
+      "Усі статті мають пряме збіг (langlink/high)",
+      "Нормалізовані дані про людський трафік",
+      "Довгий період спостереження (24 місяці)",
+      "Чіткі стійкі тренди (r² 0.54-0.66)"
+    ],
+    "sources_of_uncertainty": [
+      "Залишковий автоматичний трафік (12-37% ботів)",
+      "Сезонні всплески (вересень в обидва роки)",
+      "Період починається з піку (вересень 2024)"
+    ]
+  },
+  "recommendation": "DO_NOT_LAUNCH_BASED_ON_WIKIPEDIA",
+  "recommendation_ua": "Не запускайте курс на основі Wikipedia сигналу попиту",
+  "alternative_steps": [
+    "Проведіть опитування цільової аудиторії",
+    "Проаналізуйте пошукові запити (Google Trends)",
+    "Вивчіть конкурентні курси та їх популярність"
+  ],
+  "best_performing_topic": {
+    "name": "Black hole",
+    "reason": "найменше падіння (-10% відносне)",
+    "monthly_views": 1810,
+    "trust": 100
+  },
+  "data_files": {
+    "analysis_json": "analysis.json",
+    "analysis_markdown": "analysis_ua.md",
+    "this_summary": "summary.json"
+  }
+}

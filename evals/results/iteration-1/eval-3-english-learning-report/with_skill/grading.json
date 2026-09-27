@@ -1,0 +1,45 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/report.ts and its final output has \"ok\": true and \"pages\": 1",
+      "passed": false,
+      "evidence": "report.ts never called (trace: 14 calls, none to report.ts); tried to Write report.md, which the Claude Code subagent harness blocked"
+    },
+    {
+      "text": "Passed its own --verdict and --findings (not the auto-generated draft)",
+      "passed": false,
+      "evidence": "no report.ts call"
+    },
+    {
+      "text": "Recommends 2–3 audiences to research next, each with a reason tied to a metric",
+      "passed": true,
+      "evidence": "Turkish (+7% relative, 65.3 per 1M), Spanish (largest audience, 25,962/month), Polish"
+    },
+    {
+      "text": "Says which article was used as the proxy for 'learning English' and what that proxy measures",
+      "passed": false,
+      "evidence": "table lists 'İngilizce', 'Idioma inglés'…; never says these measure interest in the language, not in learning it"
+    },
+    {
+      "text": "Mentions at least one limitation or assumption",
+      "passed": true,
+      "evidence": "German series: '73% автоматичного трафіку… людський інтерес не можна виміряти достовірно'"
+    },
+    {
+      "text": "No unverified numbers (check_claims on the answer)",
+      "passed": false,
+      "evidence": "unverified: 2.4 (computed ratio), 90% (trust score written as a percent), 500 (outside fact), 2% (invented CTR threshold); also labels tr '↑ Зростає' although the verdict is flat (+6.7%)"
+    },
+    {
+      "text": "Verdict labels in the answer and the PDF match analysis.json (no 'growing' for a flat or declining series)",
+      "passed": false,
+      "evidence": "labelProblems: 5 (tr '↑ Зростає' ×4 although flat; '📈 Польська' although declining)"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 5,
+    "total": 7,
+    "pass_rate": 0.29
+  }
+}

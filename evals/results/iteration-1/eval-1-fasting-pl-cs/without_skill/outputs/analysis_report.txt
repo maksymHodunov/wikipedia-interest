@@ -1,0 +1,148 @@
+
+================================================================================
+WIKIPEDIA INTEREST COMPARISON: INTERMITTENT FASTING
+Polish vs Czech Language Editions (September 2024 - September 2026)
+================================================================================
+
+EXECUTIVE SUMMARY:
+─────────────────────────────────────────────────────────────────────────────
+This analysis compares the growth of interest in intermittent fasting across
+Polish-language and Czech-language Wikipedia editions over the past 2 years.
+
+IMPORTANT NOTE ON DATA LIMITATIONS:
+────────────────────────────────────
+Polish Wikipedia does not have a dedicated article on "Przerywane poszczenie"
+(Intermittent Fasting). Instead, we analyzed "Głodówka lecznicza" (Medical/
+Therapeutic Fasting), which is the closest available related article addressing
+fasting practices in Polish Wikipedia.
+
+Czech Wikipedia has a dedicated article: "Přerušovaný půst" (Intermittent Fasting)
+
+================================================================================
+KEY FINDINGS:
+================================================================================
+
+1. CZECH WIKIPEDIA - "Přerušovaný půst" (Intermittent Fasting)
+───────────────────────────────────────────────────────────────
+   Year 1 (Sep 2024 - Sep 2025):
+   └─ Average daily views: 16.77 views/day
+      Total period views: 6,116 views
+      
+   Year 2 (Sep 2025 - Sep 2026):
+   └─ Average daily views: 8.33 views/day
+      Total period views: 3,037 views
+      
+   TREND: ▼ DECLINING (-50.4%)
+   
+   Key observation: Significant decrease in viewership from Year 1 to Year 2.
+   Peak activity: April 2025 (36.2 views/day)
+   Lowest activity: June 2026 (4.9 views/day)
+
+2. POLISH WIKIPEDIA - "Głodówka lecznicza" (Medical Fasting)
+──────────────────────────────────────────────────────────────
+   Year 1 (Sep 2024 - Sep 2025):
+   └─ Average daily views: 13.27 views/day
+      Total period views: 4,836 views
+      
+   Year 2 (Sep 2025 - Sep 2026):
+   └─ Average daily views: 9.65 views/day
+      Total period views: 3,525 views
+      
+   TREND: ▼ DECLINING (-27.3%)
+   
+   Key observation: Moderate decrease in viewership from Year 1 to Year 2.
+   Peak activity: July 2025 (20.7 views/day)
+   Lowest activity: May 2026 (6.6 views/day)
+
+3. COMPARATIVE ANALYSIS:
+──────────────────────────
+   ┌─────────────────────────────────────────────────────────┐
+   │                    Czech        Polish      Difference  │
+   ├─────────────────────────────────────────────────────────┤
+   │ Year 1 Avg Daily   16.77         13.27        +26.3%    │
+   │ Year 2 Avg Daily    8.33          9.65        -13.7%    │
+   │ Year-over-Year     -50.4%        -27.3%       -23.1pp   │
+   │ Change             
+   └─────────────────────────────────────────────────────────┘
+   
+   Initial Interest: Czech Wikipedia had 26.3% higher daily views in Year 1
+   Interest Stability: Polish article showed more stable interest (-27.3% vs -50.4%)
+   Convergence: By Year 2, both articles had similar daily view counts
+
+================================================================================
+MONTHLY TREND ANALYSIS:
+================================================================================
+
+Czech Article Peak Months (2025-2026):
+  • April 2025: 36.2 views/day
+  • January 2025: 19.6 views/day
+  • August 2025: 16.9 views/day
+
+Polish Article Peak Months (2025-2026):
+  • July 2025: 20.7 views/day
+  • January 2025: 19.5 views/day
+  • December 2024: 13.2 views/day
+
+Seasonal Pattern: Both articles show peaks in winter months (December-January)
+and some activity spikes in spring/summer, suggesting possible seasonal
+interest patterns related to diet and health resolutions.
+
+================================================================================
+INTERPRETATION & INSIGHTS:
+================================================================================
+
+1. DECLINING INTEREST TREND
+   Both Wikipedia articles show declining viewership in Year 2 compared to Year 1.
+   This could indicate:
+   • Stabilization of initial interest peak
+   • Shift to other information sources (e.g., blogs, health websites)
+   • Potential outdating of Wikipedia content
+   • Broader changes in Wikipedia readership patterns
+
+2. ARTICLE AVAILABILITY DIFFERENCE
+   Czech Wikipedia has a dedicated article on intermittent fasting, while Polish
+   Wikipedia does not. This could suggest:
+   • Greater Wikipedia editing activity on health topics in Czech community
+   • Different editorial standards/coverage between language editions
+   • Possible language barrier for Polish intermittent fasting terminology
+
+3. INTEREST STABILITY
+   Polish article (medical fasting) shows more stable decline (-27.3%) compared
+   to Czech article's steeper decline (-50.4%), possibly because:
+   • Medical fasting is a broader, more established topic
+   • Intermittent fasting as a specific diet trend may have peaked
+   • Related terms/articles may be fragmenting the audience
+
+4. COMPARATIVE READERSHIP
+   Despite higher initial views, Czech article declined faster, suggesting
+   that while intermittent fasting generated initial interest, the audience
+   may have shifted to other articles or sources.
+
+================================================================================
+METHODOLOGY:
+================================================================================
+
+Data Source: Wikimedia Pageviews API
+Time Period: September 27, 2024 - September 27, 2026 (730 days)
+Metrics: Daily page view counts, aggregated to monthly averages
+Analysis: Year-over-year comparison, trend analysis, seasonal patterns
+
+================================================================================
+CONCLUSION:
+================================================================================
+
+Interest in intermittent fasting-related articles on both Polish and Czech
+Wikipedia has DECLINED over the past two years, with the Czech-language
+article showing a more pronounced decline (-50.4%) compared to the Polish
+medical fasting article (-27.3%). 
+
+The lack of a dedicated intermittent fasting article in Polish Wikipedia,
+combined with the declining viewership patterns, suggests that while there
+was initial interest in this health trend, engagement has decreased
+significantly. This pattern aligns with typical lifecycle of internet
+health trends and may indicate that intermittent fasting interest has
+plateaued or shifted to different information sources.
+
+================================================================================
+Data Generated: 2026-09-27
+================================================================================

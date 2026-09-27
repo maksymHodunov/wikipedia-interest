@@ -1,0 +1,6 @@
+{
+  "tool_calls": 3,
+  "duration_ms": 60784,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "human review: 'the decline reflects the platform trend, not the topic' contradicts cs relativeGrowth −50.5% vs edition −16%"
+}

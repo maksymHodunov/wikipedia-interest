@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/analyze.ts with --langs containing pl and cs and a 24-month period",
+      "passed": true,
+      "evidence": "trace call 2: --langs pl,cs --months 24; call 3 re-ran with --articles pl=\"Głodówka lecznicza\""
+    },
+    {
+      "text": "States that Polish Wikipedia has no article on intermittent fasting, or explicitly labels any Polish article used as a proxy",
+      "passed": true,
+      "evidence": "\"Це проксі-стаття (терапевтичне голодування), оскільки польська Wikipedia не має спеціалізованої статті\""
+    },
+    {
+      "text": "Gives the Czech growth with a number that appears in analysis.json",
+      "passed": true,
+      "evidence": "\"-50.5% відносного зростання, -58% абсолютного\""
+    },
+    {
+      "text": "States the trust level for the Czech series",
+      "passed": true,
+      "evidence": "\"Висока довіра (70 балів)\""
+    },
+    {
+      "text": "Mentions at least one limitation",
+      "passed": true,
+      "evidence": "edition-wide decline (cs −16.1%, pl −11.9%) and low volume (183–191 views/month)"
+    },
+    {
+      "text": "Every number in the answer is found by scripts/check_claims.ts",
+      "passed": true,
+      "evidence": "check_claims: checked 25, unverified []"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "topics": [
+    "Intermittent fasting"
+  ],
+  "langs": [
+    "pl",
+    "cs",
+    "sk"
+  ],
+  "period": {
+    "start": "20210901",
+    "end": "20260831"
+  },
+  "normalized": true,
+  "outDir": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting",
+  "files": {
+    "chart": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/chart.svg",
+    "chartIndexed": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/chart_indexed.svg",
+    "csv": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/data.csv",
+    "analysis": "/Users/mh/Developer/genesis-academy/wikipedia-interest/out/intermittent-fasting/analysis.json"
+  },
+  "series": [
+    {
+      "lang": "cs",
+      "project": "cs.wikipedia",
+      "article": "Přerušovaný půst",
+      "months": 60,
+      "completeness": 1,
+      "totalLast12": 2198,
+      "avgMonthlyLast12": 183,
+      "perMillionLast12": 3,
+      "yoy": -53.6,
+      "robustGrowth": -58,
+      "relativeGrowth": -50.5,
+      "editionGrowth": -16.1,
+      "trendAnnual": -34.2,
+      "r2": 0.54,
+      "spikeShare": 0.03,
+      "peakMonth": {
+        "month": "2022-01",
+        "views": 2150
+      },
+      "botShare": 0.12,
+      "trust": {
+        "score": 80,
+        "label": "high",
+        "reasons": [
+          "low volume (183 views/month) — small numbers swing wildly"
+        ]
+      },
+      "verdict": {
+        "label": "declining",
+        "basis": "share of edition views -51% YoY (raw -58%, whole edition -16%)"
+      },
+      "points": [
+        {
+          "month": "2021-09",
+          "views": 158
+        },
+        {
+          "month": "2021-10",
+          "views": 317
+        },
+        {
+          "month": "2021-11",
+          "views": 526
+        },
+        {
+          "month": "2021-12",
+          "views": 788
+        },
+        {
+          "month": "2022-01",
+          "views": 2150
+        },
+        {
+          "month": "2022-02",
+          "views": 1218
+        },
+        {
+          "month": "2022-03",
+          "views": 954
+        },
+        {
+          "month": "2022-04",
+          "views": 1269
+        },
+        {
+          "month": "2022-05",
+          "views": 1244
+        },
+        {
+          "month": "2022-06",
+          "views": 1083
+        },
+        {
+          "month": "2022-07",
+          "views": 1068
+        },
+        {
+          "month": "2022-08",
+          "views": 1266
+        },
+        {
+          "month": "2022-09",
+          "views": 1160
+        },
+        {
+          "month": "2022-10",
+          "views": 833
+        },
+        {
+          "month": "2022-11",
+          "views": 780
+        },
+        {
+          "month": "2022-12",
+          "views": 693
+        },
+        {
+          "month": "2023-01",
+          "views": 1596
+        },
+        {
+          "month": "2023-02",
+          "views": 1357
+        },
+        {
+          "month": "2023-03",
+          "views": 1239
+        },
+        {
+          "month": "2023-04",
+          "views": 1386
+        },
+        {
+          "month": "2023-05",
+          "views": 1629
+        },
+        {
+          "month": "2023-06",
+          "views": 1040
+        },
+        {
+          "month": "2023-07",
+          "views": 1289
+        },
+        {
+          "month": "2023-08",
+          "views": 1052
+        },
+        {
+          "month": "2023-09",
+          "views": 481
+        },
+        {
+          "month": "2023-10",
+          "views": 305
+        },
+        {
+          "month": "2023-11",
+          "views": 329
+        },
+        {
+          "month": "2023-12",
+          "views": 296
+        },
+        {
+          "month": "2024-01",
+          "views": 773
+        },
+        {
+          "month": "2024-02",
+          "views": 593
+        },
+        {
+          "month": "2024-03",
+          "views": 770
+        },
+        {
+          "month": "2024-04",
+          "views": 537
+        },
+        {
+          "month": "2024-05",
+          "views": 749
+        },
+        {
+          "month": "2024-06",
+          "views": 491
+        },
+        {
+          "month": "2024-07",
+          "views": 526
+        },
+        {
+          "month": "2024-08",
+          "views": 447
+        },
+        {
+          "month": "2024-09",
+          "views": 393
+        },
+        {
+          "month": "2024-10",
+          "views": 634
+        },
+        {
+          "month": "2024-11",
+          "views": 329
+        },
+        {
+          "month": "2024-12",
+          "views": 294
+        },
+        {
+          "month": "2025-01",
+          "views": 489
+        },
+        {
+          "month": "2025-02",
+          "views": 272
+        },
+        {
+          "month": "2025-03",
+          "views": 366
+        },
+        {
+          "month": "2025-04",
+          "views": 958
+        },
+        {
+          "month": "2025-05",
+          "views": 225
+        },
+        {
+          "month": "2025-06",
+          "views": 238
+        },
+        {
+          "month": "2025-07",
+          "views": 157
+        },
+        {
+          "month": "2025-08",
+          "views": 386
+        },
+        {
+          "month": "2025-09",
+          "views": 270
+        },
+        {
+          "month": "2025-10",
+          "views": 141
+        },
+        {
+          "month": "2025-11",
+          "views": 151
+        },
+        {
+          "month": "2025-12",
+          "views": 218
+        },
+        {
+          "month": "2026-01",
+          "views": 474
+        },
+        {
+          "month": "2026-02",
+          "views": 196
+        },
+        {
+          "month": "2026-03",
+          "views": 179
+        },
+        {
+          "month": "2026-04",
+          "views": 135
+        },
+        {
+          "month": "2026-05",
+          "views": 109
+        },
+        {
+          "month": "2026-06",
+          "views": 115
+        },
+        {
+          "month": "2026-07",
+          "views": 91
+        },
+        {
+          "month": "2026-08",
+          "views": 119
+        }
+      ],
+      "perMillionSeries": [
+        {
+          "month": "2021-09",
+          "views": 2.4891392003678128
+        },
+        {
+          "month": "2021-10",
+          "views": 4.250215695094621
+        },
+        {
+          "month": "2021-11",
+          "views": 7.0170387040111155
+        },
+        {
+          "month": "2021-12",
+          "views": 10.395761083563372
+        },
+        {
+          "month": "2022-01",
+          "views": 23.573718229508064
+        },
+        {
+          "month": "2022-02",
+          "views": 16.155360343919767
+        },
+        {
+          "month": "2022-03",
+          "views": 12.19545728420282
+        },
+        {
+          "month": "2022-04",
+          "views": 17.808918389164948
+        },
+        {
+          "month": "2022-05",
+          "views": 16.848272489332125
+        },
+        {
+          "month": "2022-06",
+          "views": 17.621650568429214
+        },
+        {
+          "month": "2022-07",
+          "views": 18.86298917267954
+        },
+        {
+          "month": "2022-08",
+          "views": 21.59548721866995
+        },
+        {
+          "month": "2022-09",
+          "views": 17.396052139927367
+        },
+        {
+          "month": "2022-10",
+          "views": 11.425256752127861
+        },
+        {
+          "month": "2022-11",
+          "views": 10.572771491557262
+        },
+        {
+          "month": "2022-12",
+          "views": 9.880876551522185
+        },
+        {
+          "month": "2023-01",
+          "views": 18.043994582686327
+        },
+        {
+          "month": "2023-02",
+          "views": 19.176601934117873
+        },
+        {
+          "month": "2023-03",
+          "views": 15.507485853924965
+        },
+        {
+          "month": "2023-04",
+          "views": 18.937413011382738
+        },
+        {
+          "month": "2023-05",
+          "views": 20.466953866568804
+        },
+        {
+          "month": "2023-06",
+          "views": 14.929679129757043
+        },
+        {
+          "month": "2023-07",
+          "views": 20.007054155137645
+        },
+        {
+          "month": "2023-08",
+          "views": 15.991186971086169
+        },
+        {
+          "month": "2023-09",
+          "views": 7.557065348630677
+        },
+        {
+          "month": "2023-10",
+          "views": 4.086420696742768
+        },
+        {
+          "month": "2023-11",
+          "views": 4.473130428964643
+        },
+        {
+          "month": "2023-12",
+          "views": 4.145488089277456
+        },
+        {
+          "month": "2024-01",
+          "views": 9.038930298610126
+        },
+        {
+          "month": "2024-02",
+          "views": 8.324137594428954
+        },
+        {
+          "month": "2024-03",
+          "views": 9.990718492770625
+        },
+        {
+          "month": "2024-04",
+          "views": 7.311079360786205
+        },
+        {
+          "month": "2024-05",
+          "views": 9.214104769513414
+        },
+        {
+          "month": "2024-06",
+          "views": 7.689551356180019
+        },
+        {
+          "month": "2024-07",
+          "views": 8.724793763955317
+        },
+        {
+          "month": "2024-08",
+          "views": 7.259943511792544
+        },
+        {
+          "month": "2024-09",
+          "views": 6.308916430118421
+        },
+        {
+          "month": "2024-10",
+          "views": 8.944506475991986
+        },
+        {
+          "month": "2024-11",
+          "views": 4.778353391040544
+        },
+        {
+          "month": "2024-12",
+          "views": 4.178465323875619
+        },
+        {
+          "month": "2025-01",
+          "views": 5.863548323750029
+        },
+        {
+          "month": "2025-02",
+          "views": 3.8994729632909344
+        },
+        {
+          "month": "2025-03",
+          "views": 4.887305805374183
+        },
+        {
+          "month": "2025-04",
+          "views": 14.296329726250953
+        },
+        {
+          "month": "2025-05",
+          "views": 3.0558130398713383
+        },
+        {
+          "month": "2025-06",
+          "views": 4.229499164389579
+        },
+        {
+          "month": "2025-07",
+          "views": 2.5670435331832313
+        },
+        {
+          "month": "2025-08",
+          "views": 6.711277653571811
+        },
+        {
+          "month": "2025-09",
+          "views": 4.711511202560186
+        },
+        {
+          "month": "2025-10",
+          "views": 2.1188261444692906
+        },
+        {
+          "month": "2025-11",
+          "views": 2.0718006527132493
+        },
+        {
+          "month": "2025-12",
+          "views": 3.635313549212148
+        },
+        {
+          "month": "2026-01",
+          "views": 7.031597685803294
+        },
+        {
+          "month": "2026-02",
+          "views": 3.361552249575634
+        },
+        {
+          "month": "2026-03",
+          "views": 3.0840697425673573
+        },
+        {
+          "month": "2026-04",
+          "views": 2.468531570955389
+        },
+        {
+          "month": "2026-05",
+          "views": 1.8229595229398552
+        },
+        {
+          "month": "2026-06",
+          "views": 2.1421929965004947
+        },
+        {
+          "month": "2026-07",
+          "views": 1.71274564136819
+        },
+        {
+          "month": "2026-08",
+          "views": 2.3121265988404005
+        }
+      ],
+      "name": "cs",
+      "topic": "Intermittent fasting",
+      "resolution": {
+        "lang": "cs",
+        "project": "cs.wikipedia",
+        "article": "Přerušovaný půst",
+        "method": "langlink",
+        "confidence": "high"
+      },
+      "spikes": [
+        "2025-04",
+        "2026-01"
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "name": "cs",
+      "score": 6,
+      "why": "declining (share of edition views -51% YoY (raw -58%, whole edition -16%)), trust high, 3 views per 1M edition views"
+    }
+  ],
+  "excluded": [
+    {
+      "topic": "Intermittent fasting",
+      "lang": "pl",
+      "reason": "no article linked to the topic (text search only)",
+      "searchHits": [
+        "Stres oksydacyjny",
+        "Głodówka lecznicza",
+        "Paleolityczny styl życia",
+        "Skróty i skrótowce używane w medycynie"
+      ]
+    },
+    {
+      "topic": "Intermittent fasting",
+      "lang": "sk",
+      "reason": "no article found",
+      "searchHits": []
+    }
+  ],
+  "warnings": [
+    "excluded Intermittent fasting@pl, Intermittent fasting@sk: no article on this topic in those editions (a finding in itself — small or young audience). To use a proxy article, pick one from \"excluded[].searchHits\" or scripts/resolve.ts --search and pass --articles <lang>=\"<Title>\"."
+  ]
+}

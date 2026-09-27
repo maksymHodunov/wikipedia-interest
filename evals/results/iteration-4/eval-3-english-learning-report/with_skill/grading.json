@@ -1,0 +1,45 @@
+{
+  "assertion_results": [
+    {
+      "text": "Ran scripts/report.ts and its final output has \"ok\": true and \"pages\": 1",
+      "passed": true,
+      "evidence": "trace: 1st report.ts → exit 6 (title 104 chars > 90); agent shortened it; 2nd → {\"ok\": true, \"pages\": 1}"
+    },
+    {
+      "text": "Passed its own --verdict and --findings",
+      "passed": true,
+      "evidence": "custom Ukrainian verdict/findings in both report.ts calls"
+    },
+    {
+      "text": "Recommends 2–3 audiences to research next, each with a reason tied to a metric",
+      "passed": true,
+      "evidence": "tr (65.3 per 1M, +6.7% relative), es (47.7 per 1M, flat), then fr/pl for qualitative research"
+    },
+    {
+      "text": "Says which article was used as the proxy for 'learning English' and what that proxy measures",
+      "passed": false,
+      "evidence": "articles listed in the table, but the answer never says they are a proxy measuring interest in the language rather than in learning it"
+    },
+    {
+      "text": "Mentions at least one limitation or assumption",
+      "passed": true,
+      "evidence": "platform-wide decline 2025−26; German data 73% bots → needs other validation"
+    },
+    {
+      "text": "report.ts output has an empty numbers.unverified list",
+      "passed": true,
+      "evidence": "numbers {checked: 6, unverified: []}; chat answer: 34 numbers checked, 0 unverified"
+    },
+    {
+      "text": "Verdict labels in the answer and the PDF match analysis.json",
+      "passed": true,
+      "evidence": "table: tr/es/de 'Плаский', pl/fr 'Спадає'; check_claims labelProblems [] and report.ts labels 0"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.86
+  }
+}

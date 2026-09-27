@@ -1,0 +1,7 @@
+{
+  "total_tokens": 56258,
+  "duration_ms": 134631,
+  "tool_calls": 11,
+  "model": "claude-haiku-4-5-20251001",
+  "note": "790 words for a 'short report'"
+}
